@@ -3,6 +3,9 @@ date: 2015-10-23 17:53:53
 tags:
 ---
 
+Oh hurrow Meteor.js
+<!-- more -->
+
 Here's a quick tutorial about how to build a full stack website (front end code, server and database) using [meteor.js](https://www.meteor.com/).
 
 Here's the final [source code](https://github.com/jasonshark/leaderboard) and the [demo app](http://jasonshark-leaderboard.meteor.com/).

@@ -5,6 +5,8 @@ tags:
 
 Following this [tutorial](https://realpython.com/blog/python/deploying-a-django-app-to-aws-elastic-beanstalk/).
 
+<!-- more -->
+
 ```
 $ git clone https://github.com/realpython/image-of-the-day.git
 $ cd image-of-the-day

@@ -7,6 +7,8 @@ Continued from part 1: [deploy-django-to-aws](http://connorleech.ghost.io/deploy
 
 I'm learning from [this tutorial](https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/).
 
+<!-- more -->
+
 ### Set up s3 bucket
 
 Go to https://console.aws.amazon.com/s3/home and click "Create Bucket"

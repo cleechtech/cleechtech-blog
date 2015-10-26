@@ -7,6 +7,8 @@ The source code is [available here](https://github.com/jasonshark/angular-drf-to
 
 In this app we'll build a persistent todo list. The backend and database will be handled by django. django rest framework will convert the tabled data to JSON and angular will bring the frontend magic.
 
+<!-- more -->
+
 ![this is angular](http://cloud-4.steamusercontent.com/ugc/541889413256781007/8E0E1D04169BD1922CA1467046699255CEB69E02/)
 
 ### Clone the starter project

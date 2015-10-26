@@ -5,6 +5,7 @@ tags:
 
 I'm in week 7 or 8 of RocketU bootcamp and it's time to build some cool shit. We've covered phonegap, d3, angular, django and basic algorithm design using python and javascript. On my own I've also explored the basics of react. There are tons of tools out there. At the end of the day it's about building and shipping product. I need a full stack solution and I'm going to use meteor.js.
 
+<!-- more -->
 If you already love meteor than take this opportunity to [look at gifs](http://connorlee.ch/gif-explorer/). 
 
 The alternative to meteor for me would be using angular or react. I like that angular has [ionic](http://ionicframework.com/) and react has [react native](https://facebook.github.io/react-native/)/[reapp](http://reapp.io/) for launching native apps fast. These tools beat out the old hybrid approach using jQuery mobile. I also like that angular especially has a large user community and it is easy to get help. From a technical approach I like how react uses normal javascript all bundled together with html to make components. It takes a lot of work to make things that simple.

@@ -3,6 +3,9 @@ date: 2015-10-23 17:59:45
 tags:
 ---
 
+Learn you Django by making a deck of cards out of internets.
+<!-- more -->
+
 For the impatient, [source code is here](https://github.com/jasonshark/django_cards)
 
 Start the project

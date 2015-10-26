@@ -3,6 +3,9 @@ date: 2015-10-23 18:02:49
 tags:
 ---
 
+Complaints about angular.js after playing around extensively with React and Meteor
+<!-- more -->
+
 I'm revisiting angular after not using it for a while. To get started again with my class @ RocketU we made a todo list. My code is here:
 
 [JS Fiddle Todo list](http://jsfiddle.net/9cxpha19/)

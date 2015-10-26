@@ -3,6 +3,9 @@ date: 2015-10-23 18:01:10
 tags:
 ---
 
+Get Django Rest Framework and Angular.js to play nicely together. Built while a student at RocketU coding bootcamp
+<!-- more -->
+
 Create an app with django rest framework (drf) that uses angular.js on the frontend. This app will be built from the [django-drf-starter-project](https://github.com/jasonshark/django-drf-starter-project). If you are curious about how the django-drf-starter-project was built you can view the [tutorial here](https://coderwall.com/p/ympo6g/create-a-starter-template-for-working-with-django-rest-framework?p=1&q=).
 
 The full [source code is here](https://github.com/jasonshark/django-drf-angular-starter-project)

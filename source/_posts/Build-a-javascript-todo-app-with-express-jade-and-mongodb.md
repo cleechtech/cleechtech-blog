@@ -7,6 +7,8 @@ Hey everyone today we're going to build a super simple todo application using [e
 
 In this tutorial we'll connect an express server to a mongoDB database and serve our html using the jade templating engine. To make talking to MongoDB easier we will use the [mongoose](https://github.com/learnboost/mongoose) npm package. Even though mongodb is a schemaless database (everything is json) mongoose lets us define models and easily chain queries.
 
+<!-- more -->
+
 [SOURCE CODE](https://github.com/jasonshark/express-todo) is on github here
 
 [LIVE DEMO](http://express-mongo-jade-todo.herokuapp.com) hosted by heroku is here

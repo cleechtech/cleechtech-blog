@@ -4,6 +4,7 @@ tags:
 ---
 
 **insurrection**: a violent uprising against an authority or government
+<!-- more -->
 
 I saw this [event](https://www.facebook.com/events/367500803440253/) on facebook. Included is a link to a book, written recently about protest movements and the like
 

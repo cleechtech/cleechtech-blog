@@ -3,6 +3,9 @@ date: 2015-10-23 17:57:35
 tags:
 ---
 
+For the uninitiated, behold angular-ui-router
+<!-- more -->
+
 [SOURCE CODE](https://github.com/jasonshark/intro-to-ui-router)
 
 If you're like me you've used [ui-router](https://github.com/angular-ui/ui-router/) before with angular.js. Your applications probably look something like this:

@@ -3,6 +3,9 @@ date: 2015-10-23 18:02:16
 tags:
 ---
 
+Learn you cryptocurrency. Stellar is a new network protocol shaking up the scene
+<!-- more -->
+
 [Stellar](https://www.stellar.org/) is a new protocol that makes it easy to send money between any two currencies quickly. The system aims to bring the world together by increasing interoperability between diverse financial systems and currencies. Parties can exchange using their own defined currencies, currencies that exist already or use the Stellar intermediary currency to perform trades. Stellar is a cryptocurrency and a protocol. The system is managed by a non-profit company based in San Francisco. Stellar is a peer to peer protocol that enables money to move as easily as email. 
 
 I am new to cryptocurrency and have no bitcoin. I signed up with Facebook and recieved free stellars out of interest on the topic. I learned about the Stellar protocol through a post on the [Praekelt Foundation's blog](http://blog.praekeltfoundation.org/).

@@ -7,6 +7,8 @@ See the [source code here](https://github.com/jasonshark/django-drf-starter-proj
 
 Django rest framework serializes data from structured databases (Postgres, Mysql, Sqlite) into JSON. Django provides the server and database management. [Django rest framework](http://www.django-rest-framework.org/) converts the structured data into javascript object notation, which gets sent to the browser. Modern frontend javascript frameworks like angular, backbone and react all like to eat JSON. This workflow gets a django project set up with the rest framework.
 
+<!-- more -->
+
 ### Set up virtual environment
 
 ```

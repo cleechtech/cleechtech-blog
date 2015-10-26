@@ -20,8 +20,11 @@ $ cp -R public ../cleechtech.github.io
 Change into cleechtech.github.io
 
 ```
+$ rm -rf * 
 $ mv public/* .
 $ rm -rf public
+$ rm -rf assets/css/tranquilpeak.css
+$ cp ../cleechtech-blog/tranquilpeak.css assets/css/
 ```
 
 Check it out locally with `$ python -m SimpleHTTPServer`

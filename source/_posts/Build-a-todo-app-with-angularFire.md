@@ -9,6 +9,8 @@ Hey everyone! [Firebase](https://www.firebase.com/) and angular.js are awesome t
 
 [DEMO](https://firebasingtodos.firebaseapp.com/) is here
 
+<!-- more -->
+
 ### Get started
 [Sign up](https://www.firebase.com/signup/) for a free firebase account. This is basically going to be our database. Somewhere deep down Firebase uses MongoDB. Our database is going to look like a neat JSON object
 

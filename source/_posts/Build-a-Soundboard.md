@@ -5,6 +5,8 @@ tags:
 
 We're going to have a button and when we click it we're going to play a sound.
 
+<!-- more -->
+
 [Source code](https://github.com/jasonshark/soundboard) on github
 
 [Demo](http://connorlee.ch/soundboard/) hosted with gh-pages

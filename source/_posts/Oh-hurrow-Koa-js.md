@@ -3,6 +3,8 @@ date: 2015-10-23 18:00:17
 tags:
 ---
 
+Koa is a node.js web framework that is more modern than express. We will build a functional web server in this tutorial 
+<!-- more -->
 
 ![](https://camo.githubusercontent.com/674563115c4e0d4e5d99440b916952ad795c498e/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f363339363931332f6b6f612f6c6f676f2e706e67)
 

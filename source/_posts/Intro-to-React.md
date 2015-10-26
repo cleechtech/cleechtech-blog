@@ -3,6 +3,9 @@ date: 2015-10-23 17:57:57
 tags:
 ---
 
+Oh hurrow React.js
+<!-- more -->
+
 [SOURCE CODE](https://github.com/jasonshark/intro-to-react)
 
 <iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=intro-to-react&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>

@@ -3,6 +3,9 @@ date: 2015-10-23 18:03:14
 tags:
 ---
 
+Master authentication with fullstack javascript development
+<!-- more -->
+
 ![](http://media.giphy.com/media/3oEduWAFQjlfP5gMU0/giphy.gif)
 
 [DEMO](https://node-jwt-intro.herokuapp.com/)

@@ -5,6 +5,8 @@ tags:
 
 Starter code is [HERE](https://github.com/jasonshark/ionic-firebase-auth-starter)
 
+<!-- more -->
+
 <iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=ionic-firebase-auth-starter&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 
 <iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=ionic-firebase-auth-starter&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>

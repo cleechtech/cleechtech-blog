@@ -5,6 +5,7 @@ tags:
 
 sample code on [github here](https://github.com/jasonshark/ionic-push-starter).
 
+<!-- more -->
 ```
 $ ionic start ionic-push-starter io
 $ cd ionic-push-starter

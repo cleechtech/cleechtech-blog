@@ -3,6 +3,9 @@ date: 2015-10-23 17:54:23
 tags:
 ---
 
+Make some maps with angular.js
+<!-- more -->
+
 This is a quick tutorial on how to add maps to your angular.js application. Using google maps API or leaflet.js by themselves is simple. Unfortunately manipulating the DOM is not always straightforward in angular.js projects. External libraries need to be packaged into angular.js directives. Fortunately there is a legit Angular community that has done the heavy lifting for us. 
 
 We're going to use [angular-leaflet-directive](https://github.com/tombatossals/angular-leaflet-directive).

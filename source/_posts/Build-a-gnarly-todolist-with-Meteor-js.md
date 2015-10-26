@@ -5,6 +5,7 @@ tags:
 
 So I've gone through how to build a barebones, functional, fullstack application with meteor in [How to build an app using Meteor.js](http://connorleech.ghost.io/how-to-build-an-app-using-meteor-js/). That said, it is not impressive. Last week I went through Eventedmind's excellent course on how to [Build a multi page app with iron meteor](https://www.eventedmind.com/classes/build-a-multi-page-app-with-iron-meteor-6737880d). It is a bit like how to build a barebones blog, complete with authentication.
 
+<!-- more -->
 The [DEMO](http://js-meteor-todos.meteor.com/) is here. I used meteor's built in deployment. I had [some trouble](https://github.com/iron-meteor/iron-cli/issues/153) deploying the app to heroku. Suggestions welcome!
 
 

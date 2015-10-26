@@ -3,6 +3,9 @@ date: 2015-10-23 17:58:20
 tags:
 ---
 
+Authentication using the OAuth.io service on the client side
+<!-- more -->
+
 First off thank you to Preetish Panda for his tutorial on oauth.io. You can find that tutorial [here](http://www.sitepoint.com/building-twitter-app-using-angularjs).
 
 

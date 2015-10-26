@@ -4,6 +4,7 @@ tags:
 ---
 
 Clone the [starter code](https://github.com/jasonshark/react-comment-list/tree/f7f7b0451edc008b25817c6fedb44b42001613ee) or view the [finished code](https://github.com/jasonshark/react-comment-list/tree/master).
+<!-- more -->
 
 ###### Create components
 commit code: https://github.com/jasonshark/react-comment-list/tree/fd7504266de7266fa16b9286b57eb39a6ba00287

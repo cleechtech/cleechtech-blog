@@ -10,6 +10,7 @@ I'm posting a blog post on how to make a blog. So meta.
 
 Check out the [SOURCE CODE](https://github.com/cleechtech/mean-blog)
 
+<!-- more -->
 #### Get crackin
 
 Install the starter template and change the names, delete the silly image in the README.
