@@ -1,6 +1,6 @@
 title: Intro to angular-ui-router
 date: 2015-10-23 17:57:35
-tags: Angular
+tags: [Angular]
 ---
 
 For the uninitiated, behold angular-ui-router

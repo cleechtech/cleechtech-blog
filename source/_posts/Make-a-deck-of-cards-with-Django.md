@@ -1,6 +1,6 @@
 title: Make a deck of cards with Django
 date: 2015-10-23 17:59:45
-tags: Django
+tags: [Django]
 ---
 
 Learn you Django by making a deck of cards out of internets.

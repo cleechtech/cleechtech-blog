@@ -1,6 +1,6 @@
 title: 'Build a javascript todo app with express, jade and mongodb'
 date: 2015-10-23 16:51:28
-tags:
+tags: [MEAN, Javascript, Todo, Nodejs, MongoDB]
 ---
 
 Hey everyone today we're going to build a super simple todo application using [express 4](http://expressjs.com/4x/api.html). Express is a lightweight server side framework for node.js. It's very popular but not quite as easy to get up and running with a database as something like Rails or Django.

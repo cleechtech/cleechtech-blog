@@ -1,6 +1,6 @@
 title: Build a gnarly todolist with Meteor.js
 date: 2015-10-26 16:50:15
-tags:
+tags: [Meteor, Todo]
 ---
 
 So I've gone through how to build a barebones, functional, fullstack application with meteor in [How to build an app using Meteor.js](http://connorleech.ghost.io/how-to-build-an-app-using-meteor-js/). That said, it is not impressive. Last week I went through Eventedmind's excellent course on how to [Build a multi page app with iron meteor](https://www.eventedmind.com/classes/build-a-multi-page-app-with-iron-meteor-6737880d). It is a bit like how to build a barebones blog, complete with authentication.

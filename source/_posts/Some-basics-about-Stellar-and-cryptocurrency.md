@@ -1,6 +1,6 @@
 title: Some basics about Stellar and cryptocurrency
 date: 2015-10-22 18:02:16
-tags:
+tags: [Currency]
 ---
 
 Learn you cryptocurrency. Stellar is a new network protocol shaking up the scene

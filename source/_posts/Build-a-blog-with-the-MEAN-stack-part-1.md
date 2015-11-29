@@ -1,6 +1,6 @@
 title: Build a blog with the MEAN stack (part 1)
 date: 2015-10-24 15:18:16
-tags: mean, javascript
+tags: [MEAN, Javascript, Angular, Nodejs, MongoDB]
 ---
 
 

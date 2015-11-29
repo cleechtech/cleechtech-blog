@@ -1,6 +1,6 @@
 title: 5 Steps in the Sales Process
 date: 2015-11-29 09:56:04
-tags: Sales
+tags: [Sales, Startup]
 ---
 
 There are five steps in the sales process:

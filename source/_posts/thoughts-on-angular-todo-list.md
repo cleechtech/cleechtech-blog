@@ -1,6 +1,6 @@
 title: thoughts on angular todo list
 date: 2015-10-22 18:02:49
-tags:
+tags: [Angular, Todo]
 ---
 
 Complaints about angular.js after playing around extensively with React and Meteor

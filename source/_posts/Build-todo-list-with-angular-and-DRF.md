@@ -1,6 +1,6 @@
 title: Build todo list with angular and DRF
 date: 2015-10-23 17:46:39
-tags:
+tags: [Todo, Angular, Django]
 ---
 
 The source code is [available here](https://github.com/jasonshark/angular-drf-todolist).

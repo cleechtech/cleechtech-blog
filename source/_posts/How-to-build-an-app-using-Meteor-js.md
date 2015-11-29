@@ -1,6 +1,6 @@
 title: How to build an app using Meteor.js
 date: 2015-10-23 17:53:53
-tags:
+tags: [Meteor]
 ---
 
 Oh hurrow Meteor.js

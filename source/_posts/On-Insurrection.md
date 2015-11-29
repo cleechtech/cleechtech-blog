@@ -1,6 +1,6 @@
 title: On Insurrection
 date: 2015-10-20 18:00:43
-tags:
+tags: [Insurrection]
 ---
 
 **insurrection**: a violent uprising against an authority or government

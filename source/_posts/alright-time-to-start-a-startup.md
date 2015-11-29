@@ -1,6 +1,6 @@
 title: alright time to start a startup
 date: 2015-10-23 16:47:43
-tags:
+tags: [Startup]
 ---
 
 I'm in week 7 or 8 of RocketU bootcamp and it's time to build some cool shit. We've covered phonegap, d3, angular, django and basic algorithm design using python and javascript. On my own I've also explored the basics of react. There are tons of tools out there. At the end of the day it's about building and shipping product. I need a full stack solution and I'm going to use meteor.js.

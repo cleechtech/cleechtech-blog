@@ -1,6 +1,6 @@
 title: Build a Soundboard
 date: 2015-10-23 17:44:33
-tags:
+tags: [Javascript]
 ---
 
 We're going to have a button and when we click it we're going to play a sound.

@@ -1,6 +1,6 @@
 title: How to use the angular-leaflet directive
 date: 2015-10-23 09:54:23
-tags:
+tags: [Angular, Maps]
 ---
 
 Make some maps with angular.js

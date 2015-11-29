@@ -1,6 +1,6 @@
 title: Create a starter template for working with django-rest-framework
 date: 2015-10-23 17:48:43
-tags:
+tags: [Django]
 ---
 
 See the [source code here](https://github.com/jasonshark/django-drf-starter-project).

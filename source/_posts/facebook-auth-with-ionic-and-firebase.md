@@ -1,6 +1,6 @@
 title: facebook auth with ionic and firebase
 date: 2015-10-24 05:51:30
-tags:
+tags: [Ionic, Firebase, Javascript]
 ---
 
 Starter code is [HERE](https://github.com/jasonshark/ionic-firebase-auth-starter)

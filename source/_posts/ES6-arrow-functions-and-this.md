@@ -1,6 +1,6 @@
 title: ES6 arrow functions and this
 date: 2015-10-23 17:51:04
-tags:
+tags: [Javascript]
 ---
 
 ES6 is the upcoming standard for javascript. You can use ES6 features today by including babel.js or the jsx transformer in your html file. React uses JSX and the JSX transformer library to take advantage of ES6 features and generate components. Angular 2.0 uses typescript to implement [select](http://stackoverflow.com/a/22386542/2031033) ES6 features. Moving forward React and Angular will commonly use arrow functions. If you are familiar with coffeescript you already know about them. Below is a rundown of arrow functions and this.

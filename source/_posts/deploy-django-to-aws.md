@@ -1,6 +1,6 @@
 title: deploy django to aws
 date: 2015-10-24 17:50:16
-tags:
+tags: [Django, AWS]
 ---
 
 Following this [tutorial](https://realpython.com/blog/python/deploying-a-django-app-to-aws-elastic-beanstalk/).

@@ -1,6 +1,6 @@
-title: 'use express, angular and jwt to make a secure app'
+title: use express, angular and jwt to make a secure app
 date: 2015-10-23 18:03:14
-tags:
+tags: [MEAN, Nodejs, Javascript, Angular]
 ---
 
 Master authentication with fullstack javascript development

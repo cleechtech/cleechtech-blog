@@ -1,6 +1,6 @@
 title: Handle a git merge conflict
 date: 2015-10-20 17:53:25
-tags: Git
+tags: [Git]
 ---
 
 I'm starting to work with other people using git and github. Though I'm familiar with pushing, pulling, branching and cloning, I had not regularly encountered  merge conflicts until I began RocketU.

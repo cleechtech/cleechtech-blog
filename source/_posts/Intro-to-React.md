@@ -1,6 +1,6 @@
 title: Intro to React
 date: 2015-10-24 17:57:57
-tags: React
+tags: [React, Javascript]
 ---
 
 Oh hurrow React.js

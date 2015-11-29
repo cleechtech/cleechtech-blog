@@ -1,6 +1,6 @@
 title: Oh hurrow Koa.js
 date: 2015-10-23 11:59:17
-tags:
+tags: [Nodejs, Koa, Javascript]
 ---
 
 Koa is a node.js web framework that is more modern than express. We will build a functional web server in this tutorial 

@@ -1,6 +1,6 @@
 title: log in with twitter from client with angular and oauth.io
 date: 2015-10-23 17:58:20
-tags:
+tags: [Angular, Javascript]
 ---
 
 Authentication using the OAuth.io service on the client side

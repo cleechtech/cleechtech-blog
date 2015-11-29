@@ -1,6 +1,6 @@
 title: deploy django to aws part 2- hosting files on S3
 date: 2015-10-24 17:49:08
-tags:
+tags: [Django, AWS]
 ---
 
 Continued from part 1: [deploy-django-to-aws](http://connorleech.ghost.io/deploy-django-to-aws/).

@@ -1,6 +1,6 @@
 title: Set up drf to play well with angular templates
 date: 2015-10-24 18:01:10
-tags:
+tags: [Django, Angular]
 ---
 
 Get Django Rest Framework and Angular.js to play nicely together. Built while a student at RocketU coding bootcamp
