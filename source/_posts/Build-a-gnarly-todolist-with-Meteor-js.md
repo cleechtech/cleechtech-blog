@@ -1,5 +1,5 @@
 title: Build a gnarly todolist with Meteor.js
-date: 2015-10-23 16:50:15
+date: 2015-10-26 16:50:15
 tags:
 ---
 

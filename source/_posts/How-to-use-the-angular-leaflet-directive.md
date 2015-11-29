@@ -1,5 +1,5 @@
 title: How to use the angular-leaflet directive
-date: 2015-10-23 17:54:23
+date: 2015-10-23 09:54:23
 tags:
 ---
 

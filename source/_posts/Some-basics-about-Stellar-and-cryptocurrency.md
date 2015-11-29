@@ -1,5 +1,5 @@
 title: Some basics about Stellar and cryptocurrency
-date: 2015-10-23 18:02:16
+date: 2015-10-22 18:02:16
 tags:
 ---
 

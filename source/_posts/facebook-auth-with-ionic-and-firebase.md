@@ -1,5 +1,5 @@
 title: facebook auth with ionic and firebase
-date: 2015-10-23 17:51:30
+date: 2015-10-24 05:51:30
 tags:
 ---
 

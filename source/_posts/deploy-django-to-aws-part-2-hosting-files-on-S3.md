@@ -1,5 +1,5 @@
 title: deploy django to aws part 2- hosting files on S3
-date: 2015-10-23 17:49:08
+date: 2015-10-24 17:49:08
 tags:
 ---
 

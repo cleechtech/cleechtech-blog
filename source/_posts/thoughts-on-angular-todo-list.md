@@ -1,5 +1,5 @@
 title: thoughts on angular todo list
-date: 2015-10-23 18:02:49
+date: 2015-10-22 18:02:49
 tags:
 ---
 

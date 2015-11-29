@@ -1,5 +1,5 @@
 title: deploy django to aws
-date: 2015-10-23 17:50:16
+date: 2015-10-24 17:50:16
 tags:
 ---
 

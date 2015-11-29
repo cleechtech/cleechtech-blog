@@ -1,5 +1,5 @@
 title: Build a blog with the MEAN stack (part 1)
-date: 2015-10-23 15:18:16
+date: 2015-10-24 15:18:16
 tags: mean, javascript
 ---
 

@@ -1,5 +1,5 @@
 title: Set up drf to play well with angular templates
-date: 2015-10-23 18:01:10
+date: 2015-10-24 18:01:10
 tags:
 ---
 

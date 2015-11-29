@@ -1,5 +1,5 @@
 title: Handle a git merge conflict
-date: 2015-10-23 17:53:25
+date: 2015-10-20 17:53:25
 tags:
 ---
 
