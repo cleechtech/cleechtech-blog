@@ -10,6 +10,11 @@ $ hexo server
 
 ```
 
+To wipe tags:
+```
+$ hexo clean
+```
+
 To deploy run:
 
 ```
