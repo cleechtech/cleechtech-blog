@@ -1,5 +1,5 @@
 title: On Insurrection
-date: 2015-10-23 18:00:43
+date: 2015-10-20 18:00:43
 tags:
 ---
 

@@ -1,6 +1,6 @@
 title: Build a todo app with angularFire
 date: 2015-10-23 17:45:19
-tags:
+tags: Angular, Firebase
 ---
 
 Hey everyone! [Firebase](https://www.firebase.com/) and angular.js are awesome tools that you should check out. Today we're going to build and deploy a persistent client side app with only front end code. I modeled this heavily off the Firebase + Angular [TodoMVC](https://github.com/tastejs/todomvc/tree/master/examples/firebase-angular). It's a great project but the code seemed a bit heavy. We're gunna use the most recent version of [angularFire](https://www.firebase.com/docs/web/libraries/angular/)  and bootstrap for styles

@@ -1,6 +1,6 @@
 title: Build push notifications into an ionic app
 date: 2015-10-23 17:46:00
-tags:
+tags: Angular, Ionic
 ---
 
 sample code on [github here](https://github.com/jasonshark/ionic-push-starter).

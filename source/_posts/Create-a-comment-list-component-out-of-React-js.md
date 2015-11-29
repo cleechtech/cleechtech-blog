@@ -1,6 +1,6 @@
 title: Create a comment list component out of React.js
 date: 2015-10-23 17:47:59
-tags:
+tags: React
 ---
 
 Clone the [starter code](https://github.com/jasonshark/react-comment-list/tree/f7f7b0451edc008b25817c6fedb44b42001613ee) or view the [finished code](https://github.com/jasonshark/react-comment-list/tree/master).
