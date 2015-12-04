@@ -1,12 +1,12 @@
 title: Ruby On Rails for the MEAN stack developer
 date: 2015-12-02 16:05:39
-tags: Ruby On Rails, Ruby
+tags: [Ruby On Rails, Ruby]
 ---
 
 Ruby On Rails has been around since about 2006 and it is a tried and tested way to build web applications. In this tutorial we’re going to use the popular Bootstrap 3 UI library and Ruby On Rails 4 to create a server and database. The app will display a prepopulated list of tasks. In future lessons we will go through adding and modifying tasks.
 
 **tl;dr** [SOURCE CODE](https://github.com/cleechtech/rails-task-list)
-
+<!-- more -->
 **Questions?** Hit me up [on twitter](https://twitter.com/realjasonshark)
 
 ### Getting started with Ruby On Rails 

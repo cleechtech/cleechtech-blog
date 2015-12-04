@@ -8,7 +8,7 @@ Final [SOURCE CODE](https://github.com/cleechtech/node-angular-stormpath)
 ## Set up project
 
 Stormpath is a service that handles user authentication and authorization for you. We are going to integrate Stormpath user management into a very lightweight MEAN stack starter template. First we're going to clone the starter project which you can view [here](https://github.com/cleechtech/mean-starter).
-
+<!-- more -->
 ```
 $ git clone git@github.com:cleechtech/mean-starter.git node-angular-stormpath
 ```
