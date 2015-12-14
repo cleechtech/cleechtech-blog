@@ -1,4 +1,4 @@
-title: Ruby On Rails for the MEAN stack developer
+title: Part 1 - Ruby On Rails for the MEAN stack developer
 date: 2015-12-02 16:05:39
 tags: [Ruby On Rails, Ruby]
 ---

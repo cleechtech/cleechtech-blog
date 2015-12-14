@@ -1,4 +1,4 @@
-title: 'Add Angular.js to Ruby on Rails app'
+title: Part 2 - Add Angular.js to Ruby on Rails app
 date: 2015-12-04 15:34:04
 tags: [Angular, Ruby, Ruby On Rails]
 ---

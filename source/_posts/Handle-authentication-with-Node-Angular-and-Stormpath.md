@@ -1,6 +1,6 @@
 title: Handle authentication with Node, Angular and Stormpath
 date: 2015-11-30 11:59:01
-tags: [Node, Angular, Auth, MEAN]
+tags: [Nodejs, Angular, Auth, MEAN]
 ---
 
 Final [SOURCE CODE](https://github.com/cleechtech/node-angular-stormpath)
