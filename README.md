@@ -76,3 +76,5 @@ In `<head>` add:
 ```
 <script src="//load.sumome.com/" data-sumo-site-id="f4e97af1393e211ff14126f7ea76bdfe3dd9a328f79dfaaf8b0b159c16276230" async="async"></script>
 ```
+
+This is supposed to make a popup happen.
