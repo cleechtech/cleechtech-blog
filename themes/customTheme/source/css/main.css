@@ -1,0 +1,113 @@
+body{ 
+	background: grey;
+	height: 100%;
+	color:white;
+	font-size:24px;
+}
+.author-name {
+	font-size:72px;
+}
+
+.blog-post {
+	color: white;
+}
+.blog-post a {
+	color: yellow;
+}
+.blog-post.text-muted {
+	color: white;
+}
+.blog-post .author-name {
+	color: yellow;
+}
+
+.btn-circle {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  padding: 10px 16px;
+  line-height: 1.33;
+  border-radius: 35px;
+  font-size: 36px;
+  margin-right:20px;
+  margin-top:10px;
+}
+
+.btn-linkedin {
+	color: #fff;
+	background-color: steelblue;
+}
+
+.btn-github {
+	color: #fff;
+	background-color: black;
+}
+
+.btn-yellow {
+	background-color: yellow;
+	font-size:36px;
+}
+
+/* Double Diagonal line */
+section {
+	position: relative;
+	padding: 10em 10%;
+	background: lightgrey;
+	color: #fff;
+}
+.top-part {
+	background-color: lightgrey;
+	padding-bottom: 100px;
+}
+#wrapper { 
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+*,
+*:after,
+*::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.hideOverflow {
+	overflow: hidden;
+}
+
+section::before,
+section::after {
+	position: absolute;
+	content: '';
+	pointer-events: none;
+}
+
+.ss-style-doublediagonal {
+	z-index: 1;
+	padding-top: 3em;
+	background: grey;
+}
+
+.ss-style-doublediagonal::before,
+.ss-style-doublediagonal::after {
+	top: 0;
+	left: -25%;
+	z-index: -1;
+	width: 150%;
+	height: 75%;
+	background: inherit;
+	-webkit-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.ss-style-doublediagonal::before {
+	height: 50%;
+	background: yellow;
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	-webkit-transform-origin: 3% 0;
+	transform-origin: 3% 0;
+}

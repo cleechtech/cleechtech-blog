@@ -4,7 +4,7 @@
 
 # Site
 title: El Blogo de Connor
-subtitle: Javascript developer in the Bay Area
+subtitle: Technical recruiter at Mondo, javascript developer
 description:
 author: Connor Leech
 language: en
@@ -72,7 +72,7 @@ marked:
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: tranquilpeak
+theme: customTheme
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

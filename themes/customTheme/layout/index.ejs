@@ -1,0 +1,37 @@
+<div class='row text-center top-part'>
+    <img src="http://i.imgur.com/Au86HeN.jpg" alt="Connor Leech" class="img-circle" />
+	<h1 class='author-name'><%= config.author %></h1>
+    <div class='col-sm-4 col-sm-offset-4'>
+        <p><%= config.subtitle %></p>
+    </div>
+    <div class='col-sm-12'>
+        <a href='https://www.github.com/cleechtech' target='_blank' class="btn btn-github btn-circle">
+            <i class="fa fa-github fa-6"></i>
+        </a>
+        <a href='https://www.linkedin.com/in/connorleech' target='_blank' class="btn btn-linkedin btn-circle">
+            <i class="fa fa-linkedin fa-6"></i>
+        </a>
+        <a href='https://twitter.com/realjasonshark' target='_blank' class="btn btn-info btn-circle">
+            <i class="fa fa-twitter fa-6"></i>
+        </a>
+    </div>
+</div>
+<section class="ss-style-doublediagonal">
+    <% page.posts.each(function(post){ %>
+        <div class='row blog-post'>
+            <h1>
+                <a href="<%- url_for(post.path) %>">
+                    <%= post.title %>
+                </a>
+            </h1>
+            <%= date(post.date, config.date_format) %> 
+            
+            <% if(post.excerpt) { %>
+                <p>
+                    <%- post.excerpt %>
+                </p>
+            <% } %>
+            <hr />
+        </div>
+    <% }) %>
+</section>
