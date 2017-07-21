@@ -4,15 +4,15 @@
 
 # Site
 title: El Blogo de Connor
-subtitle: Technical recruiter at Mondo, javascript developer
-description:
+subtitle: I like AWS, Laravel, Vue.js and Technical Recruiting
+description: Blog for all of the things with the code.
 author: Connor Leech
 language: en
-timezone:
+timezone: PST
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://cleechtech.github.io
+url: http://connor11528.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -78,6 +78,6 @@ theme: customTheme
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:cleechtech/cleechtech.github.io.git
+  repo: git@github.com:connor11528/connor11528.github.io.git
   branch: master
   message: auto deploy!
