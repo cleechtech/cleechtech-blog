@@ -8,7 +8,7 @@ subtitle: I like AWS, Laravel, Vue.js and Technical Recruiting
 description: Blog for all of the things with the code.
 author: Connor Leech
 language: en
-timezone: PST
+timezone: America/Los_Angeles
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
