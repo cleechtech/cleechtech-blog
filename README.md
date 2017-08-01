@@ -1,7 +1,7 @@
-My blog -- the source code
+ConnorLeech.info -- the source code
 ====
 
-Made with Hexo.js and [tranquilpeak-hexo-theme](https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme)
+My personal site, made with Hexo.js
 
 ```
 $ hexo new post "title goes here"
@@ -9,7 +9,7 @@ $ hexo generate
 $ hexo server
 ```
 
-To wipe tags:
+To wipe tags (deletes pubpic folder):
 ```
 $ hexo clean
 ```
@@ -21,7 +21,7 @@ To deploy run:
 $ hexo deploy
 ```
 
-Your build will automagically be deployed to the master branch of https://github.com/connor11528/connor11528.github.io (specified in **_config.yml**)
+The build will automatically deploys to the master branch of https://github.com/connor11528/connor11528.github.io (specified in **_config.yml**)
 
 ### Partials
 
