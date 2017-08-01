@@ -1,4 +1,16 @@
-body { color:white; }
+/**
+ * Styles 
+ */
+
+header h1 { margin-top: 200px; }
+
+.navigation { margin-top: 200px; }
+
+p { font-size: 18px; }
+
+a span { cursor: pointer; }
+
+.navigation li { font-size: 35px; list-style-type: none; }
 
 h1 {  font-size: 45px; font-weight: inherit; font-style: italic;}
 
@@ -15,7 +27,7 @@ header:before  {
 
 	display: block;
 	background-image:url('../images/gg.jpg'); 
-	height: 800px;
+	height: 100%;
 
 	-webkit-filter: blur(8px);
 	-moz-filter: blur(8px);
@@ -34,22 +46,16 @@ header {
 
   color: #001f3f;
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow:scroll;
+  height:100%;
 }
-
-header h1 { margin-top: 200px; }
-.navigation { margin-top: 200px; }
-p { font-size: 18px; }
-
-a span { cursor: pointer; }
-
-.navigation li { font-size: 35px; list-style-type: none; }
 
 
 /** 
  * Anchor underline animation: https://stackoverflow.com/questions/33058659/explain-this-css-link-underline-animation 
  */
 .navigation a { 
-	color: inherit; 
+  color:white;
 	text-decoration: none; 
 	display: inline-block;
     position: relative;
@@ -68,5 +74,12 @@ a:after {
 a:hover:after {
     width: 100%;
     background: white;
+}
+
+/**
+ * Media Queries 
+ */
+@media(max-width:580px){
+  header h1, .navigation { margin-top: 50px }
 }
 
