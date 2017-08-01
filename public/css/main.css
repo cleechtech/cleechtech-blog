@@ -1,0 +1,39 @@
+h1 {  font-size: 45px; font-weight: inherit; font-style: italic;}
+
+
+/* Pen for blur: https://codepen.io/akademy/pen/FlkzB */
+header:before  {
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: -1;
+
+	display: block;
+	background-image:url('../images/gg.jpg'); 
+	height: 800px;
+
+	-webkit-filter: blur(8px);
+	-moz-filter: blur(8px);
+	-o-filter: blur(8px);
+	-ms-filter: blur(8px);
+	filter: blur(8px);
+}
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  color: #001f3f;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header h1 { margin-top: 200px; }
+
+a span { cursor: pointer; }
+
+

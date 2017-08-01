@@ -23,8 +23,5 @@ $ hexo deploy
 
 The build will automatically deploys to the master branch of https://github.com/connor11528/connor11528.github.io (specified in **_config.yml**)
 
-### Partials
-
-Partials are included in themeName/layout/_partial and can be included like `<%- partial('_partial/mailchimp_bar') %>`
 
 
