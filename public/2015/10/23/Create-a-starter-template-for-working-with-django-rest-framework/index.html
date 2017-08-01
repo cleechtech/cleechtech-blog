@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>Create a starter template for working with django-rest-framework</h1>
+	    October 23, 2015 
+	    <hr />
+		<p>See the <a href="https://github.com/jasonshark/django-drf-starter-project" target="_blank" rel="external">source code here</a>.</p>
+<p>Django rest framework serializes data from structured databases (Postgres, Mysql, Sqlite) into JSON. Django provides the server and database management. <a href="http://www.django-rest-framework.org/" target="_blank" rel="external">Django rest framework</a> converts the structured data into javascript object notation, which gets sent to the browser. Modern frontend javascript frameworks like angular, backbone and react all like to eat JSON. This workflow gets a django project set up with the rest framework.</p>
+<a id="more"></a>
+<h3 id="Set-up-virtual-environment"><a href="#Set-up-virtual-environment" class="headerlink" title="Set up virtual environment"></a>Set up virtual environment</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">source</span> ~/.bash_profile</span></div><div class="line"><span class="meta">$</span><span class="bash"> lsvirtualenv</span></div><div class="line"><span class="meta">$</span><span class="bash"> mkvirtualenv django-drf-starter-project <span class="comment"># OR $ workon django-drf-starter-project</span></span></div></pre></td></tr></table></figure>
+<h3 id="Create-django-app"><a href="#Create-django-app" class="headerlink" title="Create django app"></a>Create django app</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> django-admin startproject django_drf_starter_project</span></div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> django_drf_starter_project</span></div><div class="line"><span class="meta">$</span><span class="bash"> pip install django djangorestframework</span></div><div class="line"><span class="meta">$</span><span class="bash"> pip freeze &gt; requirements.txt</span></div><div class="line"><span class="meta">$</span><span class="bash"> ./manage.py runserver</span></div></pre></td></tr></table></figure>
+<p>You should see “It worked!” at localhost:8000. (control + C stops server on mac). If you’re using git also copy and paste in the <code>.gitignore</code> file from here so you don’t commit garbage to version control.</p>
+<h3 id="Create-a-new-app"><a href="#Create-a-new-app" class="headerlink" title="Create a new app"></a>Create a new app</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> ./manage.py startapp jsframework</span></div><div class="line"><span class="meta">$</span><span class="bash"> mkdir jsframework/templates</span></div><div class="line"><span class="meta">$</span><span class="bash"> mkdir jsframework/templates/jsframework</span></div><div class="line"><span class="meta">$</span><span class="bash"> touch jsframework/templates/jsframework/index.html jsframework/templates/jsframework/base.html</span></div></pre></td></tr></table></figure>
+<p>This creates a new app called jsframework within the django_drf_starter_project project. We also set up a templates folder where we will display our html templates. I made another folder called jsframework inside the templates directory. I know it looks a bit weird. We do this so we can namespace our templates later on when declaring routes. Django will automagically look in the <code>templates</code> directory for every app when compiling templates.</p>
+<h3 id="Let-django-know-about-it"><a href="#Let-django-know-about-it" class="headerlink" title="Let django know about it"></a>Let django know about it</h3><p>Modify <code>django_drf_starter_project/settings.py</code> to include the rest_framework app that we installed via pip and our jsframework app we created from the cli.</p>
+<figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="type">INSTALLED_APPS</span> = (</div><div class="line">    <span class="symbol">'django</span>.contrib.admin',</div><div class="line">    <span class="symbol">'django</span>.contrib.auth',</div><div class="line">    <span class="symbol">'django</span>.contrib.contenttypes',</div><div class="line">    <span class="symbol">'django</span>.contrib.sessions',</div><div class="line">    <span class="symbol">'django</span>.contrib.messages',</div><div class="line">    <span class="symbol">'django</span>.contrib.staticfiles',</div><div class="line">    <span class="symbol">'rest_framework'</span>,</div><div class="line">    <span class="symbol">'jsframework'</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Also sync your database. Django will use sqlite as default. Run <code>./manage.py migrate</code> after updating your installed apps. A <code>db.sqlite3</code> file will get generated automagically. Our database is now in sync.</p>
+<p><img src="http://media.giphy.com/media/XdlEHQpoHhy0g/giphy.gif" alt="migrate it"></p>
+<h3 id="Render-templates-to-browser"><a href="#Render-templates-to-browser" class="headerlink" title="Render templates to browser"></a>Render templates to browser</h3><p>Create a <code>urls.py</code> file inside of the jsframework app. I know this is a bit convoluted since we already have a urls.py file in the project directory. We create a urls.py inside jsframework to hold all of the routes for the jsframework app. It’s seperation of concerns.</p>
+<p>Define our route:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</div><div class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</div><div class="line"></div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^$'</span>, views.index, name=<span class="string">'index'</span>),</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>Now we need to define the <code>index</code> view. If you’re coming from rails or anything, a view in django is more like a controller. Templates are more like views. If that confused you, ignore it.</p>
+<p>jsframework/views.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></div><div class="line">    <span class="keyword">return</span> render(request, <span class="string">'jsframework/index.html'</span>)</div></pre></td></tr></table></figure></p>
+<p>Put text into <code>jsframework/templates/jsframework/index.html</code> so you have something to see. The file path is silly but hopefully you can see now why we namespace. Django automatically looks in templates directory for every app. If we had multiple apps the index.html path could get messy.</p>
+<p>Now let the main project <code>urls.py</code> now about the routes that we defined for our jsframework app. That is really simple. Add this line: <code>url(r&#39;^/?&#39;, include(&#39;jsframework.urls&#39;)),</code>. That imports the routes from one url file into the other.</p>
+<p>You’ll see text on the screen.</p>
+<h3 id="Template-inheritance"><a href="#Template-inheritance" class="headerlink" title="Template inheritance"></a>Template inheritance</h3><p>We want index.html to inherit from base.html. Add to base.html:</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="meta">&lt;!DOCTYPE html&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Let's get djangtahstie<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> content %&#125;</span><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span><span class="xml"></span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Add to index.html:<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;% extends <span class="string">"jsframework/base.html"</span> %&#125;</div><div class="line"></div><div class="line">&#123;% <span class="keyword">block</span> content %&#125;</div><div class="line">	<span class="type">What</span> up world?</div><div class="line">&#123;% endblock %&#125;</div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">### Add static files</span></div><div class="line"></div><div class="line"><span class="type">Now</span> we want to <span class="keyword">include</span> our javascript <span class="keyword">and</span> css files</div><div class="line"></div><div class="line">![<span class="type">Suits</span>](http://media.tumblr.com/tumblr_m9un52Tttv1r7tvni.gif)</div><div class="line"></div><div class="line"><span class="type">Adding</span> <span class="keyword">from</span> cdn <span class="keyword">is</span> really easy, it's the same <span class="keyword">as</span> normal. <span class="type">If</span> you want to <span class="keyword">include</span> local <span class="keyword">static</span> files things are a bit different. <span class="type">In</span> settings.py there <span class="keyword">is</span> a line `<span class="type">STATIC_URL</span> = '/<span class="keyword">static</span>/'` that tells django to look <span class="keyword">in</span> folders within apps called <span class="keyword">static</span> <span class="keyword">for</span> <span class="keyword">static</span> files. <span class="type">Create</span> that inside jsframework <span class="keyword">as</span> well <span class="keyword">as</span> directories <span class="keyword">for</span> css, images <span class="keyword">and</span> js.</div></pre></td></tr></table></figure></p>
+<p>$ mkdir jsframework/static<br>$ mkdir jsframework/static/js jsframework/static/css jsframework/static/img<br>$ touch $ mkdir jsframework/static/js/main.js jsframework/static/css/main.css<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">In</span> base.html <span class="keyword">add</span> `<span class="comment">&#123;% load staticfiles %&#125;</span>` <span class="keyword">to</span> line <span class="number">1</span>. <span class="keyword">Then</span> <span class="keyword">reference</span> script/link tags like so:</div></pre></td></tr></table></figure></p>
+<p><link rel="stylesheet" href="/css/main.css"></p>
+<p><script src="/js/main.js"></script><br>```</p>
+<p>See the <a href="https://github.com/jasonshark/django-drf-starter-project" target="_blank" rel="external">source code here</a></p>
+
+	</div>
+</div>
+	
+</body>
+</html>

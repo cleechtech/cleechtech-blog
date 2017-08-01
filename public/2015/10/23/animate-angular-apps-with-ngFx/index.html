@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>animate angular apps with ngFx</h1>
+	    October 23, 2015 
+	    <hr />
+		<p>Recently I stumbled upon <a href="https://github.com/Hendrixer/ngFx" target="_blank" rel="external">ngFx</a> as a simple way to add animations to angular apps. The animations are based off <a href="http://daneden.github.io/animate.css/" target="_blank" rel="external">animate.css</a> except they’re all in javascript and packaged into an angular module. Angular 1.4 is <a href="http://angularjs.blogspot.com/search/label/announcements" target="_blank" rel="external">changing up animations</a> so this post might not be relevant in the future, but here’s a simple animation solution for the present day.</p>
+<a id="more"></a>
+<p><em>Update:</em> To use this tool there are some licensing restrictions. If you’re charging people money to use your app <a href="http://greensock.com/standard-license" target="_blank" rel="external">you’ll need a license</a>. :Sad face:</p>
+<p>If you would like to see the <a href="https://github.com/jasonshark/angular-ngfx-demo" target="_blank" rel="external">source code</a> it is on github.</p>
+<p><a href="http://connorlee.ch/angular-ngfx-demo" target="_blank" rel="external">Demo</a></p>
+<h4 id="Get-started"><a href="#Get-started" class="headerlink" title="Get started"></a>Get started</h4><p>I set up a lightweight <a href="https://github.com/jasonshark/angular-starter" target="_blank" rel="external">angular starter</a> template with ui-router and no clunky build system. Clone it and add the <a href="https://github.com/Hendrixer/ngFx/blob/master/dist/ngFx.js" target="_blank" rel="external">ngFx module</a>, <a href="http://cdnjs.com/libraries/gsap" target="_blank" rel="external">TweenMax</a> library and the <a href="http://cdnjs.com/libraries/angular.js/" target="_blank" rel="external">ngAnimate</a> module to take care of dependencies. You could also use bower if that is easier for you. Add the modules to the app.</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var app</span> = angular.module(<span class="string">'ngfx-demo'</span>, [</div><div class="line">	<span class="string">'ui.router'</span>,</div><div class="line">	<span class="string">'ngFx'</span>,</div><div class="line">	<span class="string">'ngAnimate'</span></div><div class="line">]);</div></pre></td></tr></table></figure>
+<p>So to start off we’re going to click a button and show a login form. I set up an additional state with the same controller.</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.state</span>(<span class="string">'login'</span>, &#123;</div><div class="line">	<span class="attribute">url</span>: <span class="string">"/login"</span>,</div><div class="line">	<span class="attribute">templateUrl</span>: <span class="string">"templates/login.html"</span>,</div><div class="line">	<span class="attribute">controller</span>: <span class="string">'MainCtrl'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Then made a basic login form with a show form button.</p>
+<p><strong>templates/login.html</strong><br><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"> &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="symbol">'row</span> text-center'&gt;</div><div class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="symbol">'btn</span> btn-success' ng-click=<span class="symbol">'showForm</span> = !showForm'&gt;<span class="type">Show</span> form&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div id=<span class="symbol">'loginBo</span>x' ng-show=<span class="symbol">'showFor</span>m' <span class="class"><span class="keyword">class</span></span>=<span class="symbol">'col</span>-sm-offset<span class="number">-4</span> col-sm<span class="number">-4</span> img-rounded fx-fade-down'&gt;</div><div class="line">	&lt;form&gt;</div><div class="line">		&lt;h2&gt;<span class="type">Login</span>&lt;/h2&gt;</div><div class="line">		&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="symbol">'form</span>-group'&gt;</div><div class="line">			&lt;label <span class="keyword">for</span>=<span class="string">"inputEmail"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"sr-only"</span>&gt;<span class="type">Email</span> address&lt;/label&gt;</div><div class="line">			&lt;input <span class="class"><span class="keyword">type</span></span>=<span class="string">"email"</span> id=<span class="string">"inputEmail"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"form-control"</span> placeholder=<span class="string">"Email address"</span> required=<span class="string">""</span> autofocus=<span class="string">""</span>&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">		&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="symbol">'form</span>-group'&gt;</div><div class="line">			&lt;label <span class="keyword">for</span>=<span class="string">"inputPassword"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"sr-only"</span>&gt;<span class="type">Password</span>&lt;/label&gt;</div><div class="line">			&lt;input <span class="class"><span class="keyword">type</span></span>=<span class="string">"password"</span> id=<span class="string">"inputPassword"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"form-control"</span> placeholder=<span class="string">"Password"</span> required=<span class="string">""</span>&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">		&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"checkbox"</span>&gt;</div><div class="line">		  &lt;label&gt;</div><div class="line">		    &lt;input <span class="class"><span class="keyword">type</span></span>=<span class="string">"checkbox"</span> value=<span class="string">"remember-me"</span>&gt; <span class="type">Remember</span> me</div><div class="line">		  &lt;/label&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">		&lt;button <span class="class"><span class="keyword">class</span></span>=<span class="string">"btn btn-lg btn-primary btn-block"</span> <span class="class"><span class="keyword">type</span></span>=<span class="string">"submit"</span>&gt;<span class="type">Sign</span> in&lt;/button&gt;</div><div class="line">	&lt;/form&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>Then there’s the controller</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">'MainCtrl'</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope)</span></span>&#123;</div><div class="line">	$scope.showForm = <span class="keyword">false</span>;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>And a little bit of css to prettify (not to animate).</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">	<span class="attribute">background-color</span>:lightblue;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#loginBox</span> &#123;</div><div class="line">	<span class="attribute">background-color</span>: white;</div><div class="line">	<span class="attribute">margin-top</span>:<span class="number">50px</span>;</div><div class="line">	<span class="attribute">box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="number">5px</span> <span class="number">#888888</span>;</div><div class="line">	<span class="attribute">padding-bottom</span>:<span class="number">20px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>So out of all that code and markup, the only bit that added animation was the <code>fx-fade-down</code> class on the html form’s parent. The module uses the fx namespace, so any class prefixed with <code>fx</code> is about animation and adds javascript functionality. From the readme it says</p>
+<blockquote>
+<p>All dynamic animations tie into ngAnimate hooks. So you can apply them to…</p>
+</blockquote>
+<ul>
+<li>ng-hide / ng-show</li>
+<li>ng-include</li>
+<li>ng-if</li>
+<li>ng-view</li>
+<li>ui-view (if you’re using ui.router)</li>
+<li>ng-switch</li>
+<li>ng-class</li>
+<li>ng-repeat</li>
+</ul>
+<p>This means that these directives are all “animate aware”<sup><u><a href="https://docs.angularjs.org/api/ngAnimate" target="_blank" rel="external">1</a></u></sup>. So when the ng-show binding changes a <em>fade down</em> animation occurs on the element. Right now we trigger the change by clicking an element. So far it’s pretty cool.</p>
+<p><img src="http://cdn2.crushable.com/wp-content/uploads/2013/09/Miley-Cyrus-Shocked.gif" alt=""></p>
+<p><small><strong>Pro tip:</strong> With bootstrap <code>&lt;div class=&quot;img-rounded&quot;&gt;</code> will give you rounded corners on any element.</small></p>
+<h4 id="Animate-all-the-things"><a href="#Animate-all-the-things" class="headerlink" title="Animate all the things"></a>Animate all the things</h4><p>So looking at the list above, we can add animations for every time a page comes in. In <strong>index.html</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div ui-view <span class="class"><span class="keyword">class</span></span>=<span class="string">'fx-bounce-right'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>We can add more complex animations with easings, speeds, directives and event hooks. This is a basic introduction to how to use this module for a project.</p>
+<p>The source code is <a href="https://github.com/jasonshark/angular-ngfx-demo" target="_blank" rel="external">HERE</a>. If you would like to build on this please submit a pull request!</p>
+
+	</div>
+</div>
+	
+</body>
+</html>

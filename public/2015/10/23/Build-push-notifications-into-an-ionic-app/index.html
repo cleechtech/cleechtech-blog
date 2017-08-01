@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>Build push notifications into an ionic app</h1>
+	    October 23, 2015 
+	    <hr />
+		<p>sample code on <a href="https://github.com/jasonshark/ionic-push-starter" target="_blank" rel="external">github here</a>.</p>
+<a id="more"></a>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> ionic start ionic-push-starter io</span></div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ionic-push-starter</span></div><div class="line"><span class="meta">$</span><span class="bash"> ionic upload</span></div></pre></td></tr></table></figure>
+<p>Your app should be available at <a href="https://apps.ionic.io/apps" target="_blank" rel="external">ionic.io</a>. Theoretically you can view your apps with Ionic View, a mobile app. I’m running android 4.1.2 and it no workey.</p>
+<p>Add a plugin for connecting to the internet with android:</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cordova plugin <span class="keyword">add</span><span class="bash"> cordova-plugin-whitelist</span></div></pre></td></tr></table></figure>
+<p>With my testing my other ionic apps missing this plugin was driving me crazy <a href="https://blog.nraboy.com/2015/05/whitelist-external-resources-for-use-in-ionic-framework/" target="_blank" rel="external">this blog post</a> helped me out. The author has a lot of good tutorials.</p>
+<p>Paste in this code to <code>www/js/app.js</code>:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.config([<span class="string">'$ionicAppProvider'</span>, <span class="function"><span class="keyword">function</span><span class="params">($ionicAppProvider)</span> </span>&#123;</div><div class="line">  <span class="comment">// Identify app</span></div><div class="line">  $ionicAppProvider.identify(&#123;</div><div class="line">    <span class="comment">// The App ID (from apps.ionic.io) for the server</span></div><div class="line">    app_id: <span class="string">'YOUR_APP_ID'</span>,</div><div class="line">    <span class="comment">// The public API key all services will use for this app</span></div><div class="line">    api_key: <span class="string">'YOUR_PUBLIC_API_KEY'</span>,</div><div class="line">    <span class="comment">// The GCM project ID (project number) from your Google Developer Console (un-comment if used)</span></div><div class="line">    <span class="comment">// gcm_id: 'YOUR_GCM_ID'</span></div><div class="line">  &#125;);</div><div class="line">&#125;])</div></pre></td></tr></table></figure>
+<p>The <code>app_id</code> comes from <a href="https://apps.ionic.io/apps" target="_blank" rel="external">https://apps.ionic.io/apps</a> and look your at your app’s id. <code>api_key</code> comes from your apps page &gt; Settings &gt; Keys &gt; Public Key.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> ionic platform add android</span></div><div class="line"><span class="meta">$</span><span class="bash"> ionic build android</span></div></pre></td></tr></table></figure>
+<p>This will build your android application. I email this file: <code>ionic-push-starter/platforms/android/build/outputs/apk/android-debug.apk</code> to myself and download my app on my phone. <code>.apk</code> is the filetype of your android app. Ionic converts your html, css and js into native code.</p>
+<p>Email the above file to yourself. You may have to disable some security settings on your android phone.</p>
+<p>Note:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> ionic <span class="built_in">emulate</span> android</span></div><div class="line"><span class="meta">$</span><span class="bash"> ionic serve</span></div></pre></td></tr></table></figure></p>
+<p>Are the ways to test in the emulator and browser. We don’t have push notification functionality there. To use the android emulator you must have the android sdk installed. Push notifications must be tested on a physical device. Open the app, go to the push tab, you’ll see Ionic’s note on that.</p>
+<h4 id="set-up-Google-Cloud-Messaging"><a href="#set-up-Google-Cloud-Messaging" class="headerlink" title="set up Google Cloud Messaging"></a>set up Google Cloud Messaging</h4><p>This is all pretty much from the <a href="http://docs.ionic.io/v1.0/docs/push-android-setup" target="_blank" rel="external">docs</a>.</p>
+<p>Click “Create Project” on <a href="https://console.developers.google.com/project" target="_blank" rel="external">google developer console</a>.</p>
+<p>Copy in the top bar your <strong>Project ID</strong> and <strong>Project Number</strong>. The Project Number will later become your <strong>GCM sender ID</strong>. </p>
+<p>Turn on <strong>Google Cloud Messaging for Android</strong> under Mobile APIs.</p>
+<p><img src="/content/images/2015/06/Screen-Shot-2015-06-12-at-6-54-09-PM.png" alt=""></p>
+<p>Then click “Enable API”. It is taking a bit of time for me</p>
+<p><img src="/content/images/2015/06/Screen-Shot-2015-06-12-at-6-54-33-PM.png" alt=""></p>
+<p>Then create API Public Access Key. Click <strong>Create new Key</strong>.</p>
+<p><img src="/content/images/2015/06/Screen-Shot-2015-06-12-at-7-04-28-PM.png" alt=""></p>
+<p>From the ionic docs</p>
+<blockquote>
+<p>In the Create a new key dialog, click Server key.</p>
+<p>In the resulting configuration dialog leave the box blank to allow connections from any IP</p>
+</blockquote>
+<p>Save the <strong>API Key</strong> that was generated.</p>
+<p>Send the google key to the ionic push service. They will be taking care of this for us.</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ ionic <span class="keyword">push</span> --google-api-<span class="built_in">key</span> your-google-api-<span class="built_in">key</span></div><div class="line">Google API <span class="built_in">Key</span> <span class="built_in">Saved</span></div></pre></td></tr></table></figure>
+<h4 id="Back-to-the-code"><a href="#Back-to-the-code" class="headerlink" title="Back to the code"></a>Back to the code</h4><p>In <code>www/js/app.js</code> go into the <code>.config</code> block we copied in earlier. Uncomment the <code>gcm_id</code> property and add the <strong>Project Number</strong> that’s on the homepage of your google app (click Overview).</p>
+<p>Add the plugin:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ionic plugin <span class="built_in">add</span> http<span class="variable">s:</span>//github.<span class="keyword">com</span>/phonegap-build/PushPlugin.git</div></pre></td></tr></table></figure>
+<p>Now email the app to yourself, download it on your phone. Click register and an alert box with the token will appear</p>
+
+	</div>
+</div>
+	
+</body>
+</html>

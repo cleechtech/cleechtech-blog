@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>Set up drf to play well with angular templates</h1>
+	    October 24, 2015 
+	    <hr />
+		<p>Get Django Rest Framework and Angular.js to play nicely together. Built while a student at RocketU coding bootcamp<br><a id="more"></a></p>
+<p>Create an app with django rest framework (drf) that uses angular.js on the frontend. This app will be built from the <a href="https://github.com/jasonshark/django-drf-starter-project" target="_blank" rel="external">django-drf-starter-project</a>. If you are curious about how the django-drf-starter-project was built you can view the <a href="https://coderwall.com/p/ympo6g/create-a-starter-template-for-working-with-django-rest-framework?p=1&amp;q=" target="_blank" rel="external">tutorial here</a>.</p>
+<p>The full <a href="https://github.com/jasonshark/django-drf-angular-starter-project" target="_blank" rel="external">source code is here</a></p>
+<p><img src="http://media.giphy.com/media/mxDZecDOOsWCA/giphy.gif" alt="Let&#39;s get started"></p>
+<h3 id="Create-the-project"><a href="#Create-the-project" class="headerlink" title="Create the project"></a>Create the project</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> git@github.com:jasonshark/django-drf-starter-project.git</span></div><div class="line"><span class="meta">$</span><span class="bash"> mv django-drf-starter-project django-drf-angular-starter-project</span></div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> django-drf-angular-starter-project</span></div></pre></td></tr></table></figure>
+<p>This downloads the code from part one and renames the project to angular name.</p>
+<h3 id="Set-up-virtual-environment"><a href="#Set-up-virtual-environment" class="headerlink" title="Set up virtual environment"></a>Set up virtual environment</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">source</span> ~/.bash_profile</span></div><div class="line"><span class="meta">$</span><span class="bash"> mkvirtualenv django-drf-angular-starter-project <span class="comment"># OR $ workon django-drf-angular-starter-project if you've already created the virtual environment</span></span></div><div class="line"><span class="meta">$</span><span class="bash"> lsvirtualenv</span></div><div class="line"><span class="meta">$</span><span class="bash"> pip install -r requirements.txt</span></div></pre></td></tr></table></figure>
+<p>On my computer I have to source .bash_profile. I’m lazy and haven’t fixed this. Hopefully you have <a href="https://virtualenvwrapper.readthedocs.org/en/latest/" target="_blank" rel="external">virtualenvwrapper</a> set up properly on your own machine. The last step installs django and django rest framework from requirements.txt.</p>
+<h3 id="Modify-view"><a href="#Modify-view" class="headerlink" title="Modify view"></a>Modify view</h3><p>In the views last time we used django templates, now we want angular to handle the front end. Django will provide one template (<code>jsframework/templates/jsframework/base.html</code>). The rest of our frontend code will be stored in <code>jsframework/static/templates</code>. Angular will access this using <a href="https://github.com/angular-ui/ui-router" target="_blank" rel="external">ui-router</a>.</p>
+<p>Send the base template </p>
+<p><strong>jsframework/views.py:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></div><div class="line">    <span class="keyword">return</span> render(request, <span class="string">'jsframework/base.html'</span>)</div></pre></td></tr></table></figure></p>
+<p>Then in base.html modify it to load angular and use angular views. Delete the django template tags, add:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">ng-app</span>=<span class="string">'drf-angular'</span>&gt;</span></div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ui-view</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Write-angular"><a href="#Write-angular" class="headerlink" title="Write angular"></a>Write angular</h3><p><img src="http://cdn.meme.am/instances/500x/62550074.jpg" alt="don&#39;t get carried away"></p>
+<p>Create an app, routes and a controller:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'drf-angular'</span>, [</div><div class="line">	<span class="string">'ui.router'</span></div><div class="line">]);</div><div class="line"></div><div class="line">app.config(<span class="function"><span class="keyword">function</span><span class="params">($stateProvider, $urlRouterProvider)</span></span>&#123;</div><div class="line">	$stateProvider</div><div class="line">		.state(<span class="string">'home'</span>, &#123;</div><div class="line">			url: <span class="string">'/'</span>,</div><div class="line">			templateUrl: <span class="string">'/static/templates/home.html'</span>,</div><div class="line">			controller: <span class="string">'MainCtrl'</span></div><div class="line">		&#125;);</div><div class="line"></div><div class="line">	$urlRouterProvider.otherwise(<span class="string">'/'</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.controller(<span class="string">'MainCtrl'</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope)</span></span>&#123;</div><div class="line">	$scope.test = <span class="string">"I come from the angularz"</span>;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>All of our angular templates will live in <code>jsframework/static/templates</code>. Reference them using the path specified in <code>templateUrl</code>.</p>
+<p>All our routing will have <code>/#/</code>. Also we have not invented any models or serializers, but we’ve set up a server and handling angular on the frontend.</p>
+<p>The full <a href="https://github.com/jasonshark/django-drf-angular-starter-project" target="_blank" rel="external">source code is here</a></p>
+
+	</div>
+</div>
+	
+</body>
+</html>

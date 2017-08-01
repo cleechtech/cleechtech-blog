@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>Part 3 - Add angular-ui-router to a Ruby On Rails app</h1>
+	    December 14, 2015 
+	    <hr />
+		<p><strong>tldr;</strong> — <a href="https://github.com/cleechtech/rails-task-list" target="_blank" rel="external">source code on github</a> (give it a star!)</p>
+<p>In <a href="http://cleechtech.github.io/2015/12/02/Ruby-On-Rails-%E2%80%94-Introduction-for-the-total-n00b/" target="_blank" rel="external">part 1</a> and <a href="http://cleechtech.github.io/2015/12/04/Add-Angular-js-to-Ruby-on-Rails-app/" target="_blank" rel="external">part 2</a> we set up a Ruby On Rails app with some static data and added angular and bower. In this post we will set up routing and request the list of tasks using angular instead of the rails template language.</p>
+<a id="more"></a>
+<h3 id="Make-Rails-routes"><a href="#Make-Rails-routes" class="headerlink" title="Make Rails routes"></a>Make Rails routes</h3><p>In <strong>config/routes.rb</strong> we are going to set up the task index template as the route. Any request that is unmatched (as a fallback) will also serve the index template. Angular is on the index template so most routing our users see will happen through angular.</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Rails.application.routes.draw <span class="keyword">do</span></div><div class="line">  root <span class="keyword">:to</span> =&gt; <span class="string">"task#index"</span></div><div class="line">  <span class="builtin-name">get</span> <span class="string">"*unmatched_route"</span> =&gt; <span class="string">"task#index"</span></div><div class="line"> <span class="built_in">..</span>.</div></pre></td></tr></table></figure>
+<p>Then in <strong>views/task/index.html.erb</strong> add a space where the routing will occur:</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">class</span>=’container’&gt;</div><div class="line"> &lt;<span class="keyword">div</span> ui-view&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+<p>Next up we are going to use <a href="https://github.com/pitr/angular-rails-templates" target="_blank" rel="external">angular-rails-templates</a>. In the <strong>Gemfile</strong> add</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gem</span> ‘<span class="selector-tag">angular-rails-templates</span>’</div><div class="line"><span class="selector-tag">gem</span> ‘<span class="selector-tag">sprockets</span>’, ‘2<span class="selector-class">.12</span><span class="selector-class">.3</span>’</div></pre></td></tr></table></figure>
+<p>In order for this gem to work we need at least sprockets 2.12. The default sprockets for a rails 4 app (as of this writing is 2.11). You can update sprockets by running</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> bundle update sprockets</span></div></pre></td></tr></table></figure>
+<p>Side note, if you get an error when running bundle install with SSL certificates like:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">Gem:</span>:<span class="string">RemoteFetcher:</span>:<span class="string">FetchError:</span> SSL_connect returned=<span class="number">1</span> errno=<span class="number">0</span> state=SSLv3 read server certificate <span class="string">B:</span> certificate verify failed (<span class="string">https:</span><span class="comment">//rubygems.org/gems/rack-1.5.5.gem)</span></div></pre></td></tr></table></figure>
+<p>then change your gemfile to <code>source ‘http://rubygems.org&#39;</code> instead of <code>&#39;https://rubygems.org&#39;</code>. One letter change gets rid of the error.</p>
+<h3 id="Write-angular-routes"><a href="#Write-angular-routes" class="headerlink" title="Write angular routes"></a>Write angular routes</h3><p>In <strong>app/assets/javascripts/application.js</strong> add the javascript libraries we need.</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/<span class="regexp">/= require angular/angular</span></div><div class="line">/<span class="regexp">/= require angular-ui-router/release</span><span class="regexp">/angular-ui-router</span></div><div class="line">/<span class="regexp">/= require angular-rails-templates</span></div><div class="line">/<span class="regexp">/= require_tree ../templates</span></div></pre></td></tr></table></figure>
+<p>The last line here means that our client side templates live in <strong>app/assets/templates</strong>. So create that folder.</p>
+<p>Next add a module dependency to angular and define our tasks route.</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = angular.module(‘rails-task-<span class="keyword">list</span>’, [</div><div class="line"> ‘ui.router’,</div><div class="line"> ‘templates’</div><div class="line">]);</div><div class="line"></div><div class="line">app.config([</div><div class="line"> ‘$stateProvider’, </div><div class="line"> ‘$urlRouterProvider’, </div><div class="line"> ‘$locationProvider’, </div><div class="line"> <span class="function"><span class="keyword">function</span><span class="params">($stateProvider, $urlRouterProvider, $locationProvider)</span></span>&#123;</div><div class="line">     $stateProvider.state(‘tasks’, &#123;</div><div class="line">          url: ‘/’,templateUrl: ‘tasks.html’,</div><div class="line">          controller: ‘TaskCtrl’</div><div class="line">      &#125;);</div><div class="line"></div><div class="line">    $urlRouterProvider.otherwise(‘/’);</div><div class="line">    $locationProvider.html5Mode(&#123;</div><div class="line">       enabled:<span class="keyword">true</span>,</div><div class="line">       requireBase: <span class="keyword">false</span></div><div class="line">     &#125;);</div><div class="line"> &#125;]);</div></pre></td></tr></table></figure>
+<p>Create <strong>app/assets/templates/tasks.html</strong></p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="string">div </span><span class="string">class=</span>’<span class="string">container’</span>&gt;</div><div class="line"> &lt;<span class="string">div </span><span class="string">class=</span>’<span class="string">row </span><span class="string">text-center’</span>&gt;</div><div class="line"> &lt;<span class="string">h2&gt;</span><span class="string">Task </span><span class="string">List&lt;</span>/<span class="string">h2&gt;</span></div><div class="line"> &lt;<span class="string">ul </span><span class="string">class=</span>’<span class="built_in">list-group’&gt;</span></div><div class="line"> &lt;<span class="string">li </span><span class="string">class=</span>’<span class="built_in">list-group-item’</span> <span class="string">ng-repeat=</span>’<span class="string">task </span><span class="string">in </span><span class="string">tasks’</span>&gt;</div><div class="line"> &#123;&#123;<span class="string">task.</span><span class="string">title&#125;</span>&#125;</div><div class="line"> &lt;/<span class="string">li&gt;</span></div><div class="line"> &lt;/<span class="string">ul&gt;</span></div><div class="line"> &lt;/<span class="string">div&gt;</span></div><div class="line">&lt;/<span class="string">div&gt;</span></div></pre></td></tr></table></figure>
+<p>Now in our controller send the request for the tasks:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">app.controller(‘TaskCtrl’, [</div><div class="line"> ‘$scope’,</div><div class="line"> ‘$http’,</div><div class="line"> <span class="function"><span class="keyword">function</span><span class="params">($scope, $http)</span></span>&#123;</div><div class="line">     $scope.taks = [];</div><div class="line">     $http.get(‘/api/v1/tasks’).then(<span class="function"><span class="keyword">function</span><span class="params">(res)</span></span>&#123;</div><div class="line">         console.log(res.data);</div><div class="line">         $scope.tasks = res.data;</div><div class="line">     &#125;);</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
+<p>Send JSON with Rails Our angular routing is set up and we are ready to handle the JSON response. Now we need to set up the “/api/v1/tasks” endpoint. In <strong>config/routes.rb</strong> add our api definition.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Rails.application.routes.draw <span class="keyword">do</span></div><div class="line"></div><div class="line"><span class="keyword">scope</span> ‘/api’ <span class="keyword">do</span></div><div class="line"> <span class="keyword">scope</span> ‘/v1’ <span class="keyword">do</span></div><div class="line">   <span class="keyword">scope</span> ‘/tasks’ <span class="keyword">do</span></div><div class="line">     <span class="keyword">get</span> ‘/’ =&gt; ‘task#all’</div><div class="line">   <span class="keyword">end</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"> <span class="keyword">end</span></div><div class="line"></div><div class="line"> root :<span class="keyword">to</span> =&gt; “task#<span class="keyword">index</span>”</div><div class="line"> <span class="keyword">get</span> “*unmatched_route” =&gt; “task#<span class="keyword">index</span>”</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<p>This says that when we hit “/api/v1/tasks” invoke the all method in TaskController. Remember, this is our rails task ctrl, not our angular task controller. Define the all method on the TaskController in <strong>app/controllers/task_controller.rb</strong> so that it looks like:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TaskController</span> &lt; ApplicationController</span></div><div class="line"> <span class="function"><span class="keyword">def</span> <span class="title">index</span></span></div><div class="line"> <span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">all</span></span></div><div class="line"> render <span class="symbol">json:</span> Task.all</div><div class="line"> <span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<p>So here the “index” method will render the html page. The “all” method will send all of the tasks to the client as json, then angular will render them. To see the raw JSON point your browser to <code>http://localhost:3000/api/v1/tasks</code>.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>In this tutorial we set up angular.js routing for our Ruby On Rails app. We serve client side templates and fetch data asynchronously using angular.js. You can <a href="https://github.com/cleechtech/rails-task-list" target="_blank" rel="external">check out the source code</a>. Give it a <a href="https://github.com/cleechtech/rails-task-list/stargazers" target="_blank" rel="external">star</a> if you find it helpful. Also you can ask me questions <a href="https://twitter.com/realjasonshark" target="_blank" rel="external">on twitter</a>.</p>
+
+	</div>
+</div>
+	
+</body>
+</html>

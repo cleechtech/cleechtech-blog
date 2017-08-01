@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>How to use the angular-leaflet directive</h1>
+	    October 23, 2015 
+	    <hr />
+		<p>Make some maps with angular.js<br><a id="more"></a></p>
+<p>This is a quick tutorial on how to add maps to your angular.js application. Using google maps API or leaflet.js by themselves is simple. Unfortunately manipulating the DOM is not always straightforward in angular.js projects. External libraries need to be packaged into angular.js directives. Fortunately there is a legit Angular community that has done the heavy lifting for us. </p>
+<p>We’re going to use <a href="https://github.com/tombatossals/angular-leaflet-directive" target="_blank" rel="external">angular-leaflet-directive</a>.</p>
+<p>Here’s the <a href="https://gist.github.com/jasonshark/a090c329185b94a19de2" target="_blank" rel="external">gist</a> of the finished code on the github.</p>
+<p>First include all the scripts. We need the angular library, leaflet, the directive code and our script:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>My Mapping App<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./angular-leaflet-directive.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">'./app.js'</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Note we also included the leaflet.css in the head. Next we need to inject the directive as a dependency to our application when we initialize our app:</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var app</span> = angular.module(<span class="string">"mymapingapp"</span>, [</div><div class="line">    <span class="string">"leaflet-directive"</span></div><div class="line">]);</div></pre></td></tr></table></figure>
+<p>Now link our angular module to the app. Add <code>ng-app=&quot;mymapingapp&quot;</code> to the <html> like a pro. Also attach <code>ng-controller=&quot;MainCtrl&quot;</code> to the body or the section where we want the map. We’ll use the angular.js controller in order to provide options to the map and other goodies. We’ll do this by extending the controller’s scope with some properties. The angular-leaflet directive will read these properties off the controller’s scope and update automatically. Here’s the controller with the options:</html></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">app</span><span class="selector-class">.controller</span>(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, function($scope) &#123;</div><div class="line">	<span class="comment">// make map</span></div><div class="line">    <span class="selector-tag">angular</span><span class="selector-class">.extend</span>($scope, &#123;</div><div class="line">        <span class="attribute">san_fran</span>: &#123;</div><div class="line">            <span class="attribute">lat</span>: <span class="number">37.78</span>,</div><div class="line">            <span class="attribute">lng</span>: -<span class="number">122.42</span>,</div><div class="line">            <span class="attribute">zoom</span>: <span class="number">13</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attribute">events</span>: &#123;&#125;,</div><div class="line">        <span class="attribute">layers</span>: &#123;</div><div class="line">            <span class="attribute">baselayers</span>: &#123;</div><div class="line">                <span class="attribute">osm</span>: &#123;</div><div class="line">                    <span class="attribute">name</span>: <span class="string">'OpenStreetMap'</span>,</div><div class="line">                    <span class="attribute">url</span>: <span class="string">'https://&#123;s&#125;.tiles.mapbox.com/v3/examples.map-i875mjb7/&#123;z&#125;/&#123;x&#125;/&#123;y&#125;.png'</span>,</div><div class="line">                    <span class="attribute">type</span>: <span class="string">'xyz'</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        <span class="attribute">defaults</span>: &#123;</div><div class="line">            <span class="attribute">scrollWheelZoom</span>: false</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
+<p>As you can see we’re extending the $scope object with more properties. We’ll feed these to the directive like whoa:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;leaflet <span class="attribute">center</span>=<span class="string">"san_fran"</span> <span class="attribute">markers</span>=<span class="string">"markers"</span> <span class="attribute">event-broadcast</span>=<span class="string">"events"</span> <span class="attribute">defaults</span>=<span class="string">"defaults"</span> <span class="attribute">id</span>=<span class="string">'map'</span>&gt;&lt;/leaflet&gt;</div></pre></td></tr></table></figure>
+<p>There are a ton more options. Like a jackass I’m going to encourage you to check out the <a href="http://tombatossals.github.io/angular-leaflet-directive/#!/" target="_blank" rel="external">documentation</a>.</p>
+<p>You also need to give the map element a height and width. I select it using an id. Add this CSS: <code>#map{ height: 450px width: 450px; }</code></p>
+<p>So we have a map. Whoop dee do! It’s kind of a lot of code, but we know it’s the Angular Way&#0153;.</p>
+<p>We’ll make our map a bit more interesting. When we click the map let’s add a marker. That is what the <a href="http://tombatossals.github.io/angular-leaflet-directive/#!/examples/events" target="_blank" rel="external">events</a> property on the controller scope is for.</p>
+<p>We’ll listen for clicks to the map. When a click goes down we’ll add a new marker to the array:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// add marker</span></div><div class="line">$scope.markers = <span class="keyword">new</span> <span class="keyword">Array</span>();</div><div class="line">$scope.$on(<span class="string">"leafletDirectiveMap.click"</span>, <span class="function"><span class="keyword">function</span><span class="params">(event, args)</span></span>&#123;</div><div class="line">    <span class="keyword">var</span> leafEvent = args.leafletEvent;</div><div class="line">    $scope.markers.push(&#123;</div><div class="line">        lat: leafEvent.latlng.lat,</div><div class="line">        lng: leafEvent.latlng.lng,</div><div class="line">        draggable: <span class="keyword">true</span></div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>So now everytime you click the map you’ll have annoying draggable markers. Adjust the properties on the controller scope and link that to the <code>&lt;leaflet&gt;</code> directive attributes and you have an angulartastic map!</p>
+<p>You can peep the finished code in this <a href="https://gist.github.com/jasonshark/a090c329185b94a19de2" target="_blank" rel="external">Github Gist</a></p>
+
+	</div>
+</div>
+	
+</body>
+</html>

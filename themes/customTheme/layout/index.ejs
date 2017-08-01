@@ -1,37 +1,86 @@
-<div class='row text-center top-part'>
-    <img src="http://i.imgur.com/Au86HeN.jpg" alt="Connor Leech" class="img-circle" />
-	<h1 class='author-name'><%= config.author %></h1>
-    <div class='col-sm-4 col-sm-offset-4'>
-        <p><%= config.subtitle %></p>
+<!-- Header -->
+<header class="intro-header" style="background-image:url(images/gg.jpg);">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <div class="site-heading">
+            <div class='col-sm-12'>
+                <!--  Social buttons    -->
+                <ul class="list-inline text-center">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/connorleech/" target='_blank'>
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+
+                  <li class="list-inline-item">
+                    <a href="https://medium.com/@connorleech" target='_blank'>
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://twitter.com/Connor11528" target='_blank'>
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://github.com/connor11528" target='_blank'>
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+      </div>
     </div>
-    <div class='col-sm-12'>
-        <a href='https://www.github.com/cleechtech' target='_blank' class="btn btn-github btn-circle">
-            <i class="fa fa-github fa-6"></i>
-        </a>
-        <a href='https://www.linkedin.com/in/connorleech' target='_blank' class="btn btn-linkedin btn-circle">
-            <i class="fa fa-linkedin fa-6"></i>
-        </a>
-        <a href='https://twitter.com/realjasonshark' target='_blank' class="btn btn-info btn-circle">
-            <i class="fa fa-twitter fa-6"></i>
-        </a>
+  </div>
+</header>
+<div class='container'>
+    <div class='row'>
+        <div class='col-sm-3'>
+            <h2>Recent Posts</h2>
+        </div>
+        <div class='col-sm-6 col-sm-offset-1'>
+            <h2>Tags</h2>
+        </div>
+
+
+
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <% page.posts.each(function(post){ %>
+                <div class="post-preview">
+                    <p class="post-meta">
+                      <%= date(post.date, config.date_format) %> 
+                    </p>
+                    <h3 class="post-title">
+                        <a href="<%- url_for(post.path) %>">
+                            <%= post.title %>
+                        </a>
+                    </h3>
+                    <% if(post.excerpt) { %>
+                        <p>
+                            <%- post.excerpt %>
+                        </p>
+                    <% } %>
+                    <div class='row'>
+                        <div class='col-md-2 col-md-offset-10'>
+                            <%- page.content %>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
     </div>
 </div>
-<section class="ss-style-doublediagonal">
-    <% page.posts.each(function(post){ %>
-        <div class='row blog-post'>
-            <h1>
-                <a href="<%- url_for(post.path) %>">
-                    <%= post.title %>
-                </a>
-            </h1>
-            <%= date(post.date, config.date_format) %> 
-            
-            <% if(post.excerpt) { %>
-                <p>
-                    <%- post.excerpt %>
-                </p>
-            <% } %>
-            <hr />
-        </div>
-    <% }) %>
-</section>

@@ -21,6 +21,10 @@ To deploy run:
 $ hexo deploy
 ```
 
-Your build will automagically be deployed to the master branch of https://github.com/cleechtech/cleechtech.github.io (specified in **_config.yml**)
+Your build will automagically be deployed to the master branch of https://github.com/connor11528/connor11528.github.io (specified in **_config.yml**)
+
+### Partials
+
+Partials are included in themeName/layout/_partial and can be included like `<%- partial('_partial/mailchimp_bar') %>`
 
 

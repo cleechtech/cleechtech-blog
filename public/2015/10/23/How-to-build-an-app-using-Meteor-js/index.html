@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>How to build an app using Meteor.js</h1>
+	    October 23, 2015 
+	    <hr />
+		<p>Oh hurrow Meteor.js<br><a id="more"></a></p>
+<p>Here’s a quick tutorial about how to build a full stack website (front end code, server and database) using <a href="https://www.meteor.com/" target="_blank" rel="external">meteor.js</a>.</p>
+<p>Here’s the final <a href="https://github.com/jasonshark/leaderboard" target="_blank" rel="external">source code</a> and the <a href="http://jasonshark-leaderboard.meteor.com/" target="_blank" rel="external">demo app</a>.</p>
+<h6 id="Get-started"><a href="#Get-started" class="headerlink" title="Get started"></a>Get started</h6><p>Install meteor, create an app and run it on port 3000:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">curl http<span class="variable">s:</span>//install.meteor.<span class="keyword">com</span>/ | <span class="keyword">sh</span></div><div class="line">meteor create leaderboard</div><div class="line"><span class="keyword">cd</span> leaderboard</div><div class="line">meteor</div></pre></td></tr></table></figure></p>
+<p>You’ll see the default app. Open your browser to localhost:3000 and also take a look around at the code generated.</p>
+<h6 id="syntax-runthrough"><a href="#syntax-runthrough" class="headerlink" title="syntax runthrough"></a>syntax runthrough</h6><p><code>{{> hello}}</code> renders the <code>&lt;template&gt;</code> with name=”hello”. Meteor is very good about finding these templates. We will store ours in a directory called <code>client</code>.</p>
+<p><code>Template.hello.helpers({ ... }</code> Meteor helper functions match to a specific template. Helper functions make calls to the server to get data that is rendered in the template</p>
+<p><code>Template.hello.events({})</code> these use javascript/jQuery selectors as the keys and executes the value functions when those events take place. Again the events are listened for only with the hello template.</p>
+<h6 id="project-structure"><a href="#project-structure" class="headerlink" title="project structure"></a>project structure</h6><p>Delete all the generated files except .meteor directory. Create three new directories: <code>mkdir client server lib</code></p>
+<p>These are all <a href="http://docs.meteor.com/#/basic/filestructure" target="_blank" rel="external">special directories</a> for meteor. Javascript in meteor is largely isomorphic, meaning it can be run on client and server. By segregating our code into these directories we have separation of concerns. <code>lib</code> is for js code that runs on client and the server.</p>
+<h6 id="render-html"><a href="#render-html" class="headerlink" title="render html"></a>render html</h6><p>Create a file client/layout.html and start the meteor server like before. Add elements to the file<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Leaderboard<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Leaderboard<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Everything’s taken care of by meteor and the layout template is magically rendered. Include a template we have not defined in the body after the <code>&lt;h1&gt;</code>. Add <code>{{> players_list}}</code></p>
+<p>Everything breaks and the layout disappears. Check the browser’s javascript console: “Uncaught Error: No such template: players_list” Let’s define it!</p>
+<p>Create a file in client/players_list.html and make a template<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">template</span> name=<span class="string">"players_list"</span>&gt;</div><div class="line">	<span class="type">List</span> <span class="keyword">of</span> players will go here</div><div class="line">&lt;/<span class="keyword">template</span>&gt;</div></pre></td></tr></table></figure></p>
+<h6 id="define-a-collection"><a href="#define-a-collection" class="headerlink" title="define a collection"></a>define a collection</h6><p>We will have a collection of players in our database. Meteor uses MongoDB. What’s crazy is we can make database calls in our client javascript that will be executed immediately in a local copy of the database that sits in the browser called miniMongo. Bottom line is we want our collection available on the client and the server. Make a file lib/players.js and create a collection in the database<br><code>PlayersList = new Mongo.Collection(&#39;players&#39;);</code></p>
+<p>To render and manipulate the collection we will use helper functions. Make a file client/players_list.js</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Template.players_list.helpers(&#123;</div><div class="line">  <span class="string">'player'</span>: <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    // descending score order</div><div class="line">    // <span class="keyword">if</span> score is the same <span class="built_in">sort</span> ascending alphabetically</div><div class="line">    <span class="keyword">return</span> PlayersList.<span class="built_in">find</span>(&#123;&#125;, &#123;<span class="built_in">sort</span>: &#123;score: <span class="number">-1</span>, name: <span class="number">1</span>&#125; &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Here we match a variable player to the returning result from a meteor-MongoDB <a href="http://docs.meteor.com/#/basic/Mongo-Collection-find" target="_blank" rel="external">find query</a>. This result we can render on the client like whoa: . Though this will actually return a “cursor”. Right now go into the browser js console and execute the query: <code>PlayersList.find({}, {sort: {score: -1, name: 1} })</code>. This will return a cursor that will be easily rendered in a moment. <code>PlayersList.find().fetch()</code> returns a cursor of all elements in the collection and then changes that into an array. The array is empty cause we have nothing in the database.<br><img src="/content/images/2015/04/Screen-Shot-2015-04-08-at-10-38-08-AM-1.png" alt=""></p>
+<p>Update client/players_list.html so it is ready to render a list of players<br><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></div><div class="line">    <span class="template-tag">&#123;&#123;#<span class="name"><span class="builtin-name">each</span></span> player&#125;&#125;</span><span class="xml"></span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"player"</span>&gt;</span></div><div class="line">            <span class="template-variable">&#123;&#123;name&#125;&#125;</span><span class="xml">: </span><span class="template-variable">&#123;&#123;score&#125;&#125;</span><span class="xml"> </span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"increment"</span>&gt;</span>Upvote<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"decrement"</span>&gt;</span>Downvote<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"remove"</span>&gt;</span>Remove<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="template-tag">&#123;&#123;/<span class="name"><span class="builtin-name">each</span></span>&#125;&#125;</span><span class="xml"></span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h6 id="add-to-collection-form"><a href="#add-to-collection-form" class="headerlink" title="add to collection form"></a>add to collection form</h6><p>Add the markup to render a template in layout.html: <code>{{> add_player}}</code></p>
+<p>Then create a file client/add_player.html<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">name</span>=<span class="string">"add_player"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"player_name"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"Add Player"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>You’ll now see our form rendered on our site. In order to handle form submission and add to the collection we must capture the form submit event that will be fired from the <code>add_player</code> template. Make client/add_player.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Template.add_player.events(&#123;</div><div class="line">	<span class="string">'submit form'</span>: <span class="function"><span class="keyword">function</span>(<span class="params">e, tmpl</span>)</span>&#123;</div><div class="line">		e.preventDefault();</div><div class="line">		<span class="keyword">var</span> player_name = 	$(e.target).find(<span class="string">'[name=player_name]'</span>).val();</div><div class="line">		$(e.target).find(<span class="string">'[name=player_name]'</span>).val(<span class="string">''</span>);</div><div class="line">		</div><div class="line">		Meteor.call(<span class="string">'add_player'</span>, player_name)</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Breaking this down, the function will execute on form submit. We’ll prevent the browser’s default action, grab the input field value and reset the form using jQuery then we call a “<a href="http://docs.meteor.com/#/basic/methods" target="_blank" rel="external">Meteor method</a>“.</p>
+<p>Define our add player method on the server so it is secure. Add a file <code>server/player_methods.js</code><br><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Meteor.methods(&#123;</div><div class="line">	<span class="string">'add_player'</span>: <span class="function"><span class="keyword">function</span><span class="params">(player)</span></span>&#123;</div><div class="line">		PlayersList.<span class="built_in">insert</span>(&#123;</div><div class="line">			name: player,</div><div class="line">			score: <span class="number">0</span></div><div class="line">		&#125;);</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>Add players with the form and they’ll pop up in the browser.</p>
+<h6 id="insecure-package"><a href="#insecure-package" class="headerlink" title="insecure package"></a>insecure package</h6><p>Meteor comes with an “insecure” package. Let’s remove that. Instead it is best practice to “publish” and “subscribe” to the data you want available. In your terminal: <code>meteor remove insecure</code>. To add packages (like twitter bootstrap or authentication) use <code>meteor add &lt;packageName&gt;</code></p>
+<p>We publish on the server:<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Meteor.publish(<span class="string">'PlayersList'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> PlayersList.<span class="built_in">find</span>();</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>and subscribe on the client for the template where we want to render the data:</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Meteor</span><span class="selector-class">.subscribe</span>(<span class="string">'PlayersList'</span>);</div></pre></td></tr></table></figure>
+<h6 id="more-code"><a href="#more-code" class="headerlink" title="more code"></a>more code</h6><p>I define some players list events for upvoting. Events call server side methods here:</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Template.players_list.events(&#123;</div><div class="line">  <span class="string">'click .increment'</span>: <span class="function"><span class="keyword">function</span><span class="params">(e, tmpl)</span></span>&#123;</div><div class="line">    Meteor.call(<span class="string">"update_player_score"</span>, <span class="keyword">this</span>._id, <span class="number">5</span>);</div><div class="line">  &#125;,</div><div class="line">  <span class="string">'click .decrement'</span>: <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    Meteor.call(<span class="string">"update_player_score"</span>, <span class="keyword">this</span>._id, <span class="number">-5</span>);</div><div class="line">  &#125;,</div><div class="line">  <span class="string">'click .remove'</span>: <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    Meteor.call(<span class="string">'remove_player'</span>, <span class="keyword">this</span>._id);</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><code>this</code> refrences the data context (so the current player in the each loop)</p>
+<p>Those methods make mongodb calls. The code is in our server directory and therefore hidden from the client:</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="string">'remove_player'</span>: <span class="keyword">function</span>(player_id)&#123;</div><div class="line">	PlayersList.remove(player_id);</div><div class="line">&#125;,</div><div class="line"><span class="string">'update_player_score'</span>: <span class="keyword">function</span>(player_id, toAdd)&#123;</div><div class="line">	PlayersList.update(&#123;_id: player_id&#125;, &#123;$inc: &#123;score: toAdd&#125; &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="That’s-it"><a href="#That’s-it" class="headerlink" title="That’s it"></a>That’s it</h6><p>Check out the <a href="https://github.com/jasonshark/leaderboard" target="_blank" rel="external">source code</a> and the <a href="http://jasonshark-leaderboard.meteor.com/" target="_blank" rel="external">live demo</a>. Deploy your app with <code>meteor deploy &lt;my-app-name&gt;.meteor.com</code></p>
+
+	</div>
+</div>
+	
+</body>
+</html>

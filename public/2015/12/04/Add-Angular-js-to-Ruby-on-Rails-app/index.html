@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>Part 2 - Add Angular.js to Ruby on Rails app</h1>
+	    December 4, 2015 
+	    <hr />
+		<p><img src="http://spr.com/wp-content/uploads/2015/08/RailsAngularBanner1.png" alt="Image from SPR Consulting"></p>
+<p>In my <a href="https://medium.com/@jasonshark/ruby-on-rails-introduction-for-the-total-n00b-fdc1a7f6567e#.bfte8gwl7" target="_blank" rel="external">last ROR post</a> we set up a Rails app that displays a list from the database. Here is the <a href="https://github.com/cleechtech/rails-task-list" target="_blank" rel="external">SOURCE CODE</a>. (Give it a star on github!)</p>
+<p>In this post we will add angular to the task list.<br><a id="more"></a></p>
+<h2 id="Disable-turbolinks"><a href="#Disable-turbolinks" class="headerlink" title="Disable turbolinks"></a>Disable turbolinks</h2><p>Turbolinks is a feature new to Rails 4. It uses pushState to change the address of the current page, meaning scripts do not have to be reloaded. Angular already does some of this magic, though it is <a href="http://stackoverflow.com/questions/14797935/using-angularjs-with-turbolinks" target="_blank" rel="external">possible</a> to use angular and turbolinks together. For this app we’re going to stick with only angular, no turbolinks.</p>
+<p>Remove <code>//= require turbolinks</code> from <strong>app/assets/javascripts/application.js</strong>.</p>
+<p>Next remove <code>“data-turbolinks-track” =&gt; true</code> from <strong>app/views/layouts/application.html.erb</strong>.</p>
+<p>You can also remove <code>gem ‘turbolinks’</code> from the <strong>Gemfile</strong>.</p>
+<h2 id="Add-bower"><a href="#Add-bower" class="headerlink" title="Add bower"></a>Add bower</h2><p>You could download libraries directly and drop them into <strong>vendor/assets/javascripts/</strong> but instead we’re going to use bower to do this for us. Create a file in the root called <code>.bowerrc</code> (run <code>$ touch .bowerrc</code> from the command line) and install client side dependencies (meaning angular and ui-router).</p>
+<p><strong>.bowerrc</strong> file looks like:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"directory"</span>: <span class="string">"vendor/assets/components"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Use tabs to spaces in the .bowerrc file. Install dependencies with:</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="keyword">bower </span>init &amp;&amp; <span class="keyword">bower </span>i angular angular-ui-router --save</div></pre></td></tr></table></figure>
+<p>This creates the bower.json file and installs angular and angular-ui-router.</p>
+<p>Next we need to tell the rails asset pipeline to load in what bower added to <strong>vendor/assets/components</strong>. Go to <strong>config/application.rb</strong> and add this line:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">config<span class="selector-class">.assets</span><span class="selector-class">.paths</span> &lt;&lt; Rails<span class="selector-class">.root</span><span class="selector-class">.join</span>(‘vendor’, ‘assets’, ‘components’)</div></pre></td></tr></table></figure>
+<p>When rails loads in our javascripts and stylesheets it will also know to load in from the “components” folder.</p>
+<p>Next tell the application which <em>specific files</em> we want to load from the components directory. Update <strong>app/assets/javascripts/application.js</strong>:</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//= require jquery</span></div><div class="line"><span class="comment">//= require jquery_ujs</span></div><div class="line"><span class="comment">//= require angular/angular</span></div><div class="line"><span class="comment">//= require angular-ui-router/release/angular-ui-router</span></div></pre></td></tr></table></figure>
+<p>Remove the <code>//= require_tree .</code> line. If we have that it will ignore the folder structure we set up later. The order our files loads in matter so get rid of it!</p>
+<p>Start the rails server and open up the console. Type “angular” and press enter. We’ve used bower to load client libraries into Rails.</p>
+<h2 id="Create-an-Angular-application"><a href="#Create-an-Angular-application" class="headerlink" title="Create an Angular application"></a>Create an Angular application</h2><p>Okay so we’ve configured rails to load in the libraries, now we need to make our angular app and have that load in properly.</p>
+<p>First attach a module to <strong>app/views/layouts/application.html.erb</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">ng-app</span>=<span class="string">’rails-task-list’</span>&gt;</span></div><div class="line">...</div></pre></td></tr></table></figure>
+<p>Next make a folder for controllers and factories in <strong>app/assets/javascripts</strong></p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mkdir app<span class="regexp">/assets/</span>javascripts<span class="regexp">/controllers app/</span>assets<span class="regexp">/javascripts/</span>factories</div></pre></td></tr></table></figure>
+<p>Tell the asset pipeline about these new directories, add to <strong>config/application.rb</strong>:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">config<span class="selector-class">.assets</span><span class="selector-class">.paths</span> &lt;&lt; Rails<span class="selector-class">.root</span><span class="selector-class">.join</span>(‘app’, ‘javascripts’, ‘controllers’)</div><div class="line"> config<span class="selector-class">.assets</span><span class="selector-class">.paths</span> &lt;&lt; Rails<span class="selector-class">.root</span><span class="selector-class">.join</span>(‘app’, ‘javascripts’, ‘factories’)</div></pre></td></tr></table></figure>
+<p>Then in <strong>app/assets/javascripts/application.js</strong> instantiate the angular module.</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//= require jquery</span></div><div class="line"><span class="comment">//= require jquery_ujs</span></div><div class="line"><span class="comment">//= require angular/angular</span></div><div class="line"><span class="comment">//= require angular-ui-router/release/angular-ui-router</span></div><div class="line"><span class="comment">//= require_self</span></div><div class="line"><span class="comment">//= require controllers/task</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> <span class="keyword">app</span> = angular.module(‘rails-task-<span class="keyword">list</span>’, [</div><div class="line"> ‘ui.router’</div><div class="line">]);</div></pre></td></tr></table></figure>
+<p>Create a TaskCtrl in <strong>app/assets/javascripts/controllers/task.js</strong>:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">app.controller(‘TaskCtrl’, [</div><div class="line"> ‘$scope’,</div><div class="line"> <span class="function"><span class="keyword">function</span><span class="params">($scope)</span></span>&#123;</div><div class="line">     $scope.message = ‘I come from the angular controller!’;</div><div class="line"> &#125;]);</div></pre></td></tr></table></figure>
+<p>And finally update the task view in <strong>app/views/task/index.html.erb</strong>:</p>
+<figure class="highlight erb"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">’container’</span> <span class="attr">ng-controller</span>=<span class="string">’TaskCtrl’</span>&gt;</span></span></div><div class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">’row</span> <span class="attr">text-center</span>’&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Tasks<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"></div><div class="line"> <span class="tag">&lt;<span class="name">pre</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">pre</span>&gt;</span></div><div class="line"></div><div class="line"> <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">’list-group’</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">%</span></span><span class="ruby"> @tasks.each <span class="keyword">do</span> <span class="params">|task|</span> </span><span class="xml"><span class="tag">%&gt;</span></span></div><div class="line"> <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">’list-group-item’</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span></span><span class="ruby"> task.title </span><span class="xml"><span class="tag">%&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line"> <span class="tag">&lt;<span class="name">%</span></span><span class="ruby"> <span class="keyword">end</span> </span><span class="xml"><span class="tag">%&gt;</span></span></div><div class="line"> <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>If you are not following along, make sure you created the Rails task controller like in the <a href="https://medium.com/@jasonshark/ruby-on-rails-introduction-for-the-total-n00b-fdc1a7f6567e#.bfte8gwl7" target="_blank" rel="external">last post</a>. In upcoming posts we will use ui-router with Ruby On Rails.</p>
+<p>Source code: <a href="https://github.com/cleechtech/rails-task-list" target="_blank" rel="external">https://github.com/cleechtech/rails-task-list</a></p>
+<p>Ask me questions or give feedback via comments or <a href="https://twitter.com/realjasonshark" target="_blank" rel="external">on twitter</a>!</p>
+
+	</div>
+</div>
+	
+</body>
+</html>

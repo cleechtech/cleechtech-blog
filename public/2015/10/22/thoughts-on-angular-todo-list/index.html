@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>thoughts on angular todo list</h1>
+	    October 22, 2015 
+	    <hr />
+		<p>Complaints about angular.js after playing around extensively with React and Meteor<br><a id="more"></a></p>
+<p>I’m revisiting angular after not using it for a while. To get started again with my class @ RocketU we made a todo list. My code is here:</p>
+<p><a href="http://jsfiddle.net/9cxpha19/" target="_blank" rel="external">JS Fiddle Todo list</a></p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-app</span>=<span class="string">'TodoList'</span> <span class="attr">ng-controller</span>=<span class="string">'TodoCtrl as tc'</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>To list<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'text'</span> <span class="attr">placeholder</span>=<span class="string">'Add a todo...'</span> <span class="attr">ng-model</span>=<span class="string">'tc.newTodo'</span> <span class="attr">ng-keypress</span>=<span class="string">"tc.checkEnter($event)"</span>&gt;</span>   </div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">ng-click</span>=<span class="string">'tc.addTodo($event)'</span>&gt;</span>Add todo<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-repeat</span>=<span class="string">'todo in tc.todos track by $index'</span> <span class="attr">ng-class</span>=<span class="string">'</span></span><span class="template-variable">&#123;done: todo.completed&#125;</span><span class="xml"><span class="tag"><span class="string">'</span>&gt;</span></span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'checkbox'</span> <span class="attr">ng-model</span>=<span class="string">'todo.completed'</span>&gt;</span></div><div class="line">        <span class="template-variable">&#123;&#123;todo.name&#125;</span><span class="xml">&#125; - <span class="tag">&lt;<span class="name">span</span> <span class="attr">ng-click</span>=<span class="string">'tc.remove($index)'</span>&gt;</span>X<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>First the markup seems real dirty. There are all sorts of extra the developer should be clued in about like <code>ng-class</code>, <code>ng-keypress</code>, passing in <code>$index</code> and <code>$event</code>. I like how I can attach <code>ng-model</code> to the checkbox to make it automatically checked. I had trouble updating the data and the state of the checkbox using backbone. Angular’s two way data binding is for sure awesome. </p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'TodoList'</span>, [])</div><div class="line">.controller(<span class="string">'TodoCtrl'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">var</span> <span class="keyword">self</span> = this;</div><div class="line">    <span class="keyword">self</span>.todos = [&#123;name: <span class="string">'Learn angular'</span>, completed: <span class="keyword">true</span>&#125;, </div><div class="line">                  &#123;name: <span class="string">'Learn React'</span>, completed: <span class="keyword">false</span>&#125;];</div><div class="line">    </div><div class="line">    <span class="keyword">self</span>.addTodo = <span class="function"><span class="keyword">function</span><span class="params">(e)</span></span>&#123;</div><div class="line">        <span class="keyword">self</span>.todos.push(&#123;name: <span class="keyword">self</span>.newTodo, completed: <span class="keyword">false</span>&#125;);</div><div class="line">        <span class="keyword">self</span>.newTodo = <span class="string">''</span>;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    <span class="keyword">self</span>.checkEnter = <span class="function"><span class="keyword">function</span><span class="params">(e)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(e.keyCode === <span class="number">13</span>)&#123;</div><div class="line">            <span class="keyword">self</span>.addTodo();</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    <span class="keyword">self</span>.remove = <span class="function"><span class="keyword">function</span><span class="params">(index)</span></span>&#123;</div><div class="line">        <span class="keyword">self</span>.todos.splice(index, <span class="number">1</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>We used the new <code>controller as</code> syntx, which is less of a pain than I was expecting. As long as we use <code>var self</code> we don’t run into any problems. I bet when Angular 2.0 and ES6 come out we won’t have to worry about the scope of this and whatnot. Looking forward to diving back into angular directives!</p>
+<p>Soon I’ll also post a bit on how to build these simple apps. I like the declarative nature of react. It feels like a whole lot less magic. To infinity and beyond!</p>
+
+	</div>
+</div>
+	
+</body>
+</html>

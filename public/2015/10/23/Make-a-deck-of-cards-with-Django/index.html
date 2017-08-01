@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>Make a deck of cards with Django</h1>
+	    October 23, 2015 
+	    <hr />
+		<p>Learn you Django by making a deck of cards out of internets.<br><a id="more"></a></p>
+<p>For the impatient, <a href="https://github.com/jasonshark/django_cards" target="_blank" rel="external">source code is here</a></p>
+<p>Start the project</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> django-admin startproject django_cards</span></div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> django_cards</span></div></pre></td></tr></table></figure>
+<p>create a virtual environment and activate it</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ virtualenv venv</div><div class="line">New python executable <span class="keyword">in</span> venv<span class="regexp">/bin/</span>python2.<span class="number">7</span></div><div class="line">Also creating executable <span class="keyword">in</span> venv<span class="regexp">/bin/</span>python</div><div class="line">Installing setuptools, pip...done.</div><div class="line"></div><div class="line">$ . venv<span class="regexp">/bin/</span>activate</div><div class="line">(venv) $</div></pre></td></tr></table></figure>
+<p>venv is a convention. It creates a new environment for our project where we’ll install django and other packages. A virtual environment is like a virtual machine with way less overhead. Add venv to .gitignore for version control.</p>
+<p>Install django and generate a requirements.txt file. This is where all the packages that our app requires will be defined. It’s like a gemfile in ruby or package.json in node.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> pip install django</span></div><div class="line"><span class="meta">$</span><span class="bash"> pip freeze &gt; requirements.txt</span></div></pre></td></tr></table></figure>
+<p>This creates our project directory. Now we create a new app called cards where we will have all of our application logic.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> django-admin.py startapp cards</span></div></pre></td></tr></table></figure>
+<p>cards is now an app we’ll use within the django_cards project. In django_cards/settings.py add cards to our installed apps:</p>
+<figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="type">INSTALLED_APPS</span> = (</div><div class="line">    <span class="symbol">'django</span>.contrib.contenttypes',</div><div class="line">    <span class="symbol">'django</span>.contrib.sessions',</div><div class="line">    <span class="symbol">'django</span>.contrib.messages',</div><div class="line">    <span class="symbol">'django</span>.contrib.staticfiles',</div><div class="line">    <span class="symbol">'cards'</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Create a card model in cards/models.py. This will define the columns in our</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">from django.db <span class="built_in">import</span> models</div><div class="line"></div><div class="line">class Card(models.Model):</div><div class="line">    <span class="attr">SPADE</span> = <span class="number">0</span></div><div class="line">    <span class="attr">CLUB</span> = <span class="number">1</span></div><div class="line">    <span class="attr">DIAMOND</span> = <span class="number">2</span></div><div class="line">    <span class="attr">HEART</span> = <span class="number">3</span></div><div class="line">    <span class="attr">SUITS</span> = (</div><div class="line">        (SPADE, <span class="string">"spade"</span>),</div><div class="line">        (CLUB, <span class="string">"club"</span>),</div><div class="line">        (DIAMOND, <span class="string">"diamond"</span>),</div><div class="line">        (HEART, <span class="string">"heart"</span>)</div><div class="line">    )</div><div class="line">    <span class="attr">suit</span> = models.PositiveSmallIntegerField(<span class="attr">choices=SUITS)</span></div><div class="line">    <span class="attr">rank</span> = models.CharField(<span class="attr">max_length=5)</span></div></pre></td></tr></table></figure>
+<p>Add to a new file cards/utils.py:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> models <span class="keyword">import</span> Card</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_deck</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    Create a list of playing cards in our database</div><div class="line">    """</div><div class="line">    suits = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</div><div class="line">    ranks = [<span class="string">'two'</span>, <span class="string">'three'</span>, <span class="string">'four'</span>, <span class="string">'five'</span>, <span class="string">'six'</span>, <span class="string">'seven'</span>, <span class="string">'eight'</span>, <span class="string">'nine'</span>, <span class="string">'ten'</span>, <span class="string">'jack'</span>, <span class="string">'queen'</span>, <span class="string">'king'</span>, <span class="string">'ace'</span>]</div><div class="line">    cards = [Card(suit=suit, rank=rank) <span class="keyword">for</span> rank <span class="keyword">in</span> ranks <span class="keyword">for</span> suit <span class="keyword">in</span> suits]</div><div class="line">    Card.objects.bulk_create(cards)</div></pre></td></tr></table></figure>
+<p>Now we’re going to set up our database. Make the migrations and migrate the database. We’re also going to run the create deck function.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> python manage.py makemigrations</span></div><div class="line"><span class="meta">$</span><span class="bash"> python manage.py migrate</span></div><div class="line"><span class="meta">$</span><span class="bash"> python manage.py shell</span></div><div class="line"><span class="meta">&gt;</span><span class="bash">&gt; from cards.utils import create_deck</span></div><div class="line"><span class="meta">&gt;</span><span class="bash">&gt; create_deck()</span></div></pre></td></tr></table></figure>
+<p>Next we’ll set up routing. In the project directory (django_cards) add a new route: </p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url(<span class="string">r'^$'</span>, <span class="string">'cards.views.home'</span>, name=<span class="string">'home'</span>),</div></pre></td></tr></table></figure>
+<p>This regex matches our index route and will use the view as defined in the views.py file of our card app. The last parameter gives our route a name.</p>
+<p>Define the home view:</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="title">from</span> models <span class="keyword">import</span> Card</div><div class="line"></div><div class="line"><span class="title">def</span> home(request):</div><div class="line">	<span class="class"><span class="keyword">data</span> = &#123;</span></div><div class="line">		'<span class="title">cards'</span>: <span class="type">Card</span>.<span class="title">objects</span>.<span class="title">all</span>()</div><div class="line">	&#125;</div><div class="line">	return render(request, 'cards.html', <span class="class"><span class="keyword">data</span>)</span></div></pre></td></tr></table></figure>
+<p>This provides all the card data to our template. Inside of the cards directory add a templates/cards.html. This will be our homepage. Django automatically knows to search for cards.html inside of a templates directory.</p>
+<p>Add a basic loop to templates/cards.html:</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></div><div class="line">    <span class="template-tag">&#123;% <span class="name"><span class="name">for</span></span> card <span class="keyword">in</span> cards %&#125;</span><span class="xml"></span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Suit: <span class="template-variable">&#123;&#123; card.suit &#125;&#125;</span><span class="xml">, Rank: </span><span class="template-variable">&#123;&#123; card.rank &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></div><div class="line">    <span class="template-tag">&#123;% <span class="name"><span class="name">endfor</span></span> %&#125;</span><span class="xml"></span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Then run the server and see the card data displayed on localhost:8000</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> python manage.py runserver</span></div></pre></td></tr></table></figure>
+<p>We’ll make our template a bit more snazzy:</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="xml">We have </span><span class="template-variable">&#123;&#123; cards | length &#125;&#125;</span><span class="xml"> cards!</span></div><div class="line"></div><div class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">for</span></span> card <span class="keyword">in</span> cards %&#125;</span><span class="xml"></span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">            Capitalized Suit: <span class="template-variable">&#123;&#123; card.get_suit_display | capfirst &#125;&#125;</span><span class="xml"> <span class="tag">&lt;<span class="name">br</span>&gt;</span></span></div><div class="line">            Uppercased Rank: <span class="template-variable">&#123;&#123; card.rank | upper &#125;&#125;</span><span class="xml"></span></div><div class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endfor</span></span> %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
+<p>We now use get_FIELD_display to show the suit name. This is a bit magical to me, had to <a href="http://stackoverflow.com/questions/5730211/how-does-get-field-display-in-django-work" target="_blank" rel="external">investigate on SO</a>.</p>
+<p>In future tutorials we will build up actual functionality to play cards. Keep an eye on the <a href="https://github.com/jasonshark/django_cards" target="_blank" rel="external">SOURCE code</a> for this tutorial!</p>
+
+	</div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>Oh hurrow Koa.js</h1>
+	    October 23, 2015 
+	    <hr />
+		<p>Koa is a node.js web framework that is more modern than express. We will build a functional web server in this tutorial<br><a id="more"></a></p>
+<p><img src="https://camo.githubusercontent.com/674563115c4e0d4e5d99440b916952ad795c498e/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f363339363931332f6b6f612f6c6f676f2e706e67" alt=""></p>
+<iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=koa-starter&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=koajs&repo=koa&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+
+<p>Koa is a node.js web framework that is more modern than express. We will build a functional web server in this tutorial. Koa takes advantage of es6 features, like <a href="http://davidwalsh.name/es6-generators" target="_blank" rel="external">generators</a>. Generators do not actually generate anything. Read that article to get a gist (hint <code>yield</code> statements matter). I’ll be here when you get back.</p>
+<p>Welcome back! To use this we need the newest version of node. Check with:</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="keyword">node</span> <span class="title">-v</span></div><div class="line">v0.<span class="number">12.7</span></div></pre></td></tr></table></figure>
+<p>Then to run our es6 code with <code>$ node --harmony server.js</code>. To not type that –harmony flag all the time add an alias to <strong>~/.bash_profile</strong>: </p>
+<figure class="highlight monkey"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alias</span> <span class="title">node</span>=<span class="string">"node --harmony"</span></div><div class="line"><span class="keyword">alias</span> <span class="title">nodemon</span>=<span class="string">"nodemon --harmony"</span></div></pre></td></tr></table></figure>
+<p>Harmony means ES6. Nodemon is for <a href="https://github.com/remy/nodemon" target="_blank" rel="external">nodemon</a>.</p>
+<h3 id="Start-project"><a href="#Start-project" class="headerlink" title="Start project"></a>Start project</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> mkdir project-name</span></div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> project-name &amp;&amp; npm init</span></div><div class="line"><span class="meta">$</span><span class="bash"> npm install koa koa-route --save</span></div></pre></td></tr></table></figure>
+<p>Make a simple <strong>server.js</strong>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</div><div class="line"><span class="keyword">var</span> route = <span class="built_in">require</span>(<span class="string">'koa-route'</span>);</div><div class="line"><span class="keyword">var</span> app = koa();</div><div class="line"></div><div class="line"><span class="comment">// routes</span></div><div class="line">app.use(route.get(<span class="string">'/'</span>, index));</div><div class="line">app.use(route.get(<span class="string">'/about'</span>, about));</div><div class="line"></div><div class="line"><span class="comment">// es6 generators expected as arguments</span></div><div class="line"><span class="function"><span class="keyword">function</span> *<span class="title">index</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="comment">// this is a Koa Context</span></div><div class="line">	<span class="comment">// A Koa Context encapsulates node’s request and response objects into a single object </span></div><div class="line">	<span class="keyword">this</span>.body = <span class="string">"&lt;h1&gt;Hello Koa!&lt;/h1&gt;"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> *<span class="title">about</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Koa Context (this) has these properties: '</span>);</div><div class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(<span class="keyword">this</span>));</div><div class="line">	<span class="keyword">this</span>.body = <span class="string">"&lt;h2&gt;This is the about route&lt;/h2&gt;"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">app.listen(<span class="number">8008</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Koa listening on port 8008'</span>);</div></pre></td></tr></table></figure>
+<p>Here we see the es6 generators. Route callbacks expect generators, not regular functions. <code>this</code> in the generator is special in koa. It contains request and response as well as some other handy bits for web apps. When you hit the /about route you will see this:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Koa Context (<span class="keyword">this</span>) has these <span class="string">properties:</span> </div><div class="line">[ <span class="string">'request'</span>,</div><div class="line">  <span class="string">'response'</span>,</div><div class="line">  <span class="string">'app'</span>,</div><div class="line">  <span class="string">'req'</span>,</div><div class="line">  <span class="string">'res'</span>,</div><div class="line">  <span class="string">'onerror'</span>,</div><div class="line">  <span class="string">'originalUrl'</span>,</div><div class="line">  <span class="string">'cookies'</span>,</div><div class="line">  <span class="string">'accept'</span>,</div><div class="line">  <span class="string">'state'</span> ]</div></pre></td></tr></table></figure>
+<p>Okay little different, nothing crazy. Next up we want to render some template files. ejs will be our template engine. <a href="https://github.com/tj/co-views" target="_blank" rel="external">co-views</a> has some config options for using jade or swig.. whatever that is.</p>
+<p><code>$ npm install co-views ejs --save</code></p>
+<p>Then in <strong>server.js</strong> add:</p>
+<figure class="highlight qml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> render = views(__dirname + <span class="string">'/views'</span>, &#123; <span class="attribute">ext</span>: <span class="string">'ejs'</span> &#125;);</div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> *<span class="title">index</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">this</span>.body = <span class="keyword">yield</span> render(<span class="string">'index'</span>, &#123;&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This is similar to express. The empty object is data we can pass to the template engine. <code>co-body</code> acts like <code>body-parser</code> for incoming input so add that too.</p>
+<p><code>$ npm install co-body --save</code></p>
+<h4 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h4><p>Koa CRUD app: <a href="http://weblogs.asp.net/shijuvarghese/a-simple-crud-demo-with-koa-js" target="_blank" rel="external">http://weblogs.asp.net/shijuvarghese/a-simple-crud-demo-with-koa-js</a></p>
+<p>Koa examples templates: <a href="https://github.com/koajs/examples/tree/master/templates" target="_blank" rel="external">https://github.com/koajs/examples/tree/master/templates</a></p>
+<p>In the future we will implement OAuth with <a href="https://github.com/simov/grant" target="_blank" rel="external">grant</a> and I will build out a more full featured starter template.</p>
+<p>Source code is <a href="https://github.com/jasonshark/koa-starter" target="_blank" rel="external">AVAILABLE HERE</a>.</p>
+<iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=koa-starter&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+
+	</div>
+</div>
+	
+</body>
+</html>

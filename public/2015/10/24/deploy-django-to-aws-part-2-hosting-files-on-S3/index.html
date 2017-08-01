@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>deploy django to aws part 2- hosting files on S3</h1>
+	    October 24, 2015 
+	    <hr />
+		<p>Continued from part 1: <a href="http://connorleech.ghost.io/deploy-django-to-aws/" target="_blank" rel="external">deploy-django-to-aws</a>.</p>
+<p>I’m learning from <a href="https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/" target="_blank" rel="external">this tutorial</a>.</p>
+<a id="more"></a>
+<h3 id="Set-up-s3-bucket"><a href="#Set-up-s3-bucket" class="headerlink" title="Set up s3 bucket"></a>Set up s3 bucket</h3><p>Go to <a href="https://console.aws.amazon.com/s3/home" target="_blank" rel="external">https://console.aws.amazon.com/s3/home</a> and click “Create Bucket”</p>
+<p><img src="/content/images/2015/06/Screen-Shot-2015-06-18-at-2-07-17-PM.png" alt=""></p>
+<p>Once your bucket is created click on “Permissions”:</p>
+<p><img src="/content/images/2015/06/Screen-Shot-2015-06-18-at-2-27-07-PM.png" alt=""></p>
+<p>Then hit “Edit bucket policy”. This is our bucket policy:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"Statement"</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">"Principal"</span>: &#123;</div><div class="line">          <span class="attr">"AWS"</span>: <span class="string">"*"</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"Effect"</span>: <span class="string">"Allow"</span>,</div><div class="line">      <span class="attr">"Action"</span>: <span class="string">"s3:*"</span>,</div><div class="line">      <span class="attr">"Resource"</span>: [<span class="string">"arn:aws:s3:::bucket-name/*"</span>, <span class="string">"arn:aws:s3:::bucket-name"</span>]</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>I got the policy from this <a href="http://stackoverflow.com/questions/10854095/boto-exception-s3responseerror-s3responseerror-403-forbidden" target="_blank" rel="external">Stack Overflow post</a>.</p>
+<p>Where <code>cptmusicblog</code> is the name of my bucket. Add a file and double click on it. You should be able to see it publicly. Here is a url for an image I uploaded:</p>
+<p><a href="https://s3-us-west-2.amazonaws.com/cptmusicblog/splash.png" target="_blank" rel="external">https://s3-us-west-2.amazonaws.com/cptmusicblog/splash.png</a></p>
+<h3 id="Set-up-django-to-get-static-files-from-s3"><a href="#Set-up-django-to-get-static-files-from-s3" class="headerlink" title="Set up django to get static files from s3"></a>Set up django to get static files from s3</h3><p>Install some packages and add them to <code>requirements.txt</code>:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> pip install django-storages boto</span></div><div class="line"><span class="meta">$</span><span class="bash"> pip freeze &gt; requirements.txt</span></div></pre></td></tr></table></figure>
+<p>Add “storages” to INSTALLED_APPS in <code>iotd/iotd/settings.py</code>:</p>
+<figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="type">INSTALLED_APPS</span> = (</div><div class="line">    <span class="symbol">'django</span>.contrib.admin',</div><div class="line">    <span class="symbol">'django</span>.contrib.auth',</div><div class="line">    <span class="symbol">'django</span>.contrib.contenttypes',</div><div class="line">    <span class="symbol">'django</span>.contrib.sessions',</div><div class="line">    <span class="symbol">'django</span>.contrib.messages',</div><div class="line">    <span class="symbol">'django</span>.contrib.staticfiles',</div><div class="line">    <span class="symbol">'images'</span>,</div><div class="line">    <span class="symbol">'storages'</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Then add more to settings.py:</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">AWS_HEADERS = &#123;</div><div class="line">    'Expires': 'Thu, 31 Dec <span class="number">2099</span> 20:00:00 GMT',</div><div class="line">    'Cache-Control': 'max-age=<span class="number">94608000</span>',</div><div class="line">&#125;</div><div class="line"></div><div class="line">AWS_STORAGE_BUCKET_NAME = 'BUCKET_NAME'</div><div class="line">AWS_ACCESS_KEY_ID = 'xxxxxxxxxxxxxxxxxxxx'</div><div class="line">AWS_SECRET_ACCESS_KEY = 'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'</div></pre></td></tr></table></figure>
+<p>The AWS_HEADERS means that AWS tells browsers they can cache the files until 2099</p>
+<p><img src="http://media.giphy.com/media/3jmLczk5BbfZC/giphy.gif" alt=""></p>
+<p>which happens to be in</p>
+<p><img src="http://media.giphy.com/media/11fp850173Eoyk/giphy.gif" alt=""></p>
+<p>Get your access credentials by clicking your username dropdown &gt; “Security credentials” &gt; “Users”.</p>
+<p>If you haven’t created a user you have to do that. Then click <code>Manage Access Keys</code>. Then <code>Create Access Key</code>. We can only view our private key once. Download the keys as a CSV file. Keep these secret so no one exploits them by mining bitcoin on your account with your credentials (do not push them to github).</p>
+<p>Also add these lines to <code>settings.py</code>:</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">AWS_S3_CUSTOM_DOMAIN</span> = <span class="string">'%s.s3.amazonaws.com'</span> % AWS_STORAGE_BUCKET_NAME</div><div class="line"><span class="attr">STATIC_URL</span> = <span class="string">"https://%s/"</span> % AWS_S3_CUSTOM_DOMAIN</div><div class="line"><span class="attr">STATICFILES_STORAGE</span> = <span class="string">'storages.backends.s3boto.S3BotoStorage'</span></div></pre></td></tr></table></figure>
+<h3 id="CORS-configuration"><a href="#CORS-configuration" class="headerlink" title="CORS configuration"></a>CORS configuration</h3><p>Go to S3 bucket preferences and under “edit CORS configuration” paste this in:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">CORSConfiguration</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">CORSRule</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">AllowedOrigin</span>&gt;</span>*<span class="tag">&lt;/<span class="name">AllowedOrigin</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">AllowedMethod</span>&gt;</span>GET<span class="tag">&lt;/<span class="name">AllowedMethod</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">MaxAgeSeconds</span>&gt;</span>3000<span class="tag">&lt;/<span class="name">MaxAgeSeconds</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">AllowedHeader</span>&gt;</span>Authorization<span class="tag">&lt;/<span class="name">AllowedHeader</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">CORSRule</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">CORSConfiguration</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Try-it"><a href="#Try-it" class="headerlink" title="Try it"></a>Try it</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> python iotd/manage.py collectstatic</span></div><div class="line"><span class="meta">$</span><span class="bash"> eb deploy cptmusicblog-dev</span></div></pre></td></tr></table></figure>
+	</div>
+</div>
+	
+</body>
+</html>

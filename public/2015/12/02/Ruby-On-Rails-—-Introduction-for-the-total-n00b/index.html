@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>Part 1 - Ruby On Rails for the MEAN stack developer</h1>
+	    December 2, 2015 
+	    <hr />
+		<p>Ruby On Rails has been around since about 2006 and it is a tried and tested way to build web applications. In this tutorial we’re going to use the popular Bootstrap 3 UI library and Ruby On Rails 4 to create a server and database. The app will display a prepopulated list of tasks. In future lessons we will go through adding and modifying tasks.</p>
+<p><strong>tl;dr</strong> <a href="https://github.com/cleechtech/rails-task-list" target="_blank" rel="external">SOURCE CODE</a><br><a id="more"></a><br><strong>Questions?</strong> Hit me up <a href="https://twitter.com/realjasonshark" target="_blank" rel="external">on twitter</a></p>
+<h3 id="Getting-started-with-Ruby-On-Rails"><a href="#Getting-started-with-Ruby-On-Rails" class="headerlink" title="Getting started with Ruby On Rails"></a>Getting started with Ruby On Rails</h3><p>First step, check that you have ROR and Postgres installed, create a new project with a postgres database:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> rails --version</span></div><div class="line">Rails 4.1.5</div><div class="line"><span class="meta">$</span><span class="bash"> psql --version</span></div><div class="line">psql (PostgreSQL) 9.3.5</div><div class="line"><span class="meta">$</span><span class="bash"> rails new rails-angular database=postgresql</span></div></pre></td></tr></table></figure>
+<p>That failed with a</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ bundle install</div><div class="line"></div><div class="line">Fetching gem metadata from <span class="string">https:</span><span class="comment">//rubygems.org/............</span></div><div class="line">Fetching additional metadata from <span class="string">https:</span><span class="comment">//rubygems.org/..</span></div><div class="line">Resolving dependencies…</div><div class="line"><span class="string">Gem:</span>:<span class="string">RemoteFetcher:</span>:<span class="string">FetchError:</span> SSL_connect returned=<span class="number">1</span> errno=<span class="number">0</span> state=SSLv3 read server certificate <span class="string">B:</span> certificate verify failed (<span class="string">https:</span><span class="comment">//rubygems.org/gems/rake-10.4.2.gem)</span></div></pre></td></tr></table></figure>
+<p>Off to a slow start. Checked <a href="http://stackoverflow.com/a/19151697/2031033" target="_blank" rel="external">SO</a> and ran the below commands for a fix:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> rvm get stable</span></div><div class="line"><span class="meta">$</span><span class="bash"> bundle install</span></div></pre></td></tr></table></figure>
+<p><code>$ bundle install</code> is the rails version of npm install. Instead of npm modules you use ruby gems. They’re defined in the <strong>Gemfile</strong>.</p>
+<p>Then set up the database with some more rails magic:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> rake db:create</span></div><div class="line"><span class="meta">$</span><span class="bash"> rake db:migrate</span></div><div class="line"><span class="meta">$</span><span class="bash"> rails server</span></div></pre></td></tr></table></figure>
+<p>Whenever you change your schema (database) you have to run these commands so rails can write out SQL queries for us. (That’s right we’re in structured database land.)</p>
+<p>If we open up <a href="http://localhost:3000" target="_blank" rel="external">http://localhost:3000</a> we will see the default ROR home page.</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*v-NW1U1Crzi9WLQA5ZZgPA.png" alt=""></p>
+<p>Now make a todo model, this will be a table in the database. The model fields will be some text and a boolean if the task is completed. After generating the database model run the migration command so ROR can update all our SQL.</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ rails generate model Task title:string completed:boolean<span class="built_in"></span></div><div class="line">invoke  active_record</div><div class="line">create    db/migrate/20151202231447_create_tasks.rb</div><div class="line">create    app/models/task.rb<span class="built_in"></span></div><div class="line">invoke    test_unit</div><div class="line">create      test/models/task_test.rb</div><div class="line">create      test/fixtures/tasks.yml</div><div class="line">$ rake db:migrate</div></pre></td></tr></table></figure>
+<p>Okay cool now let’s display a list of tasks on the homepage. The ROR way to do this is make a Task controller. We’re going to add an ‘index’ method when we create the controller:</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">$ rails generate controller task index</div><div class="line"></div><div class="line">create app/controllers/task_controller.rb</div><div class="line">route get ‘task/index’<span class="built_in"></span></div><div class="line">invoke erb</div><div class="line">create app/views/task</div><div class="line">create app/views/task/index.html.erb<span class="built_in"></span></div><div class="line">invoke test_unit</div><div class="line">create test/controllers/task_controller_test.rb<span class="built_in"></span></div><div class="line">invoke helper</div><div class="line">create app/helpers/task_helper.rb<span class="built_in"></span></div><div class="line">invoke test_unit</div><div class="line">create test/helpers/task_helper_test.rb<span class="built_in"></span></div><div class="line">invoke assets<span class="built_in"></span></div><div class="line">invoke coffee</div><div class="line">create app/assets/javascripts/task.js.coffee<span class="built_in"></span></div><div class="line">invoke scss</div><div class="line">create app/assets/stylesheets/task.css.scss</div></pre></td></tr></table></figure>
+<p>This generated lots of crap and we’re using coffeescript like real Ruby people — ew.</p>
+<p>Update <strong>config/routes.rb</strong>:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Rails</span><span class="selector-class">.application</span><span class="selector-class">.routes</span><span class="selector-class">.draw</span> <span class="selector-tag">do</span></div><div class="line">  <span class="selector-tag">root</span> ‘<span class="selector-tag">task</span><span class="selector-id">#index</span>’</div><div class="line"><span class="selector-tag">end</span></div></pre></td></tr></table></figure>
+<p>So then even though the task controller looks like this:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TaskController</span> &lt; ApplicationController</span></div><div class="line"> <span class="function"><span class="keyword">def</span> <span class="title">index</span></span></div><div class="line"> <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<p>the page still renders:</p>
+<p><img src="https://cdn-images-1.medium.com/max/600/1*d_bY0efKGMN1AAbunYQTlg.png" alt=""></p>
+<p>Sexy.Okay so now edit <strong>app/views/task/index.html.erb</strong> like the Rails machine tells us.</p>
+<p>The index file can look something like this. </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">’container’</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">’row</span> <span class="attr">text-center</span>’&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Tasks<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>It will be ugly cause we have no bootstrap yet.</p>
+<h3 id="Add-bootstrap"><a href="#Add-bootstrap" class="headerlink" title="Add bootstrap"></a>Add bootstrap</h3><p>The last line of your <strong>Gemfile</strong>:</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">gem</span> ‘bootstrap-sass’</div></pre></td></tr></table></figure>
+<p>then run</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> bundle install</span></div></pre></td></tr></table></figure>
+<p>In <strong>app/assets/stylesheets/application.css</strong> add:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">import</span> <span class="string">"bootstrap-sprockets"</span>;</div><div class="line">@<span class="keyword">import</span> <span class="string">"bootstrap"</span>;</div></pre></td></tr></table></figure>
+<p>All the instructions can be found in official <a href="https://github.com/twbs/bootstrap-sass" target="_blank" rel="external">bootstrap-sass</a> repo. We also have to change the application file name to a SASS extension cause… well we’re using SASS.</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mv app<span class="regexp">/assets/</span>stylesheets<span class="regexp">/application.css app/</span>assets<span class="regexp">/stylesheets/</span>application.scss</div></pre></td></tr></table></figure>
+<p>Now the word “Taks” should be centered in the page.</p>
+<h3 id="Add-Tasks-to-the-database"><a href="#Add-Tasks-to-the-database" class="headerlink" title="Add Tasks to the database"></a>Add Tasks to the database</h3><p>We want to show some tasks initially. We can use <code>$ rails console</code> to modify the database from the command line. Another way we can do it is with <strong>db/seeds.rb</strong>. In that file paste in our default Tasks:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">tasks = Task.create([</div><div class="line"> &#123;<span class="string">title:</span> “Save Gotham”, <span class="string">completed:</span> <span class="literal">true</span>&#125;,</div><div class="line">&#123;<span class="string">title:</span> “Wash the Car”, <span class="string">completed:</span> <span class="literal">false</span>&#125;,</div><div class="line">&#123;<span class="string">title:</span> “Clean my room”, <span class="string">completed:</span> <span class="literal">false</span>&#125;,</div><div class="line">&#123;<span class="string">title:</span> “Do the Laundry”, <span class="string">completed:</span> <span class="literal">true</span>&#125;,</div><div class="line">&#123;<span class="string">title:</span> “Work on Mini-Project”, <span class="string">completed:</span> <span class="literal">true</span>&#125;,</div><div class="line">&#123;<span class="string">title:</span> “Walk the Dog”, <span class="string">completed:</span> <span class="literal">true</span>&#125;</div><div class="line">])</div></pre></td></tr></table></figure>
+<p>Then populate the database with:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> rake db:seed</span></div></pre></td></tr></table></figure>
+<p>Update the index file to render our task titles:</p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="string">h1&gt;</span><span class="string">Tasks&lt;</span>/<span class="string">h1&gt;</span></div><div class="line">&lt;<span class="string">ul </span><span class="string">class=</span>’<span class="built_in">list-group’&gt;</span></div><div class="line">  &lt;% @<span class="string">tasks.</span><span class="string">each </span><span class="string">do </span>|<span class="string">task|</span> %&gt;</div><div class="line">    &lt;<span class="string">li </span><span class="string">class=</span>’<span class="built_in">list-group-item’&gt;&lt;%=</span> <span class="string">task.</span><span class="string">title </span>%&gt;&lt;/<span class="string">li&gt;</span></div><div class="line">  &lt;% <span class="string">end </span>%&gt;</div><div class="line">&lt;/<span class="string">ul&gt;</span></div></pre></td></tr></table></figure>
+<p>Okay now we have a list of tasks. In upcoming lessons we will go through adding tasks and toggling their completion status.</p>
+<p>If you have questions <a href="https://twitter.com/realjasonshark" target="_blank" rel="external">hit me up on twitter</a> or <a href="https://github.com/cleechtech/rails-task-list/issues" target="_blank" rel="external">raise an issue</a> on the source code. Thanks for reading!</p>
+
+	</div>
+</div>
+	
+</body>
+</html>

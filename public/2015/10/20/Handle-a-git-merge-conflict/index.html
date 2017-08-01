@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>Handle a git merge conflict</h1>
+	    October 20, 2015 
+	    <hr />
+		<p>I’m starting to work with other people using git and github. Though I’m familiar with pushing, pulling, branching and cloning, I had not regularly encountered  merge conflicts until I began RocketU.</p>
+<a id="more"></a>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> mergeConflicting</div><div class="line"><span class="built_in">cd</span> mergeConflicting</div><div class="line">touch play.js</div></pre></td></tr></table></figure>
+<p>add some random code. This creates a gulp web server (after you run npm install):</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">  connect = <span class="built_in">require</span>(<span class="string">'gulp-connect'</span>);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'webserver'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  connect.server(&#123;</div><div class="line">    <span class="attr">livereload</span>: <span class="literal">true</span></div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line"> </div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'webserver'</span>]);</div></pre></td></tr></table></figure>
+<p>Then add the files to .git and commit the changes:</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span><span class="bash"> -A</span></div><div class="line">git commit -m <span class="string">'add gulp process'</span></div></pre></td></tr></table></figure>
+<p>All of this is standard. I’ve learned not to work on the master branch. So to create a new branch named develop and start working on it run:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -<span class="selector-tag">b</span> develop</div></pre></td></tr></table></figure>
+<p>Now we’re on the develop branch and we’ll make some changes. We’ll make some changes to master. When we try to merge develop into master we will have a merge conflict that we will resolve.</p>
+<p>I added some more random tasks from the gulp API docs that changes lines 5 through 11.<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span><span class="bash"> -A</span></div><div class="line">git commit -m <span class="string">'add gulp task on develop branch'</span></div></pre></td></tr></table></figure></p>
+<p>Now I’ll go back to master, add some different code on the same lines and simulate a merge conflict.</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout <span class="literal">master</span></div></pre></td></tr></table></figure>
+<p>Add some new stuff<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git add -A</div><div class="line">git <span class="keyword">commit</span> -m <span class="string">'make changes on master branch'</span></div><div class="line">git <span class="keyword">status</span></div><div class="line"><span class="keyword">On</span> branch <span class="keyword">master</span></div><div class="line"><span class="keyword">nothing</span> <span class="keyword">to</span> <span class="keyword">commit</span>, working <span class="keyword">directory</span> clean</div></pre></td></tr></table></figure></p>
+<p>Cool, so everything is gravy on our respective branches. When I try to merge develop into master though we’ll get a conflict! Git does not know if it should display the file as I have it on master or as I have it on develop. We changed the same lines!</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">merge</span> develop</div><div class="line"><span class="keyword">Auto</span>-merging play.js</div><div class="line">CONFLICT (<span class="keyword">content</span>): <span class="keyword">Merge</span> conflict <span class="keyword">in</span> play.js</div><div class="line"><span class="keyword">Automatic</span> <span class="keyword">merge</span> <span class="keyword">failed</span>; fix conflicts and then <span class="keyword">commit</span> the result.</div></pre></td></tr></table></figure>
+<p>So that’s fun. If you look at the file it is a bit scary because your code is all messy and jacked up. Git will display &lt;&lt;&lt;&lt;&lt; and &gt;&gt;&gt;&gt;&gt; denoting where the two branches conflict.</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</div><div class="line"><span class="regexp">//</span> random changes on master branch</div><div class="line">gulp.src(<span class="string">'./client/templates/*.jade'</span>)</div><div class="line">  .pipe(jade())</div><div class="line">  .pipe(gulp.dest(<span class="string">'./build/templates'</span>))</div><div class="line">  .pipe(minify())</div><div class="line">  .pipe(gulp.dest(<span class="string">'./build/minified_templates'</span>));</div><div class="line"></div><div class="line">=======</div><div class="line"></div><div class="line">gulp.src(<span class="string">'client/js/**/*.js'</span>) <span class="regexp">//</span> Matches <span class="string">'client/js/somedir/somefile.js'</span> and resolves `base` to `client<span class="regexp">/js/</span>`</div><div class="line">  .pipe(minify())</div><div class="line">  .pipe(gulp.dest(<span class="string">'build'</span>));  <span class="regexp">//</span> Writes <span class="string">'build/somedir/somefile.js'</span></div><div class="line"></div><div class="line">gulp.src(<span class="string">'client/js/**/*.js'</span>, &#123; base: <span class="string">'client'</span> &#125;)</div><div class="line">  .pipe(minify())</div><div class="line">  .pipe(gulp.dest(<span class="string">'build'</span>));  <span class="regexp">//</span> Writes <span class="string">'build/js/somedir/somefile.js'</span></div><div class="line">  </div><div class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; develop</div></pre></td></tr></table></figure>
+<p>Until recently I would edit this file manually and commit my changes. Today we’ll use the git mergetool tool.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">git mergetool</div><div class="line"></div><div class="line">This message is displayed because 'merge.tool<span class="string">' is not configured.</span></div><div class="line">See 'git mergetool <span class="comment">--tool-help' or 'git help config' for more details.</span></div><div class="line"><span class="string">'git mergetool'</span> will <span class="keyword">now</span> attempt <span class="keyword">to</span> <span class="keyword">use</span> one <span class="keyword">of</span> the <span class="keyword">following</span> tools:</div><div class="line">opendiff tortoisemerge emerge vimdiff</div><div class="line">Merging:</div><div class="line">play.js</div><div class="line"></div><div class="line"><span class="keyword">Normal</span> <span class="keyword">merge</span> conflict <span class="keyword">for</span> <span class="string">'play.js'</span>:</div><div class="line">  &#123;<span class="keyword">local</span>&#125;: modified <span class="keyword">file</span></div><div class="line">  &#123;remote&#125;: modified <span class="keyword">file</span></div><div class="line">Hit <span class="keyword">return</span> <span class="keyword">to</span> <span class="keyword">start</span> <span class="keyword">merge</span> resolution tool (opendiff):</div></pre></td></tr></table></figure>
+<p>I use opendiff cause it gives you a GUI. Another tool is called vimdiff. I always get stuck in Vim and don’t like using it cause I’m afraid. Use opendiff. Hit enter.</p>
+<p><img src="/content/images/2015/04/Screen-Shot-2015-04-23-at-8-22-13-PM.png" alt=""></p>
+<p>Now you will see the two files and how they differ. Use the arrow keys to select left or right. I will select the right. Then save (File &gt; Save or command + S) then quit (File &gt; Quit or command + Q). Back in the terminal you’ll see some stuff.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">git mergetool</div><div class="line"></div><div class="line">This message is displayed because 'merge.tool<span class="string">' is not configured.</span></div><div class="line">See 'git mergetool <span class="comment">--tool-help' or 'git help config' for more details.</span></div><div class="line"><span class="string">'git mergetool'</span> will <span class="keyword">now</span> attempt <span class="keyword">to</span> <span class="keyword">use</span> one <span class="keyword">of</span> the <span class="keyword">following</span> tools:</div><div class="line">opendiff tortoisemerge emerge vimdiff</div><div class="line">Merging:</div><div class="line">play.js</div><div class="line"></div><div class="line"><span class="keyword">Normal</span> <span class="keyword">merge</span> conflict <span class="keyword">for</span> <span class="string">'play.js'</span>:</div><div class="line">  &#123;<span class="keyword">local</span>&#125;: modified <span class="keyword">file</span></div><div class="line">  &#123;remote&#125;: modified <span class="keyword">file</span></div><div class="line">Hit <span class="keyword">return</span> <span class="keyword">to</span> <span class="keyword">start</span> <span class="keyword">merge</span> resolution tool (opendiff): </div><div class="line"><span class="number">2015</span><span class="number">-04</span><span class="number">-23</span> <span class="number">20</span>:<span class="number">21</span>:<span class="number">49.350</span> FileMerge[<span class="number">3018</span>:<span class="number">303</span>] Invalid color <span class="keyword">System</span>, labelColor (<span class="keyword">warning</span> given <span class="keyword">only</span> once)</div><div class="line"><span class="number">2015</span><span class="number">-04</span><span class="number">-23</span> <span class="number">20</span>:<span class="number">21</span>:<span class="number">49.516</span> FileMerge[<span class="number">3018</span>:<span class="number">303</span>] Unable <span class="keyword">to</span> <span class="keyword">load</span> platform <span class="keyword">at</span> <span class="keyword">path</span> /Applications/Xcode.app/<span class="keyword">Contents</span>/Developer/Platforms/iPhoneOS.platform</div><div class="line"><span class="number">2015</span><span class="number">-04</span><span class="number">-23</span> <span class="number">20</span>:<span class="number">21</span>:<span class="number">49.518</span> FileMerge[<span class="number">3018</span>:<span class="number">303</span>] Unable <span class="keyword">to</span> <span class="keyword">load</span> platform <span class="keyword">at</span> <span class="keyword">path</span> /Applications/Xcode.app/<span class="keyword">Contents</span>/Developer/Platforms/iPhoneSimulator.platform</div><div class="line"></div><div class="line">git <span class="keyword">status</span></div><div class="line"></div><div class="line"><span class="keyword">On</span> branch <span class="keyword">master</span></div><div class="line">All conflicts <span class="keyword">fixed</span> but you <span class="keyword">are</span> still merging.</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git commit"</span> <span class="keyword">to</span> conclude <span class="keyword">merge</span>)</div><div class="line"></div><div class="line">Changes <span class="keyword">to</span> be committed:</div><div class="line"></div><div class="line">	modified:   play.js</div><div class="line"></div><div class="line">Untracked files:</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git add &lt;file&gt;..."</span> <span class="keyword">to</span> <span class="keyword">include</span> <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">	play.js.orig</div></pre></td></tr></table></figure>
+<p>Congrats you have resolved the merge conflict. We still have to commit our changes. Also notice a new (untracked) file was created. This is the same file when the merge conflict was first created, so you have both versions of the code. If multiple files conflict multiple .orig files will be generated. Delete this file and make the commit of the resolved merge.</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm play<span class="selector-class">.js</span><span class="selector-class">.orig</span></div></pre></td></tr></table></figure>
+<p>I made a comment to play.js. Then I committed the changes</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span><span class="bash"> -A</span></div><div class="line">git commit -m <span class="string">'merge the two branches'</span></div></pre></td></tr></table></figure>
+<p>Finally we can delete the develop branch and check that it is gone!</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-d develop </div><div class="line"><span class="symbol">Deleted</span> <span class="keyword">branch </span>develop (was fca53f8).</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch</span></div><div class="line">* master</div></pre></td></tr></table></figure>
+<p>Ultimately the develop commit shows up on the commit history of our master branch. There is another way to do this using <code>git rebase</code>. I’ll save that fun for later</p>
+<p>Check out the full git history here:</p>
+<p><a href="https://github.com/jasonshark/mergeConflicting/commits/master" target="_blank" rel="external">https://github.com/jasonshark/mergeConflicting/commits/master</a></p>
+
+	</div>
+</div>
+	
+</body>
+</html>

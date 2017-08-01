@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>Intro to angular-ui-router</h1>
+	    October 23, 2015 
+	    <hr />
+		<p>For the uninitiated, behold angular-ui-router<br><a id="more"></a></p>
+<p><a href="https://github.com/jasonshark/intro-to-ui-router" target="_blank" rel="external">SOURCE CODE</a></p>
+<p>If you’re like me you’ve used <a href="https://github.com/angular-ui/ui-router/" target="_blank" rel="external">ui-router</a> before with angular.js. Your applications probably look something like this:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'intro-ui-router'</span>, [</div><div class="line">	<span class="string">'ui.router'</span></div><div class="line">]);</div><div class="line"></div><div class="line">app.config(<span class="function"><span class="keyword">function</span><span class="params">($stateProvider, $urlRouterProvider)</span></span>&#123;</div><div class="line"></div><div class="line">	$urlRouterProvider.otherwise(<span class="string">"/"</span>);</div><div class="line"></div><div class="line">	$stateProvider</div><div class="line">	    .state(<span class="string">'home'</span>, &#123;</div><div class="line">	      url: <span class="string">"/"</span>,</div><div class="line">	      templateUrl: <span class="string">"templates/main.html"</span>,</div><div class="line">	      controller: <span class="string">'MainCtrl'</span></div><div class="line">	    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>templates/main.html</strong> gets rendered in <code>&lt;div ui-view&gt;&lt;/div&gt;</code> of <strong>index.html</strong>. It’s functional and it works.</p>
+<h4 id="Add-data"><a href="#Add-data" class="headerlink" title="Add data"></a>Add data</h4><p>To show off getting data and some more advanced features of ui-router I fired up an express server in <a href="https://github.com/jasonshark/intro-to-ui-router/blob/master/server.js" target="_blank" rel="external">server.js</a> that serves <strong>index.html</strong> and a “posts” API.</p>
+<p>For a really basic implementation, getting the posts:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">'MainCtrl'</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope, $http)</span></span>&#123;</div><div class="line">	$http.get(<span class="string">'/api/posts'</span>).then(<span class="function"><span class="keyword">function</span><span class="params">(posts)</span></span>&#123;</div><div class="line">		</div><div class="line">		$scope.posts = posts.data;</div><div class="line">		console.log($scope.posts);</div><div class="line">	&#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Once the controller is instantialized it will fire a request to the appropriate endpoint. Once that request is returned with data the data will populate the <code>posts</code> array on the scope.</p>
+<p>In <strong>templates/main.html</strong> we render the posts to the screen with a simple <code>ng-repeat</code>.</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>All posts<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'col-sm-12'</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-repeat</span>=<span class="string">'post in posts'</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">ng-href</span>=<span class="string">'/#/posts/</span></span><span class="template-variable">&#123;&#123;post._id&#125;&#125;</span><span class="xml"><span class="tag"><span class="string">'</span>&gt;</span></span><span class="template-variable">&#123;&#123;post.title&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></div><div class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>This is a pretty simple implementation of routing with angular.js but it works. Recently I’ve learned some extra tricks I’d like to share.</p>
+<p><img src="http://media.giphy.com/media/uJG2A0WvErkGY/giphy.gif" alt="new tricks"></p>
+<h4 id="Refactor"><a href="#Refactor" class="headerlink" title="Refactor"></a>Refactor</h4><p>The issue with this, having the call in the controller, is that there will be a small delay from when the page loads to when the page is actually populated with data from the server. ui-router has a solution - <em>resolve</em>.</p>
+<p>From the <a href="https://github.com/angular-ui/ui-router/wiki" target="_blank" rel="external">docs</a>:</p>
+<blockquote>
+<p>You can use resolve to provide your controller with content or data that is custom to the state. If any of these dependencies are promises, they will be resolved and converted to a value before the controller is instantiated and the <code>$stateChangeSuccess</code> event is fired.</p>
+</blockquote>
+<p>Using the resolve property in our state:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.state(<span class="string">'home'</span>, &#123;</div><div class="line">  url: <span class="string">"/"</span>,</div><div class="line">  templateUrl: <span class="string">"templates/main.html"</span>,</div><div class="line">  controller: <span class="string">'MainCtrl'</span>,</div><div class="line">  resolve: &#123;</div><div class="line">  	posts: <span class="function"><span class="keyword">function</span><span class="params">($http)</span></span>&#123;</div><div class="line">  		<span class="keyword">return</span> $http.get(<span class="string">'/api/posts'</span>).then(<span class="function"><span class="keyword">function</span><span class="params">(posts)</span></span>&#123;</div><div class="line">			<span class="keyword">return</span> posts.data;</div><div class="line">		&#125;);</div><div class="line">  	&#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Resolve makes our controller more simple:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">'MainCtrl'</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope, posts)</span></span>&#123;</div><div class="line">	$scope.posts = posts;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>The advantage of this approach is that <code>posts</code> is gauranteed to be available when the controller for the route is instantialized.</p>
+<h4 id="Show-an-individual-post"><a href="#Show-an-individual-post" class="headerlink" title="Show an individual post"></a>Show an individual post</h4><p>So we have a lists of posts. Each post uses <a href="https://docs.angularjs.org/api/ng/directive/ngHref" target="_blank" rel="external">ng-href</a> so that we can use scope properties in the url path. Let’s define that URL route:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">.state(<span class="string">'viewPost'</span>, &#123;</div><div class="line">	url: <span class="string">'/posts/:id'</span>,</div><div class="line">	templateUrl: <span class="string">'templates/post.html'</span>,</div><div class="line">	controller: <span class="string">'PostCtrl'</span>,</div><div class="line">	resolve: &#123;</div><div class="line">		post: <span class="function"><span class="keyword">function</span><span class="params">($http, $stateParams)</span></span>&#123;</div><div class="line">			<span class="comment">// get the post data for the page</span></div><div class="line">			<span class="keyword">return</span> $http.get(<span class="string">'/api/posts/'</span> + $stateParams.id).then(<span class="function"><span class="keyword">function</span><span class="params">(post)</span></span>&#123;</div><div class="line">				<span class="keyword">return</span> post.data;</div><div class="line">			&#125;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>The controller is light again:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">'PostCtrl'</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope, post)</span></span>&#123;</div><div class="line">	$scope.post = post;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>And the view is simple:</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><span class="template-variable">&#123;&#123;post.title&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="template-variable">&#123;&#123;post.description&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>That <code>/#/</code> for the ng-href is ugly. ui-router uses states, so we can use <a href="https://github.com/angular-ui/ui-router/wiki/Quick-Reference#ui-sref" target="_blank" rel="external">ui-sref</a> instead. ui-sref directs to a state instead of a url route. Our list of posts updates to:</p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>All posts<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'col-sm-12'</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-repeat</span>=<span class="string">'post in posts'</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">ui-sref</span>=<span class="string">"viewPost(</span></span><span class="template-variable">&#123;id: post.id&#125;</span><span class="xml"><span class="tag"><span class="string">)"</span>&gt;</span></span><span class="template-variable">&#123;&#123;post.title&#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></div><div class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>This way if we change the endpoint url for viewing a post we only change it in the routes definition, not all over our html.</p>
+<p>To navigate to states in the javascript you can use <code>$state.go(&#39;state_name&#39;);</code></p>
+<p>For instance a simple back button on the post page:</p>
+<p><code>&lt;div class=&#39;btn btn-primary&#39; ng-click=&#39;goBack()&#39;&gt;&lt; Back&lt;/div&gt;</code></p>
+<p>and the method is defined in <code>PostCtrl</code>:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">'PostCtrl'</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope, post, $state)</span></span>&#123;</div><div class="line">	$scope.post = post;</div><div class="line"></div><div class="line">	$scope.goBack = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">		$state.go(<span class="string">'home'</span>);</div><div class="line">	&#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Now we can see an individual post and easily navigate back to the home state. The url is persistent, meaning you can bookmark it and refresh the page and see the same thing. We get that for free with ui-router, where it takes extra code in a framework like Backbone.</p>
+<h4 id="Nested-views"><a href="#Nested-views" class="headerlink" title="Nested views"></a>Nested views</h4><p>On the home page I want to show a preview the description of the post when I click “preview”. To do that we’ll use a <a href="https://github.com/angular-ui/ui-router/wiki/Nested-States-%26-Nested-Views" target="_blank" rel="external">nested view</a> <a href="http://stackoverflow.com/a/28248244/2031033" target="_blank" rel="external">without changing the url</a>.</p>
+<p>We’ll define a child state:</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.<span class="keyword">state</span>('home.preview', &#123;</div><div class="line">	controller: function(<span class="variable">$scope</span>, <span class="variable">$stateParams</span>)&#123;</div><div class="line">		<span class="variable">$scope</span>.post = <span class="variable">$stateParams</span>.post;</div><div class="line">	&#125;,</div><div class="line">	params: &#123;</div><div class="line">		post: '<span class="keyword">default</span>Value'</div><div class="line">	&#125;,</div><div class="line">	template: '&#123;&#123;post.description&#125;&#125;'</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Then update <strong>templates/main.html</strong>:</p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>All posts<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'col-sm-6'</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-repeat</span>=<span class="string">'post in posts'</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">ui-sref</span>=<span class="string">"viewPost(</span></span><span class="template-variable">&#123;id: post.id&#125;</span><span class="xml"><span class="tag"><span class="string">)"</span>&gt;</span></span><span class="template-variable">&#123;&#123;post.title&#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></div><div class="line">			<span class="tag">&lt;<span class="name">small</span> <span class="attr">ui-sref</span>=<span class="string">'home.preview(</span></span><span class="template-variable">&#123;post: post&#125;</span><span class="xml"><span class="tag"><span class="string">)'</span>&gt;</span>preview<span class="tag">&lt;/<span class="name">small</span>&gt;</span></span></div><div class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'col-sm-6'</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- show a preview of the post here --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">ui-view</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Now when you click on preview you’ll see the post’s description. There are some more tricks with ui-router like using <a href="https://github.com/angular-ui/ui-router/wiki/Nested-States-%26-Nested-Views#abstract-states" target="_blank" rel="external">abstract states</a> and declaring <a href="https://github.com/angular-ui/ui-router/wiki/Multiple-Named-Views" target="_blank" rel="external">multiple named views</a>. This is an introduction to ui router and will serve you moving forward. Happy coding!</p>
+<p><img src="http://media2.giphy.com/media/33UbGsRWIZhkc/giphy.gif" alt="happy happy joy joy"></p>
+<p>Also check out the <a href="https://github.com/jasonshark/intro-to-ui-router" target="_blank" rel="external">SOURCE CODE</a>.</p>
+<p>Also you can follow me on <a href="https://twitter.com/cleechtech" target="_blank" rel="external">twitter</a>!</p>
+
+	</div>
+</div>
+	
+</body>
+</html>

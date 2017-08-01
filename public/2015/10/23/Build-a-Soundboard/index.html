@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KNQM2VC');</script>
+	<!-- End Google Tag Manager -->
+
+	<title>Connor Leech</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+	<!-- Custom -->
+	<link rel='stylesheet' href='css/theme.css'>
+	<style>
+	  .navbar-toggler {
+	    z-index: 1;
+	  }
+	  @media (max-width: 576px) {
+	    nav > .container {
+	      width: 100%;
+	    }
+	  }
+	  </style>
+</head>
+<body id='wrapper'>
+	<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light is-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="/">Connor Leech</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        	<a class="nav-link page-scroll" href="/blog">Blog</a>
+        	<a class="nav-link page-scroll" href="/work">Work</a>
+        	<a class="nav-link page-scroll" href="/about">About</a>
+        	<a class="nav-link page-scroll" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class='container blog-post'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<a href='/' class="btn btn-yellow btn-circle" style='color:grey;'>
+            	<i class="fa fa-home fa-2"></i>
+        	</a>
+		</div>
+	</div>
+	<div class='row'>
+		<h1 class='author-name'>Build a Soundboard</h1>
+	    October 23, 2015 
+	    <hr />
+		<p>We’re going to have a button and when we click it we’re going to play a sound.</p>
+<a id="more"></a>
+<p><a href="https://github.com/jasonshark/soundboard" target="_blank" rel="external">Source code</a> on github</p>
+<p><a href="http://connorlee.ch/soundboard/" target="_blank" rel="external">Demo</a> hosted with gh-pages</p>
+<h6 id="Make-sound-button"><a href="#Make-sound-button" class="headerlink" title="Make sound button"></a>Make sound button</h6><p><b>index.html</b><br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">class</span>='row <span class="built_in">text</span>-center' style='margin-top: <span class="number">50</span>px;'&gt;</div><div class="line">    &lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"1"</span> <span class="built_in">class</span>=<span class="string">"gridBox btn btn-lg btn-primary"</span>&gt;Hey everybody&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>I’m using <a href="http://createjs.com/SoundJS" target="_blank" rel="external">sound.js</a> and for starters using code provided from their website, slightly modified for styling</p>
+<p><b>main.js</b><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> preload;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="keyword">if</span> (!createjs.Sound.initializeDefaultPlugins()) &#123;</div><div class="line">			<span class="keyword">return</span>;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">var</span> assetsPath = <span class="string">""</span>;</div><div class="line">		<span class="keyword">var</span> sounds = [</div><div class="line">			&#123;<span class="attr">src</span>: <span class="string">"hey_everybody.m4a"</span>, <span class="attr">id</span>: <span class="number">1</span>&#125;</div><div class="line">		];</div><div class="line"></div><div class="line">		createjs.Sound.alternateExtensions = [<span class="string">"mp3"</span>];	<span class="comment">// add other extensions to try loading if the src file extension is not supported</span></div><div class="line">		createjs.Sound.addEventListener(<span class="string">"fileload"</span>, createjs.proxy(soundLoaded, <span class="keyword">this</span>)); <span class="comment">// add an event listener for when load is completed</span></div><div class="line">		createjs.Sound.registerSounds(sounds, assetsPath);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">soundLoaded</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">		<span class="comment">//examples.hideDistractor();</span></div><div class="line">		<span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(event.id);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">stop</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="keyword">if</span> (preload != <span class="literal">null</span>) &#123;</div><div class="line">			preload.close();</div><div class="line">		&#125;</div><div class="line">		createjs.Sound.stop();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">playSound</span>(<span class="params">target</span>) </span>&#123;</div><div class="line">		<span class="comment">//Play the sound: play (src, interrupt, delay, offset, loop, volume, pan)</span></div><div class="line">		<span class="keyword">var</span> instance = createjs.Sound.play(target.id, createjs.Sound.INTERRUPT_NONE, <span class="number">0</span>, <span class="number">0</span>, <span class="literal">false</span>, <span class="number">1</span>);</div><div class="line">		<span class="keyword">if</span> (instance == <span class="literal">null</span> || instance.playState == createjs.Sound.PLAY_FAILED) &#123;</div><div class="line">			<span class="keyword">return</span>;</div><div class="line">		&#125;</div><div class="line">		instance.addEventListener(<span class="string">"complete"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">instance</span>) </span>&#123;</div><div class="line"></div><div class="line">		&#125;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	init();</div><div class="line">	$(<span class="string">'.gridBox'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		playSound(<span class="keyword">this</span>);</div><div class="line">		setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">			stop()</div><div class="line">		&#125;, <span class="number">2000</span>);</div><div class="line">	&#125;);</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>At the end of the function we call init and listen for clicks. Stop the sound after 2 seconds.</p>
+
+	</div>
+</div>
+	
+</body>
+</html>
