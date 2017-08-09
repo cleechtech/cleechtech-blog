@@ -7,10 +7,14 @@
             <br>
             <% site.posts.each(function(post){ %>
                 <div class='notification is-danger post'>
-
+                    <% post.tags.each(function(tag){ %>
+                        <span class="hidden <%= tag.name %>"></span>
+                    <% }); %>
+                    
                     <a class='underline-link' href="<%- url_for(post.path) %>">
                         <%= post.title %>
                     </a>
+
                     <p>
                       <%= date(post.date, config.date_format) %> 
                     </p>
@@ -21,12 +25,12 @@
             <h1>Tags</h1>
             <br>
             <br>
-            <div class="tags">
-                <!-- On hover, cursonr pointer. on click add is-primary class and show those posts -->
-                <% site.tags.sort('name').each(function(tag) { %>
-                    <span class="tag"><%= tag.name + ' (' + tag.length + ')' %></span>
-                <% }); %>
-            </div>
+                <div class="tags">
+                    <!-- on click add is-primary class and show those posts -->
+                    <% site.tags.sort('name').each(function(tag) { %>
+                        <span class="tag <%= tag.name %>"><%= tag.name + ' (' + tag.length + ')' %></span>
+                    <% }); %>
+                </div>
         </div>
     </div>
 </header>

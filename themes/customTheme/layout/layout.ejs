@@ -4,6 +4,11 @@
 	<%- partial('_partial/head') %>
 </head>
 <body id='wrapper'>
-	<%- body %>
+	<div class='vueApp'>
+		<%- body %>
+	</div>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+	<script src=<%= url_for('js/main.js') %>></script>
 </body>
 </html>
