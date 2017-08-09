@@ -1,16 +1,11 @@
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css'>
 <header>
-    <div class='row'>
-        <div class='col-sm-12'>
-            <% site.tags.sort('name').each(function(tag) { %>
-                <div id="<%= tag.name + '-list' %>" class="archive box" data-tag="<%= tag.name.toLowerCase() %>">
-                    <a class="button is-success" href="<%- url_for(config.tag_dir + '/' + tag.slug) %>">
-                        <%= tag.name + ' (' + tag.length + ')' %>
-                    </a>
-                </div>
-            <% }); %>
-        </div>
+    <div class='columns is-multiline is-mobile'>
+        <% site.tags.sort('name').each(function(tag) { %>
+            <a class="column is-one-quarter" href="<%- url_for(config.tag_dir + '/' + tag.slug) %>">
+                <p class='notification is-danger'><%= tag.name + ' (' + tag.length + ')' %></p>
+            </a>
+        <% }); %>
     </div>
     <div class='row'>
         <% site.posts.each(function(post){ %>
