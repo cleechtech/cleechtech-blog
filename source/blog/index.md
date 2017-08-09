@@ -1,0 +1,3 @@
+title: "blog"
+layout: "blog"
+---
