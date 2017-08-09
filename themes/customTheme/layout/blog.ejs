@@ -1,36 +1,33 @@
 
 <header>
-    <div class='columns is-multiline is-mobile'>
-        <% site.tags.sort('name').each(function(tag) { %>
-            <a class="column is-one-quarter" href="<%- url_for(config.tag_dir + '/' + tag.slug) %>">
-                <p class='notification is-danger'><%= tag.name + ' (' + tag.length + ')' %></p>
-            </a>
-        <% }); %>
-    </div>
-    <div class='row'>
-        <% site.posts.each(function(post){ %>
-                <div class="post-preview">
-                    <p class="post-meta">
+    <div class='columns is-multiline is-mobile top-offset-50'>
+        <div class='column is-8'>
+            <h1>Posts</h1>
+            <br>
+            <br>
+            <% site.posts.each(function(post){ %>
+                <div class='notification is-danger post'>
+
+                    <a class='underline-link' href="<%- url_for(post.path) %>">
+                        <%= post.title %>
+                    </a>
+                    <p>
                       <%= date(post.date, config.date_format) %> 
                     </p>
-                    <h3 class="post-title">
-                        <a href="<%- url_for(post.path) %>">
-                            <%= post.title %>
-                        </a>
-                    </h3>
-                    <% if(post.excerpt) { %>
-                        <p>
-                            <%- post.excerpt %>
-                        </p>
-                    <% } %>
-                    <div class='row'>
-                        <div class='col-md-2 col-md-offset-10'>
-                            <%- page.content %>
-                        </div>
-                    </div>
                 </div>
-        <% }); %>
-
+            <% }); %>
+        </div>
+        <div class='column is-4'>
+            <h1>Tags</h1>
+            <br>
+            <br>
+            <div class="tags">
+                <!-- On hover, cursonr pointer. on click add is-primary class and show those posts -->
+                <% site.tags.sort('name').each(function(tag) { %>
+                    <span class="tag"><%= tag.name + ' (' + tag.length + ')' %></span>
+                <% }); %>
+            </div>
+        </div>
     </div>
 </header>
 

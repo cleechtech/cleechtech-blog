@@ -7,15 +7,15 @@
   height: 100%;
 }
 
-header h1, .navigation { margin-top: 200px; }
+.top-offset-50 { margin-top: 50px; }
+.top-offset-200 { margin-top: 200px; }
+
+.navigation li { font-size: 35px; list-style-type: none; }
+
 
 p { font-size: 18px; }
 
 a span { cursor: pointer; }
-
-a { color: white; }
-
-.navigation li { font-size: 35px; list-style-type: none; }
 
 h1 { font-size: 45px; font-weight: inherit; font-style: italic; }
 
@@ -90,6 +90,10 @@ a:hover {
     width: 100%;
     background: white;
 }
+
+
+.post a, .post.notification a:not(.button) { color: white; text-decoration: none; font-size: 24px; font-weight: 700;}
+
 
 /**
  * Media Queries 
