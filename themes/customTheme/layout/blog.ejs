@@ -1,36 +1,33 @@
 
 <header>
-    <div class='columns is-multiline is-mobile top-offset-50'>
+    <nav>
+        <a href="/" class='underline-link'>
+          <p class='navitem'>Home</p>
+        </a>
+        <hr>
+    </nav>
+
+    <div class='columns is-multiline is-mobile top-offset-30'>
         <div class='column is-8'>
             <h1>Posts</h1>
             <br>
             <br>
             <% site.posts.each(function(post){ %>
                 <div class='notification is-danger post'>
-                    <% post.tags.each(function(tag){ %>
-                        <span class="hidden <%= tag.name %>"></span>
-                    <% }); %>
                     
                     <a class='underline-link' href="<%- url_for(post.path) %>">
                         <%= post.title %>
                     </a>
-
+                    <p class='padding-bottom-5'>
+                    <% post.tags.each(function(tag){ %>
+                        <span class="tag"><%= tag.name %></span>
+                    <% }); %>
+                    </p>
                     <p>
                       <%= date(post.date, config.date_format) %> 
                     </p>
                 </div>
             <% }); %>
-        </div>
-        <div class='column is-4'>
-            <h1>Tags</h1>
-            <br>
-            <br>
-                <div class="tags">
-                    <!-- on click add is-primary class and show those posts -->
-                    <% site.tags.sort('name').each(function(tag) { %>
-                        <span class="tag <%= tag.name %>"><%= tag.name + ' (' + tag.length + ')' %></span>
-                    <% }); %>
-                </div>
         </div>
     </div>
 </header>
