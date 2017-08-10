@@ -9,7 +9,7 @@ So I've gone through how to build a barebones, functional, fullstack application
 The [DEMO](http://js-meteor-todos.meteor.com/) is here. I used meteor's built in deployment. I had [some trouble](https://github.com/iron-meteor/iron-cli/issues/153) deploying the app to heroku. Suggestions welcome!
 
 
-Rather than copying the eventedmind tutorial I'm going to point out some cool pieces of the [CODE](https://github.com/jasonshark/meteor-todos).
+Rather than copying the eventedmind tutorial I'm going to point out some cool pieces of the [CODE](https://github.com/connor11528/meteor-todos).
 
 ### First off
 ![imma let you finish](http://media.giphy.com/media/4P1nnTxsFtsje/giphy.gif)
@@ -238,6 +238,7 @@ So we publish todoDetail on the server and then subscribe to it in the controlle
 We genereate templates using `$ iron g:template todos/todos_list` and commands like that. You can [see](https://github.com/jasonshark/meteor-todos/tree/master/app/client/templates/todos) the app is way broken up and every html file has a javascript file associated with it. This is where data context comes in. Each template has a name and associated `helpers` and `events` functions. Helpers essentially use the data context to show the data. Events are where you handle form submission, clicks, hovers etc using basically straight up jQuery. No directives or anything. Here's the code for showing a todos detail and being able to edit it:
 
 **app/client/templates/todos/todos\_detail/todos_detail.js**
+
 ```
 Template.TodosDetail.events({
 	// submit edit todo form
@@ -276,6 +277,7 @@ Template.TodosDetail.helpers({
 So specify events for the template with jquery selectors as the values, like `submit form.edit-todo` then a function that gets the template and event as arguments. We write to the database using the global `Todos` collection. `update()` and `$set` are from MongoDB. Meteor uses mongodb so get familiar. The reason we can do this update is because we allow it when we define the todos collection. In the [todos controller](https://github.com/jasonshark/meteor-todos/blob/master/app/lib/controllers/todos_controller.js) (shown in the lib directory) we set the `data` value to be the specific todo whose id is a param from the url bar.
 
 todos controller sets the data context:
+
 ```
 data: function () {
     return Todos.findOne({_id: this.params._id});
@@ -285,6 +287,7 @@ data: function () {
 So in our template helper `this` is the data context that we specified in the controller. It is kind of crazy and easy to get confused. That's why we give it a variable name. We be humans, not machines.
 
 The code I'm talking about where we use the data context from the controller:
+
 ```
 	todoOwner: function(){
 		// data context is the todo
@@ -397,4 +400,4 @@ $ heroku open
 I think something was wrong with my environment variables. The provided meteor deployment platform works for me for now.
 
 
-Hope this is helpful! yeah I'm on [twitter](https://twitter.com/cleechtech)
+Hope this is helpful! yeah I'm on [twitter](https://twitter.com/connor11528)

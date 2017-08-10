@@ -1,11 +1,6 @@
 
 <header>
-    <nav>
-        <a href="/" class='underline-link'>
-          <p class='navitem'>Home</p>
-        </a>
-        <hr>
-    </nav>
+    <%- partial('_partial/nav') %>
 
     <div class='columns is-multiline is-mobile top-offset-30'>
         <div class='column is-8'>
@@ -15,10 +10,10 @@
             <% site.posts.each(function(post){ %>
                 <div class='notification is-danger post'>
                     
-                    <a class='underline-link' href="<%- url_for(post.path) %>">
+                    <a href="<%- url_for(post.path) %>" class='underline-link' style='padding-bottom: 8px;'>
                         <%= post.title %>
                     </a>
-                    <p class='padding-bottom-5'>
+                    <p class='padding-bottom-10'>
                     <% post.tags.each(function(tag){ %>
                         <span class="tag"><%= tag.name %></span>
                     <% }); %>

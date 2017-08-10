@@ -1,0 +1,29 @@
+<header>
+    <nav>
+        <a href="/blog" class='underline-link'>
+          <p class='navitem'>Blog</p>
+        </a>
+        <hr>
+    </nav>
+
+    <section class="hero is-danger is-medium">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-2">
+            <%= post.title %>
+          </h1>
+          <h2 class="subtitle is-4">
+            <%= date(post.date, config.date_format) %> 
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <div class='container top-offset-30'>
+        <div class='columns is-mobile'>
+            <div class='column is-8 is-offset-2'>
+                <%- post.content %>
+            </div>
+        </div>
+    </div>
+</header>
