@@ -1,6 +1,10 @@
+layout: post
 title: Part 2 - Add Angular.js to Ruby on Rails app
-date: 2015-12-04 15:34:04
-tags: [Angular, Ruby, Ruby On Rails]
+date: 2015-12-04
+category: Angular
+lede: "This article explains how to integrate Angular 1.x into a Ruby On Rails application."
+author: Connor Leech
+published: true
 ---
 
 
@@ -9,7 +13,7 @@ tags: [Angular, Ruby, Ruby On Rails]
 In my [last ROR post](https://medium.com/@jasonshark/ruby-on-rails-introduction-for-the-total-n00b-fdc1a7f6567e#.bfte8gwl7) we set up a Rails app that displays a list from the database. Here is the [SOURCE CODE](https://github.com/cleechtech/rails-task-list). (Give it a star on github!)
 
 In this post we will add angular to the task list.
-<!-- more -->
+
 ## Disable turbolinks 
 
 Turbolinks is a feature new to Rails 4. It uses pushState to change the address of the current page, meaning scripts do not have to be reloaded. Angular already does some of this magic, though it is [possible](http://stackoverflow.com/questions/14797935/using-angularjs-with-turbolinks) to use angular and turbolinks together. For this app we’re going to stick with only angular, no turbolinks.

@@ -1,0 +1,71 @@
+# Header Menu
+menu:
+  Home: /
+  Projects: /projects/
+  Blog: /archives/ # can set archive-dir in root config to custom value
+  Contact: /contact/
+  About: /about/
+   
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true # whether or not to load the fancybox library
+
+# Integrations
+disqus_shortname: 
+google_analytics:
+swiftype_install_key: 
+
+# Social
+social:
+  github: https://github.com/connor11528
+  twitter: https://twitter.com/connor11528
+  facebook: 
+  rss: atom.xml
+  linkedin: https://linkedin.com/in/connorleech
+  stackoverflow: https://stackoverflow.com/users/2031033/connor-leech
+
+# Miscellaneous
+color_scheme: blue  # options: blue, gray, green, orange, red, turquoise
+favicon: /favicon.ico # path from root of hexo site
+twitter_widget_id: "" # as a string, from https://twitter.com/settings/widgets
+twitter_username: connor11528 # twitter username without the @
+default_author: Connor Leech
+
+about: This is the about
+phone: 
+email: connorleech@gmail.com
+address_1: 
+address_2: 
+address_3: Alameda, CA
+skype: 
+lat: 37.773921 
+long: -122.273793
+
+
+# Featured Note
+# feature_note_title: 'Ten Inspiring Software Consultancies'
+# feature_note_date: 'January 4th, 2017'
+# feature_note_author: 'Patrick Steadman'
+# feature_note_path: "2017/01/03/inspiring-consultancies/"
+# feature_note_excerpt: 'One big thing I learned this year is that there’s no one right way
+# to run a software consulting business. I’ve tried to become a student of the industry, 
+# and in reading the blogs of successful companies, I’ve often found that the best practices
+# of one consultancy are considered anti-patterns at another. For example, some companies 
+# proudly call themselves Agile or Scrum teams, while others are defined by their rejection 
+# of Agile practices. Some groups care a lot about accounting and finance, while other 
+# companies outsource those concerns and focus on code or relationships.'
+
+# # Featured Case Study
+# feature_case_title: 'Verdes Pinpoints'
+# feature_case_date: 'June 14th, 2016'
+# feature_case_author: 'Patrick Steadman'
+# feature_case_path: 'blog/'
+# feature_case_project_path: 'http://pinpoints.io'
+# feature_case_lede: 'We built an interactive 3D landing page for a marketing data visualization tool.'
+# feature_case_excerpt: 'The engineers who built ReactJS were inspired by the efficiency 
+# and simplicity of the “DOOM” video game engine, 
+# so it’s not surprising that React is a good tool for building responsive 3D websites. 
+# The PinPoints build convinced us that React’s declarative components are a great fit 
+# for developing 3D user interfaces in the browser.'

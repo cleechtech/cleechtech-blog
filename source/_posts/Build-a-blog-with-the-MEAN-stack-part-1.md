@@ -8,10 +8,10 @@ I'm posting a blog post on how to make a blog. So meta.
 
 ![](http://media.giphy.com/media/roLxlT1nPN8GI/giphy.gif)
 
-Check out the [SOURCE CODE](https://github.com/cleechtech/mean-blog)
+Check out the [SOURCE CODE](https://github.com/connor11528/mean-blog)
 
 <!-- more -->
-#### Get crackin
+## Get crackin
 
 Install the starter template and change the names, delete the silly image in the README.
 
@@ -24,7 +24,7 @@ $ node server
 
 *Tip:* install nodemon `$ npm install nodemon -g` and you won't have to refresh the page all the time
 
-#### Render admin login
+## Render admin login
 
 There are lots of ways to handle authentication within the meanstack. We're going to use [Passport.js](http://passportjs.org/), the express server and ejs templates. The angular will come in handy once the template is already rendered.
 
@@ -109,7 +109,7 @@ Make sure to include bootstrap CSS and you're golden. The register form looks li
 
 Almost exactly the same. You can now check out the basic forms by navigating to `/admin` and `/admin/register`. The next step will be creating users and logging them in
 
-#### Create user model and set up passport
+## Create user model and set up passport
 
 So in order to have admins we're going to create a user model in our database. Create the model in **server/models/user.js**:
 
@@ -134,7 +134,7 @@ User.plugin(passportLocalMongoose, { usernameField: 'email' });
 module.exports = mongoose.model('User', User);
 ```
 
-To make user management with passport.js simple we're using [passport-local-mongoose](https://github.com/saintedlama/passport-local-mongoose), which is a layer of abstraction on top of [passport-local](https://github.com/jaredhanson/passport-local). Passport local is an "authentication strategy" on top of passport. You can include multiple strategies for different providers. This confused me for a long time. Scotch.io has a great [tutorial series](https://scotch.io/tutorials/easy-node-authentication-setup-and-local) on authenticating with multiple strategies in an express app. I also have an [example app](https://github.com/jasonshark/express-auth) that implements login with email/password, facebook and spotify together as one. For now we're going to keep moving forward.
+To make user management with passport.js simple we're using [passport-local-mongoose](https://github.com/saintedlama/passport-local-mongoose), which is a layer of abstraction on top of [passport-local](https://github.com/jaredhanson/passport-local). Passport local is an "authentication strategy" on top of passport. You can include multiple strategies for different providers. This confused me for a long time. Scotch.io has a great [tutorial series](https://scotch.io/tutorials/easy-node-authentication-setup-and-local) on authenticating with multiple strategies in an express app. I also have an [example app](https://github.com/connor11528/express-auth) that implements login with email/password, facebook and spotify together as one. For now we're going to keep moving forward.
 
 ![keep swimming](http://media.giphy.com/media/1sSWWMNnaZLlm/giphy.gif)
 
@@ -170,7 +170,7 @@ module.exports = function(passport){
 };
 ```
 
-###### Create routes for handling user login/registration
+## Create routes for handling user login/registration
 
 We have our forms that send plain old POST request. Set up some express routes with passport.js magical middleware. Middleware in express are functions that the request passes through when a route is hit. The request hits the route (for example POST to "/login") and then goes through a series of functions that take the format `function(req, res, next){}`. If the `next()` function gets called the request continues down the chain. Passport provides us middleware that follows this `req, res, next` pattern:
 
@@ -230,7 +230,7 @@ function isAdmin(req, res, next){
 
 For more complex apps you could add roles to users. You could add roles by issuing commands to records in MongoDB directly. Here's how to check out the contents of our database (go ahead and `/admin/register` first, so you have some data to look at!)
 
-#### Check in the database that users exist
+## Check in the database that users exist
 
 Let's check out our database. Open up a mongo shell (`$ mongod` must be running).
 
@@ -268,8 +268,7 @@ public
      |- js
      |- css
      |- templates
-``` 
-
+```
 Create the angular app in **public/admin/js/app.js**:
 
 ```
@@ -393,7 +392,7 @@ html, body, section, .full-height {
 ```
 
 
-#### Parsing markdown
+## Parsing markdown
 
 We're going to create two more templates to add a post and also show all of our posts. Create two files **addPost.html** and **allPosts.html** in **public/admin/templates**.
 
@@ -428,7 +427,7 @@ Then create a template for adding a title and a body. On the right hand column w
 Navigate to New Post (http://localhost:3000/admin/dashboard#/addPost), start typing a `# title` and you'll see the markdown preview version, thanks to showdown.js and angular.js data binding.
 
 
-#### Conclusion <small>(for now)</small>
+## Conclusion <small>(for now)</small>
 
 We have a database of users, protected admin access, two angular applications and a template for parsing markdown.
 

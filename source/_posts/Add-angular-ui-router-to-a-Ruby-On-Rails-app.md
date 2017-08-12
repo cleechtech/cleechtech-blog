@@ -5,7 +5,7 @@ tags: [Angular, Ruby, Ruby On Rails]
 
 **tldr;** — [source code on github](https://github.com/cleechtech/rails-task-list) (give it a star!)
 
-In [part 1](http://cleechtech.github.io/2015/12/02/Ruby-On-Rails-%E2%80%94-Introduction-for-the-total-n00b/) and [part 2](http://cleechtech.github.io/2015/12/04/Add-Angular-js-to-Ruby-on-Rails-app/) we set up a Ruby On Rails app with some static data and added angular and bower. In this post we will set up routing and request the list of tasks using angular instead of the rails template language.
+In [part 1](http://connor11528.github.io/2015/12/02/Ruby-On-Rails-%E2%80%94-Introduction-for-the-total-n00b/) and [part 2](http://cleechtech.github.io/2015/12/04/Add-Angular-js-to-Ruby-on-Rails-app/) we set up a Ruby On Rails app with some static data and added angular and bower. In this post we will set up routing and request the list of tasks using angular instead of the rails template language.
 
 <!-- more -->
 

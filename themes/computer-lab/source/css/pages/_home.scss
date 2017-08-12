@@ -1,0 +1,251 @@
+#home {
+  margin-top: - $menu-height; // center in viewport, regardless of menu height
+  height: 115vh;
+  background: linear-gradient(180deg, $brand 12%, rgba(250, 250, 250,1) 100%); /* w3c */
+
+  .hero {
+    height: 250px;
+    position: absolute;
+    z-index: 2;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  a.btn {
+    border-color: white;
+    color: white;
+
+    svg {
+      display: inline-block;
+      float: right;
+      height: 29px;
+    }
+
+    &:hover,&:active,&:focus {
+      border: 2px solid $white;
+      outline: none;
+      color: $brand;
+      background-color: $white;
+
+      svg  > style{
+        fill: $brand;
+      }
+    }
+  }
+
+  h1 {
+    color: $white;
+    font-size: 42px;
+
+    @media (max-width: $tablet) {
+      font-size: 26px;
+      letter-spacing: 1.33px;
+    }
+  }
+
+}
+
+#about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical;
+  overflow: auto;
+  height: 100%;
+  background-color: $alt-white;
+
+  @media (max-width: $tablet) {
+    padding: $base-spacing * 4 0 $base-spacing * 6 0;
+  }
+
+  h2.section-title {
+    color: $brand;
+  }
+
+  svg.logo {
+    width: 90px;
+    display: none;
+    margin: $base-spacing * 2 auto;
+  }
+
+  .about{
+    margin: 0 0 $base-spacing 0;
+
+    p {
+      color: $copy;
+      text-align: left;
+    }
+  }
+}
+
+#projects {
+  min-height: 100vh;
+  margin-bottom: $base-spacing * 4;
+  background-color: $white;
+
+  .bio {
+    margin-top: $base-spacing * 4;
+
+    .inner {
+      background: $border-grey;
+    }
+
+    &.first {
+      margin-top: $base-spacing;
+    }
+
+    @media (max-width: $tablet) {
+      margin-bottom: $base-spacing * 12;
+    }
+
+    h4 {
+      color: $copy;
+      text-align: center;
+      margin-top: $base-spacing;
+      padding-bottom: $base-spacing;
+    }
+  }
+
+  h2.section-title {
+    color: $copy;
+
+    @media (max-width: $tablet) {
+      display: block;
+      margin-bottom: $base-spacing * 4;
+
+    }
+  }
+
+  svg {
+    width: $base-spacing * 10;
+    position: relative;
+    display: block;
+    height: $base-spacing * 8;
+    margin: $base-spacing * 2 auto 0;
+
+    &#nectar-logo {
+      width: $base-spacing * 8;
+    }
+
+    .cls-1 {
+      fill: $brand;
+    }
+  }
+
+  a.btn {
+    display: block;
+    margin: $base-spacing * 2 auto;
+    width: $base-spacing * 8;
+  }
+
+}
+
+#services {
+  background-color: $alt-white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical;
+  overflow: auto;
+  height: 100%;
+  padding: 100px 0px;
+
+  @media (max-width: $tablet) {
+    padding: $base-spacing * 4 0 $base-spacing * 8 0;
+  } 
+
+  h2 {
+   color: $brand;
+  }
+
+  h3 {
+    color: $copy;
+  }
+  
+  .domains {
+    margin: 100px 75px 100px 75px;
+
+    @media (max-width: $tablet) {
+      margin: 60px 0px 100px 0px;
+    }
+
+    .row {
+      margin-bottom: 40px;
+    }
+
+    .picture {
+      width: 100%;
+      display: flex;
+      margin-top:55px;
+      img {
+        margin: auto;
+      }
+    }
+  }
+
+  .list-of-services{
+    margin-bottom: 150px;
+  }
+
+  .service {
+
+    ul {
+      padding: 0;
+      text-align: center;
+    }
+
+    li {
+      list-style: none;
+      font-size: 21px;
+      font-weight: 300;
+      line-height: 2em; 
+    }
+  }
+}
+
+#feature-post {
+  background-color: $white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical;
+  overflow: auto;
+  height: 100%;
+
+  @media (max-width: $tablet) {
+    padding-bottom: $base-spacing * 8;
+  }
+
+  h1, h2 {
+    color: $copy;
+  }
+  
+  h5.info {
+    color: $grey;
+    margin-top: 0;
+    font-family: 'Gill Sans', Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  p {
+    color: $copy;
+  }
+
+  a.read-more {
+    margin-top: $base-spacing;
+  }
+}
+
+#health {
+  margin-top: 100px;
+  h2 {
+    color: black;
+  }
+}

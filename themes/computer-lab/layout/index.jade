@@ -1,0 +1,178 @@
+extends base
+
+block site_body
+
+  // Home
+  section#home
+    .container.hero
+      .row.copy
+        .col-md-6.col-md-offset-3
+          h1 Connor is a web developer in the Bay Area
+      .row
+        .col-md-6.col-md-offset-3
+          a.btn.btn-default.alt(href='#about') Learn More
+
+  section#about.content-section
+    .container
+      .row
+        .copy.col-md-8.col-md-offset-2
+          .about.wow.fadeIn
+            h2.section-title Hi I'm Connor
+            p 
+              span
+              | I make things for the web using AWS, Javascript and PHP.
+              | Previously, I've worked as a Sr. Technical Recruiter at Mondo and a door to door fundraiser at the Appco Group, representing Children International.
+              | I'm a soon to be Dad and live in the Bay Area 
+          .about.wow.fadeIn
+            p
+              | I started programming in 2013 during a trip to Cape Town, South Africa. I've since worked with 
+              span
+                a(target='_blank' href='') Angular.js
+                | , 
+                a(target='_blank' href='') Node.js
+                |  and 
+                a(target='_blank' href='') Laravel
+                |  and 
+                a(target='_blank' href='') AWS
+                |.
+          .about.wow.fadeIn    
+            p
+              a.btn.btn-default.email(href='mailto:connorleech@gmail.com') Email
+
+  //- section#projects.content-section
+  //-   .container
+  //-     .row
+  //-       .col-md-4.col-md-offset-1.bio.wow.fadeInLeft.iheart
+  //-         include _partial/svg/iheart-logo
+  //-         h4 On-site React Development
+  //-         p
+  //-           span
+  //-           | Computer Lab built on-demand streaming functionality 
+  //-           | into the 
+  //-           a(target='_blank' href='https://iheart.com') iHeartRadio
+  //-           |  web platform, enabling iHeart to 
+  //-           a(target='_blank' href='http://www.forbes.com/sites/hughmcintyre/2016/12/01/iheartradio-launches-new-on-demand-streaming-apps-to-compete-with-spotify/#134dceb91a90') launch
+  //-           |  their paid subscription service before Pandora. We worked alongside 
+  //-           a(target='_blank' href='https://tech.iheart.com/') iHeart's web team
+  //-           |  to scale the existing React application to millions of users.
+  //-       .col-md-4.col-md-offset-2.bio.wow.fadeInRight.artforum
+  //-         include _partial/svg/artforum-logo.svg
+  //-         h4 React Native App
+  //-         p 
+  //-           | Computer Lab worked with 
+  //-           a(target='_blank' href='https://artforum.com') Artforum
+  //-           |  to develop a native app
+  //-           | experience for their artguide feature. We tackled platform 
+  //-           | constraints to ensure that the app was a polished and essential 
+  //-           | tool matching the Artforum brand. Download the artguide app on 
+  //-           a(target='_blank' href='https://itunes.apple.com/us/app/artguide/id508043725?mt=8') iOS
+  //-           |  or 
+  //-           a(target='_blank' href='https://play.google.com/store/apps/details?id=com.artforuma') Android
+  //-           | .
+  //-     .row
+  //-       //.col-md-4.col-md-offset-1.bio.wow.fadeInRight.giphy
+  //-         include _partial/svg/giphy-logo
+  //-         h4 CMS/AWS
+  //-         p
+  //-           span
+  //-           | Computer Lab partnered with Giphy Arts for the 
+  //-           a(target='_blank' href='https://www.historyofthegif.com/#/timeline/0')  History of the GIF
+  //-           |  project.
+  //-           a(target='_blank' href='http://www.forbes.com/sites/hughmcintyre/2016/12/01/iheartradio-launches-new-on-demand-streaming-apps-to-compete-with-spotify/#134dceb91a90') launch
+  //-           |  their paid subscription service before Pandora. We worked alongside 
+  //-           a(target='_blank' href='https://tech.iheart.com/') iHeart's web team
+  //-           |  to scale the existing React application to millions of users.
+  //-       .col-md-4.col-md-offset-1.bio.wow.fadeInLeft.screen
+  //-         include _partial/svg/screen-logo
+  //-         h4 CMS/AWS
+  //-         p 
+  //-           a(target='_blank' href='http://onscreentoday.com') Screen
+  //-           |  is a curatorial collective based in New York, Beijing and Berlin. We worked closely with staff to improve the performance and user experience of their bilingual media platform. We reduced site loading speed, simplified content management and delivered an engaging experience to a global audience.
+  //-       .col-md-4.col-md-offset-2.bio.wow.fadeInRight.verdes
+  //-         include _partial/svg/verdes-logo
+  //-         h4 Landing Page
+  //-         p 
+  //-           span We created an interactive 3D landing page for a marketing data visualization tool launched by 
+  //-           a(target='_blank' href='http://verdes.nyc') Verdes
+  //-           | , a creative agency in NYC. The 
+  //-           a(target='_blank' href="http://pinpoints.io") PinPoints
+  //-           |  build convinced us that React’s declarative components are a great fit for developing 3D user interfaces in the browser.
+  //- section#services.content-section
+  //-   .container
+  //-     .row
+  //-       .col-md-offset-2.col-md-8.col-xs-12.wow.fadeIn
+  //-         h2.wow.fadeIn Great engineering paired with domain expertise. 
+  //-     .row
+  //-       //.col-md-2.col-xs-12.wow.fadeIn.hidden-xs
+  //-         .picture
+  //-           img(src="/images/healthcare-biotech.png") 
+
+  //-       .col-md-offset-2.col-md-8.col-xs-12.wow.fadeIn
+  //-         h3 Healthcare and Biotech
+  //-         p We'll be your partner as you navigate the unique regulatory and technical challenges of the healthcare industry. Our team has years of experience working with industry leaders like Flatiron Health and we're passionate about building better health information systems.  
+  //-     .row
+  //-       //.col-md-2.col-xs-12.wow.fadeIn.hidden-xs
+  //-         .picture
+  //-           img(src="/images/the-arts.png") 
+
+  //-       .col-md-offset-2.col-md-8.col-xs-12.wow.fadeIn
+  //-         h3 The Arts
+  //-         p For our arts clients, we take care to develop solutions that will be sustainable within the context of their organization. Our involvement in creative internet communities means we have a personal interest in seeing arts projects succeed.  
+  //-     .row
+  //-       //.col-md-2.col-xs-12.wow.fadeIn.hidden-xs
+  //-         .picture
+  //-           img(src="/images/rapid-prototyping.png") 
+
+  //-       .col-md-offset-2.col-md-8.col-xs-12.wow.fadeIn
+  //-         h3 Rapid Prototyping
+  //-         p Computer Lab can rapidly form specialized teams to tackle MVP builds with highly involved technical, data science, or design needs. Our process ensures well-documented, world-class software engineering that will help de-risk your business.
+  //-   //.container
+  //-     .list-of-services
+  //-       .row
+  //-         .col-md-4.wow.fadeIn
+  //-           .service
+  //-             ul
+  //-               li AWS Data Pipeline
+  //-               li Airflow
+  //-               li HIPAA Compliance, EMRs
+  //-               li Schema Design
+  //-               li Postgres, MongoDB
+  //-               li Firebase
+  //-               li Apache Kafka
+  //-         .col-md-4.wow.fadeIn
+  //-           .service
+  //-             ul
+  //-               li Branding
+  //-               li Responsive Design
+  //-               li Ad Tech
+  //-               li Social Automation
+  //-               li SEO
+  //-               li Asset Creation
+  //-               li Content Strategy
+  //-         .col-md-4.wow.fadeIn
+  //-           .service
+  //-             ul
+  //-               li React, Electron
+  //-               li Django
+  //-               li iOS and Android
+  //-               li Wordpress, Hexo and Jekyll
+  //-               li Docker and Ansible
+  //-               li Webpack
+  //-               li ThreeJS
+
+
+
+  // Featured Post
+  section#feature-post.content-section
+    .container
+      .row
+        .col-md-8.col-md-offset-2
+          h2.section-title.wow.fadeIn
+            a(href=config.feature_note_path)=config.feature_note_title
+          h5.info.wow.fadeIn=config.feature_note_author + ' - '
+            span.date=config.feature_note_date
+          p.wow.fadeIn=config.feature_note_excerpt + ' '
+            span
+            a.readmore(href=config.feature_note_path) Read More
+          a.btn.btn-default.wow.fadeIn.read-more(href='/blog/') Blog
+

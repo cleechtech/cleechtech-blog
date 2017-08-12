@@ -1,0 +1,36 @@
+#residency {
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical;
+  overflow: auto;
+  height: 100%;
+
+  @media (max-width: $tablet) {
+    padding: $base-spacing * 4 0 $base-spacing * 6 0;
+}
+
+  h1.section-title {
+    color: $brand;
+  }
+
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0px;
+    padding-bottom: 10px;
+
+    @media (max-width: $tablet) {
+        padding-left: 0px;
+    }
+  }
+
+  img{
+    margin: 20px;
+
+  }
+
+}
