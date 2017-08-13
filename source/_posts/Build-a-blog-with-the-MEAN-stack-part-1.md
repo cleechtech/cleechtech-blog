@@ -1,6 +1,10 @@
+layout: post
 title: Build a blog with the MEAN stack (part 1)
-date: 2015-10-24 15:18:16
-tags: [MEAN, Javascript, Angular, Nodejs, MongoDB]
+date: 2015-10-24
+category: Angular
+lede: "In this post we parse markdown using Angular 1.x and connect a blogging application with Node.js and MongoDB"
+author: Connor Leech
+published: true
 ---
 
 
@@ -10,7 +14,6 @@ I'm posting a blog post on how to make a blog. So meta.
 
 Check out the [SOURCE CODE](https://github.com/connor11528/mean-blog)
 
-<!-- more -->
 ## Get crackin
 
 Install the starter template and change the names, delete the silly image in the README.

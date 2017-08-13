@@ -1,15 +1,17 @@
-title: 'Build a javascript todo app with express, jade and mongodb'
-date: 2015-10-23 16:51:28
-tags: [MEAN, Javascript, Todo, Nodejs, MongoDB]
+layout: post
+title: Build a javascript todo app with express, jade and mongodb
+date: 2015-10-23
+category: Javascript
+lede: "This post goes through the somewhat arduous process of building a todo list application with Node.js, MongoDB and express. Ultimately we deploy the app to the internet with Git and Heroku. In the future I'd recommend some client side JS frameworks or generating an application like this quickly using Laravel."
+author: Connor Leech
+published: true
 ---
 
 Hey everyone today we're going to build a super simple todo application using [express 4](http://expressjs.com/4x/api.html). Express is a lightweight server side framework for node.js. It's very popular but not quite as easy to get up and running with a database as something like Rails or Django.
 
 In this tutorial we'll connect an express server to a mongoDB database and serve our html using the jade templating engine. To make talking to MongoDB easier we will use the [mongoose](https://github.com/learnboost/mongoose) npm package. Even though mongodb is a schemaless database (everything is json) mongoose lets us define models and easily chain queries.
 
-<!-- more -->
-
-[SOURCE CODE](https://github.com/jasonshark/express-todo) is on github here
+[SOURCE CODE](https://github.com/connor11528/express-todo) is on github here
 
 [LIVE DEMO](http://express-mongo-jade-todo.herokuapp.com) hosted by heroku is here
 
@@ -81,6 +83,7 @@ You can check this code works by running `node server` in the command line. You 
 "Cannot GET /"
 
 This is because we haven't defined any routes.
+
 ### Define our routes
 Routes are essentially urls for your website. So when you went to `localhost:3000` you visited the base root `/`. For our website we'll want routes for viewing, creating and editing todos. So modify **server.js** after the express.static line and before app.listen.
 
@@ -327,7 +330,9 @@ edit: function(req, res){
     }
 ```
 Now we have a page for showing all todos and also each todo has its own page with its own unique url. Also we can add, delete and update all of our todos.
+
 ### Refactor
+
 Our code thus far won't work in production because we're reading from a local database. Also the server.js file has a lot of stuff thrown in there and does not need to be that heavy. Let's clean it up.
 
 New **server.js** file:
@@ -491,4 +496,4 @@ Finally deploy the app to heroku:
 $ git push heroku master
 ```
 
-Check out the [live demo](http://express-mongo-jade-todo.herokuapp.com) and [source code](https://github.com/jasonshark/express-todo)
+Check out the [live demo](http://express-mongo-jade-todo.herokuapp.com) and [source code](https://github.com/connor11528/express-todo)

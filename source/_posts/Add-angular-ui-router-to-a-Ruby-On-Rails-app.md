@@ -1,13 +1,16 @@
+layout: post
 title: Part 3 - Add angular-ui-router to a Ruby On Rails app
-date: 2015-12-14 14:19:27
-tags: [Angular, Ruby, Ruby On Rails]
+date: 2015-12-14
+category: Rails
+lede: "In this post we add client side routing to a Ruby On Rails app using Angular 1.x"
+author: Connor Leech
+published: true
 ---
 
 **tldr;** — [source code on github](https://github.com/cleechtech/rails-task-list) (give it a star!)
 
 In [part 1](http://connor11528.github.io/2015/12/02/Ruby-On-Rails-%E2%80%94-Introduction-for-the-total-n00b/) and [part 2](http://cleechtech.github.io/2015/12/04/Add-Angular-js-to-Ruby-on-Rails-app/) we set up a Ruby On Rails app with some static data and added angular and bower. In this post we will set up routing and request the list of tasks using angular instead of the rails template language.
 
-<!-- more -->
 
 ### Make Rails routes
 

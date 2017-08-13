@@ -1,11 +1,15 @@
-title: Build a todo app with angularFire
-date: 2015-10-23 17:45:19
-tags: [Angular, Firebase, Todo]
+layout: post
+title: Build a todo app with Angular 1.x and AngularFire
+date: 2015-10-23
+category: Angular
+lede: "This app uses Angular 1.x to build a todo application that persists data using Firebase and the AngularFire client side Javascript library. When I gave presentations at tech hubs in Tanzania, Kenya, Zambia and Zimbabwe in 2015 it covered some of this Angular and Firebase code. Great experience and thanks so much to the Firebase team for all of their support!"
+author: Connor Leech
+published: true
 ---
 
 Hey everyone! [Firebase](https://www.firebase.com/) and angular.js are awesome tools that you should check out. Today we're going to build and deploy a persistent client side app with only front end code. I modeled this heavily off the Firebase + Angular [TodoMVC](https://github.com/tastejs/todomvc/tree/master/examples/firebase-angular). It's a great project but the code seemed a bit heavy. We're gunna use the most recent version of [angularFire](https://www.firebase.com/docs/web/libraries/angular/)  and bootstrap for styles
 
-[SOURCE CODE](https://github.com/jasonshark/angularFire-todo) is here
+[SOURCE CODE](https://github.com/connor11528/angularFire-todo) is here
 
 [DEMO](https://firebasingtodos.firebaseapp.com/) is here
 
@@ -153,4 +157,4 @@ Most of the rest of the code for marking todos as completed and whatnot I stole 
 I repeated myself, used `ng-style` and `ng-if` based on the completion status of the task. This works but if you have a fix to clean this up please submit a pull request and I'll merge that shit up.
 
 
-Big props to the firebase team on building an awesome product and TodoMVC for all of their work. If you have questions about the code for this tutorial you can find me on [Twitter](https://twitter.com/cleechtech) or [Github](https://github.com/jasonshark).
+Big props to the firebase team on building an awesome product and TodoMVC for all of their work. If you have questions about the code for this tutorial you can find me on [Twitter](https://twitter.com/connor11528) or [Github](https://github.com/connor11528).

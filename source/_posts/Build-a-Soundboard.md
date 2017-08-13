@@ -1,15 +1,17 @@
-title: Build a Soundboard
-date: 2015-10-23 17:44:33
-tags: [Javascript]
+layout: post
+title: Play recorded sounds with Sound.js
+date: 2015-10-23
+category: Javascript
+lede: "This tutorial builds an application that plays a sound when you click a button. Built this during RocketU coding bootcamp"
+author: Connor Leech
+published: true
 ---
 
 We're going to have a button and when we click it we're going to play a sound.
 
-<!-- more -->
+[Source code](https://github.com/connor11528/soundboard) on github
 
-[Source code](https://github.com/jasonshark/soundboard) on github
-
-[Demo](http://connorlee.ch/soundboard/) hosted with gh-pages
+[Demo](http://connorleech.info/soundboard/) hosted with gh-pages
 
 ###### Make sound button
 

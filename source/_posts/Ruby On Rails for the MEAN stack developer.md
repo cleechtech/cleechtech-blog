@@ -1,13 +1,17 @@
-title: Part 1 - Ruby On Rails for the MEAN stack developer
-date: 2015-12-02 16:05:39
-tags: [Ruby On Rails, Ruby]
+layout: post
+title: Ruby On Rails for the MEAN stack developer
+date: 2015-12-02
+category: Rails
+lede: "If you don't know about this whole 'Ruby On Rails' thing, start here. We create a Task database model and render the database output to a web browser."
+author: Connor Leech
+published: true
 ---
 
 Ruby On Rails has been around since about 2006 and it is a tried and tested way to build web applications. In this tutorial we’re going to use the popular Bootstrap 3 UI library and Ruby On Rails 4 to create a server and database. The app will display a prepopulated list of tasks. In future lessons we will go through adding and modifying tasks.
 
-**tl;dr** [SOURCE CODE](https://github.com/cleechtech/rails-task-list)
-<!-- more -->
-**Questions?** Hit me up [on twitter](https://twitter.com/realjasonshark)
+**tl;dr** [SOURCE CODE](https://github.com/connor11528/rails-task-list)
+
+**Questions?** Hit me up [on twitter](https://twitter.com/connor11528)
 
 ### Getting started with Ruby On Rails 
 
@@ -55,8 +59,6 @@ If we open up http://localhost:3000 we will see the default ROR home page.
 
 
 ![](https://cdn-images-1.medium.com/max/800/1*v-NW1U1Crzi9WLQA5ZZgPA.png)
-
-
 
 
 Now make a todo model, this will be a table in the database. The model fields will be some text and a boolean if the task is completed. After generating the database model run the migration command so ROR can update all our SQL.
@@ -199,4 +201,4 @@ Update the index file to render our task titles:
 
 Okay now we have a list of tasks. In upcoming lessons we will go through adding tasks and toggling their completion status.
 
-If you have questions [hit me up on twitter](https://twitter.com/realjasonshark) or [raise an issue](https://github.com/cleechtech/rails-task-list/issues) on the source code. Thanks for reading!
+If you have questions [hit me up on twitter](https://twitter.com/connor11528) or [raise an issue](https://github.com/connor11528/rails-task-list/issues) on the source code. Thanks for reading!

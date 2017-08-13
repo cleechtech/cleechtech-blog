@@ -1,27 +1,30 @@
-title: log in with twitter from client with angular and oauth.io
-date: 2015-10-23 17:58:20
-tags: [Angular, Javascript]
+layout: post
+title: Client Side Twitter Login with Angular 1.x and OAuth.io
+date: 2015-10-23
+category: Angular
+lede: "Implements a Twitter social login feature using OAuth.io service provider and Angular.js 1.x"
+author: Connor Leech
+published: true
 ---
 
 Authentication using the OAuth.io service on the client side
-<!-- more -->
 
 First off thank you to Preetish Panda for his tutorial on oauth.io. You can find that tutorial [here](http://www.sitepoint.com/building-twitter-app-using-angularjs).
 
 
 ===============
 
-[SOURCE CODE](https://github.com/jasonshark/oauthio-example) for this tutorial.
+[SOURCE CODE](https://github.com/connor11528/oauthio-example) for this tutorial.
 
-[DEMO](http://connorlee.ch/oauthio-example/#/) of async twitter authentication
+[DEMO](http://connorleech.info/oauthio-example/#/) of async twitter authentication
 
 
 
 ### Getting started
-Create a static bare-bones angular app. There is an angular.js starter app [here](https://github.com/jasonshark/angular-starter).
+Create a static bare-bones angular app. There is an angular.js starter app [here](https://github.com/connor11528/angular-starter).
 
 ```
-$ git clone git@github.com:jasonshark/angular-starter.git
+$ git clone git@github.com:connor11528/angular-starter.git
 $ cd angular-starter
 $ python -m SimpleHTTPServer
 ```
@@ -229,7 +232,7 @@ Here is the completed [DEMO](http://connorlee.ch/oauthio-example/#/).
 Add your github url (`<username>.github.io`) to "Domains & URLs whitelist" on the oauth.io dashboard homepage and you can have a live site also.
 
 
-final [SOURCE CODE](https://github.com/jasonshark/oauthio-example). Give it a star!
-<iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=oauthio-example&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+final [SOURCE CODE](https://github.com/connor11528/oauthio-example). Give it a star!
+<iframe src="https://ghbtns.com/github-btn.html?user=connor11528&repo=oauthio-example&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 
 ![](http://media3.giphy.com/media/14up2cTMOGbXPO/giphy.gif)

@@ -1,10 +1,14 @@
+layout: post
 title: 5 Steps in the Sales Process
-date: 2015-11-29 09:56:04
-tags: [Sales, Startup]
+date: 2015-11-29
+category: Writing
+lede: "When selling there are five fundamental steps to help guide you through the conversation and achieve an outcome that both sides be happy with."
+author: Connor Leech
+published: true
 ---
 
 There are five steps in the sales process:
-<!-- more -->
+
 **1. Introduction**
 
 **2. Presentation**

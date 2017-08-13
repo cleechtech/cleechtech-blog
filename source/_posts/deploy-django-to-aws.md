@@ -1,11 +1,14 @@
-title: deploy django to aws
-date: 2015-10-24 17:50:16
-tags: [Django, AWS]
+layout: post
+title: Deploy Django to AWS (Part 1)
+date: 2015-10-24
+category: Django
+lede: "In this tutorial we set up Elastic Beanstalk for our Django application to deploy it live to the internet with a Postgres database. We use the Elasic Beanstalk CLI to push our changes to AWS infrastructure."
+author: Connor Leech
+published: true
 ---
 
 Following this [tutorial](https://realpython.com/blog/python/deploying-a-django-app-to-aws-elastic-beanstalk/).
 
-<!-- more -->
 
 ```
 $ git clone https://github.com/realpython/image-of-the-day.git
@@ -257,7 +260,7 @@ This is us if we host our images on EC2 instances instead of S3 buckets:
 
 I will continue on how to set up and configure S3 bucket for our app in part 2:
 
-[deploy django to aws part 2: hosting files on S3](http://connorleech.ghost.io/deploy-django-to-aws-part-2-hosting-files-on-s3/)
+[deploy django to aws part 2: hosting files on S3](http://connorleech.info/deploy-django-to-aws-part-2-hosting-files-on-s3/)
 
 If you don't need file upload and only a server and a database you are good to go. Otherwise see you "after the jump".
 

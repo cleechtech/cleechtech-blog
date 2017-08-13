@@ -1,21 +1,24 @@
-title: use express, angular and jwt to make a secure app
-date: 2015-10-23 18:03:14
-tags: [MEAN, Nodejs, Javascript, Angular]
+layout: post
+title: Use Express, Angular 1.x and JWT to make a secure app
+date: 2015-10-23
+category: Javascript
+lede: "Use JSON Web Tokens (JWT) to secure a Mongo, Express, Angular and Node.js application.. affectionately known as the MEAN stack. JWT are stateless so can be used to secure APIs that communicate with multiple applications."
+author: Connor Leech
+published: true
 ---
 
 Master authentication with fullstack javascript development
-<!-- more -->
 
 ![](http://media.giphy.com/media/3oEduWAFQjlfP5gMU0/giphy.gif)
 
 [DEMO](https://node-jwt-intro.herokuapp.com/)
 
-[SOURCE CODE](https://github.com/jasonshark/node-jwt-intro)
+[SOURCE CODE](https://github.com/connor11528/node-jwt-intro)
 
 
 ### Build server
 ```
-$ git clone https://github.com/jasonshark/mean-starter
+$ git clone https://github.com/connor11528/mean-starter
 ```
 
 Install some more packages:
@@ -554,4 +557,4 @@ and...
 </form>
 ```
 
-That is pretty much it. It is worth noting any app can send these requests to this server. The server sends and validates tokens. The server does not need to maintain sessions. The browser's localStorage is also really helpful with this examples. If you have questions [hit me up on twitter](https://twitter.com/cleechtech).
+That is pretty much it. It is worth noting any app can send these requests to this server. The server sends and validates tokens. The server does not need to maintain sessions. The browser's localStorage is also really helpful with this examples. If you have questions [hit me up on twitter](https://twitter.com/connor11528).

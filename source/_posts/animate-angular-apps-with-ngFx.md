@@ -1,11 +1,13 @@
-title: animate angular apps with ngFx
-date: 2015-10-23 16:49:35
-tags: [Angular]
+layout: post
+title: Animate Angular apps with ngFx
+date: 2015-10-23
+category: Angular
+lede: "In this post we do client side animations using Angular 1.x and the ngFx library"
+author: Connor Leech
+published: true
 ---
 
 Recently I stumbled upon [ngFx](https://github.com/Hendrixer/ngFx) as a simple way to add animations to angular apps. The animations are based off [animate.css](http://daneden.github.io/animate.css/) except they're all in javascript and packaged into an angular module. Angular 1.4 is [changing up animations](http://angularjs.blogspot.com/search/label/announcements) so this post might not be relevant in the future, but here's a simple animation solution for the present day.
-
-<!-- more -->
 
 *Update:* To use this tool there are some licensing restrictions. If you're charging people money to use your app [you'll need a license](http://greensock.com/standard-license). :Sad face:
 

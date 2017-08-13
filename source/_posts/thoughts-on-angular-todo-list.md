@@ -1,10 +1,13 @@
+layout: post
 title: thoughts on angular todo list
-date: 2015-10-22 18:02:49
-tags: [Angular, Todo]
+date: 2015-10-22
+category: Angular 
+lede: "Angular 1.x has some tricks. This post looks at the source code for a client side todo list app"
+author: Connor Leech
+published: true
 ---
 
 Complaints about angular.js after playing around extensively with React and Meteor
-<!-- more -->
 
 I'm revisiting angular after not using it for a while. To get started again with my class @ RocketU we made a todo list. My code is here:
 

@@ -1,12 +1,15 @@
-title: Intro to angular-ui-router
-date: 2015-10-23 17:57:35
-tags: [Angular]
+layout: post
+title: Intro to Angular UI Router
+date: 2015-10-23
+category: Angular
+lede: "This tutorial goes through client side routing fundamentals for an Angular 1.x application."
+author: Connor Leech
+published: true
 ---
 
 For the uninitiated, behold angular-ui-router
-<!-- more -->
 
-[SOURCE CODE](https://github.com/jasonshark/intro-to-ui-router)
+[SOURCE CODE](https://github.com/connor11528/intro-to-ui-router)
 
 If you're like me you've used [ui-router](https://github.com/angular-ui/ui-router/) before with angular.js. Your applications probably look something like this:
 
@@ -32,7 +35,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 
 #### Add data
 
-To show off getting data and some more advanced features of ui-router I fired up an express server in [server.js](https://github.com/jasonshark/intro-to-ui-router/blob/master/server.js) that serves **index.html** and a "posts" API.
+To show off getting data and some more advanced features of ui-router I fired up an express server in [server.js](https://github.com/connor11528/intro-to-ui-router/blob/master/server.js) that serves **index.html** and a "posts" API.
 
 For a really basic implementation, getting the posts:
 
@@ -211,6 +214,6 @@ Now when you click on preview you'll see the post's description. There are some 
 
 ![happy happy joy joy](http://media2.giphy.com/media/33UbGsRWIZhkc/giphy.gif)
 
-Also check out the [SOURCE CODE](https://github.com/jasonshark/intro-to-ui-router).
+Also check out the [SOURCE CODE](https://github.com/connor11528/intro-to-ui-router).
 
-Also you can follow me on [twitter](https://twitter.com/cleechtech)!
+Also you can follow me on [twitter](https://twitter.com/connor11528)!

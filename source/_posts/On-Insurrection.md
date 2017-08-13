@@ -1,10 +1,13 @@
+layout: post
 title: On Insurrection
-date: 2015-10-20 18:00:43
-tags: [Insurrection]
+date: 2015-10-20
+category: Writing
+lede: "There were a lot of protests going on in Oakland at the time of this writing. This post summarizes a summary of a book about the importance of protest movements. It is primarily in note form."
+author: Connor Leech
+published: true
 ---
 
 **insurrection**: a violent uprising against an authority or government
-<!-- more -->
 
 I saw this [event](https://www.facebook.com/events/367500803440253/) on facebook. Included is a link to a book, written recently about protest movements and the like
 

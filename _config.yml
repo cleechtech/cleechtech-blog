@@ -36,17 +36,13 @@ default_author: Connor Leech
 #   About: /about/
 
 # Featured Note
-feature_note_title: 'Ten Inspiring Software Consultancies'
-feature_note_date: 'January 4th, 2017'
-feature_note_author: 'Patrick Steadman'
-feature_note_path: "2017/01/03/inspiring-consultancies/"
-feature_note_excerpt: 'One big thing I learned this year is that there’s no one right way
-to run a software consulting business. I’ve tried to become a student of the industry, 
-and in reading the blogs of successful companies, I’ve often found that the best practices
-of one consultancy are considered anti-patterns at another. For example, some companies 
-proudly call themselves Agile or Scrum teams, while others are defined by their rejection 
-of Agile practices. Some groups care a lot about accounting and finance, while other 
-companies outsource those concerns and focus on code or relationships.'
+feature_note_title: 'Build a Task List with Laravel 5.4 and Vue 2'
+feature_note_date: 'July 17th, 2017'
+feature_note_author: 'Connor Leech'
+feature_note_path: "https://medium.com/@connorleech/build-a-task-list-with-laravel-5-4-and-vue-2-9be0bba06801"
+feature_note_excerpt: 'This tutorial goes through creating a Task List application with Laravel 5 and Vue 2. 
+After going through this tutorial you will have the source code for creating a Tasks dynamically with client side Javascript
+and persisting them to MySQL with PHP.'
 
 # Featured Case Study
 feature_case_title: 'Verdes Pinpoints'

@@ -1,13 +1,15 @@
-title: Build todo list with angular and DRF
-date: 2015-10-23 17:46:39
-tags: [Todo, Angular, Django]
+layout: post
+title: Build todo list with Angular 1.x and Django Rest Framework (DRF)
+date: 2015-10-23
+category: Django
+lede: "This tutorial got pretty popular. Django Rest Framework (DRF) is a tool for building APIs out of Python Django web servers. This tutorial sets up a DRF backend and talks to it with our JS framework of choice -- Angular 1.x"
+author: Connor Leech
+published: true
 ---
 
-The source code is [available here](https://github.com/jasonshark/angular-drf-todolist).
+The source code is [available here](https://github.com/connor11528/angular-drf-todolist).
 
 In this app we'll build a persistent todo list. The backend and database will be handled by django. django rest framework will convert the tabled data to JSON and angular will bring the frontend magic.
-
-<!-- more -->
 
 ![this is angular](http://cloud-4.steamusercontent.com/ugc/541889413256781007/8E0E1D04169BD1922CA1467046699255CEB69E02/)
 

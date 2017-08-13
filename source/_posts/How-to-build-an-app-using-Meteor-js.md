@@ -1,14 +1,17 @@
+layout: post
 title: How to build an app using Meteor.js
-date: 2015-10-23 17:53:53
-tags: [Meteor]
+date: 2015-10-23
+category: Javascript
+lede: "This app explores getting started with the Meteor Javascript Framework, circa 2015."
+author: Connor Leech
+published: true
 ---
 
 Oh hurrow Meteor.js
-<!-- more -->
 
 Here's a quick tutorial about how to build a full stack website (front end code, server and database) using [meteor.js](https://www.meteor.com/).
 
-Here's the final [source code](https://github.com/jasonshark/leaderboard) and the [demo app](http://jasonshark-leaderboard.meteor.com/).
+Here's the final [source code](https://github.com/connor11528/leaderboard)
 
 ###### Get started
 Install meteor, create an app and run it on port 3000:
@@ -174,5 +177,5 @@ Those methods make mongodb calls. The code is in our server directory and theref
 
 
 ###### That's it
-Check out the [source code](https://github.com/jasonshark/leaderboard) and the [live demo](http://jasonshark-leaderboard.meteor.com/). Deploy your app with `meteor deploy <my-app-name>.meteor.com`
+Check out the [source code](https://github.com/connor11528/leaderboard). Deploy your app with `meteor deploy <my-app-name>.meteor.com`
 

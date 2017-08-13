@@ -1,7 +1,7 @@
 layout: post
 title: Part 2 - Add Angular.js to Ruby on Rails app
 date: 2015-12-04
-category: Angular
+category: Rails
 lede: "This article explains how to integrate Angular 1.x into a Ruby On Rails application."
 author: Connor Leech
 published: true

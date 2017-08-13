@@ -1,15 +1,18 @@
-title: facebook auth with ionic and firebase
-date: 2015-10-24 05:51:30
-tags: [Ionic, Firebase, Javascript]
+layout: post
+title: Facebook authentication with Ionic 1.x and Firebase
+date: 2015-10-24
+category: Angular
+lede: "We use Firebase and Ionic 1.x to add a login with Facebook feature to our Angular 1.x powered mobile app."
+author: Connor Leech
+published: true
 ---
 
-Starter code is [HERE](https://github.com/jasonshark/ionic-firebase-auth-starter)
+Starter code is [HERE](https://github.com/connor11528/ionic-firebase-auth-starter)
 
-<!-- more -->
 
-<iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=ionic-firebase-auth-starter&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=connor11528&repo=ionic-firebase-auth-starter&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=ionic-firebase-auth-starter&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=connor11528&repo=ionic-firebase-auth-starter&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
 
 <i>A mobile app template built with ionic framework.</i>
 
@@ -223,13 +226,13 @@ Make sure to go to `Settings > Advanced` and add `http://localhost/callback` to 
 
 Now you have authentication with facebook started for a mobile app. Build something awesome.
 
-Here is the [ionic-firebase-auth-starter](https://github.com/jasonshark/ionic-firebase-auth-starter) code.
+Here is the [ionic-firebase-auth-starter](https://github.com/connor11528/ionic-firebase-auth-starter) code.
 
-<iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=ionic-firebase-auth-starter&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=connor11528&repo=ionic-firebase-auth-starter&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=ionic-firebase-auth-starter&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=connor11528&repo=ionic-firebase-auth-starter&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
 
 
-Questions? Comments? hit me up on [twitter](https://twitter.com/cleechtech)
+Questions? Comments? hit me up on [twitter](https://twitter.com/connor11528)
 
 ![](http://media.giphy.com/media/9uBX8yeCP2Lmg/giphy.gif)

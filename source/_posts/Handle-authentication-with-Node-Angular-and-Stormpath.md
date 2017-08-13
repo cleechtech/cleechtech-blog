@@ -1,16 +1,20 @@
+layout: post
 title: Handle authentication with Node, Angular and Stormpath
-date: 2015-11-30 11:59:01
-tags: [Nodejs, Angular, Auth, MEAN]
+date: 2015-11-30
+category: Angular
+lede: "In this tutorial we use Stormpath managed authentication service provider to handle authentication for our Node.js powered app. Stormpath has since been acquired by Okta and their API is shutting down soon. Pour one out for the homies.."
+author: Connor Leech
+published: true
 ---
 
-Final [SOURCE CODE](https://github.com/cleechtech/node-angular-stormpath)
+Final [SOURCE CODE](https://github.com/connor11528/node-angular-stormpath)
 
 ## Set up project
 
-Stormpath is a service that handles user authentication and authorization for you. We are going to integrate Stormpath user management into a very lightweight MEAN stack starter template. First we're going to clone the starter project which you can view [here](https://github.com/cleechtech/mean-starter).
-<!-- more -->
+Stormpath is a service that handles user authentication and authorization for you. We are going to integrate Stormpath user management into a very lightweight MEAN stack starter template. First we're going to clone the starter project which you can view [here](https://github.com/connor11528/mean-starter).
+
 ```
-$ git clone git@github.com:cleechtech/mean-starter.git node-angular-stormpath
+$ git clone git@github.com:connor11528/mean-starter.git node-angular-stormpath
 ```
 
 This command clones the starter template into a folder named "node-angular-stormpath". The starter template is set up with MongoDB, so open a new tab and run `mongod` in that window so MongoDB is ready on your machine.
@@ -273,4 +277,4 @@ and the template looks like:
 Here are the [stormpath-angularjs](
 https://github.com/stormpath/stormpath-sdk-angularjs) docs. Happy building!
 
-Final [SOURCE CODE](https://github.com/cleechtech/node-angular-stormpath)
+Final [SOURCE CODE](https://github.com/connor11528/node-angular-stormpath)

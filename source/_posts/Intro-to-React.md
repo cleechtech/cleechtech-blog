@@ -1,16 +1,19 @@
+layout: post
 title: Intro to React
-date: 2015-10-24 17:57:57
-tags: [React, Javascript]
+date: 2015-10-24
+category: Javascript
+lede: "General introduction into how React.js can work as a view layer"
+author: Connor Leech
+published: true
 ---
 
 Oh hurrow React.js
-<!-- more -->
 
-[SOURCE CODE](https://github.com/jasonshark/intro-to-react)
+[SOURCE CODE](https://github.com/connor11528/intro-to-react)
 
-<iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=intro-to-react&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=connor11528&repo=intro-to-react&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=intro-to-react&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=connor11528&repo=intro-to-react&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 
 In this tutorial we're going to go through the basics of React. We will render a list of posts that we return via a ajax query. This will not be fully functional as I'm also a beginner to react. I'll cover what I know.
 
@@ -158,8 +161,8 @@ In React I like how the html and javascript are closely coupled. I think the sim
 
 On the other hand, React has a steep learning curve and does not provide all the functionality I want. I am not familiar with Backbone and implementing thing the "Flux way" might be another headache. Routing is another concern. Maybe in the future I will look into something like [react-router](https://github.com/rackt/react-router). I am excited for the React ecosystem to mature and for the Angular 2.0 release to implement features pioneered by React. Everyone can win!
 
-To dig in more, check the [SOURCE CODE](https://github.com/jasonshark/intro-to-react). (Pull requests are welcome)
+To dig in more, check the [SOURCE CODE](https://github.com/connor11528/intro-to-react). (Pull requests are welcome)
 
-<iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=intro-to-react&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=connor11528&repo=intro-to-react&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=jasonshark&repo=intro-to-react&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=connor11528&repo=intro-to-react&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>

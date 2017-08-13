@@ -29,5 +29,22 @@ $ hexo deploy
 
 This command automatically git pushes the built files to the master branch of https://github.com/connor11528/connor11528.github.io. These settings are configured in **_config.yml**.
 
+### Post default:
+
+```
+layout: post
+title: 
+date: 
+category: 
+lede: ""
+author: Connor Leech
+published: true
+```
+
+### Theme
+
+Currently using Computer Lab's theme: https://github.com/computer-lab/computerlab.io/tree/master/themes/computer-lab
+
+All themes are stored in **themes** dir.
 
 

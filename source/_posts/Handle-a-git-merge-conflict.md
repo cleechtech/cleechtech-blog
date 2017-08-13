@@ -1,11 +1,13 @@
+layout: post
 title: Handle a git merge conflict
-date: 2015-10-20 17:53:25
-tags: [Git]
+date: 2015-10-20
+category: Programming
+lede: "At the beginning of the RocketU we learned how to fix git merge conflicts. Though I had been working with Git for some time i had not worked extensively in teams so handling merge conflicts was new territory for me. Since I hadn't learning about it beofre I decided to write a short tutorial."
+author: Connor Leech
+published: true
 ---
 
 I'm starting to work with other people using git and github. Though I'm familiar with pushing, pulling, branching and cloning, I had not regularly encountered  merge conflicts until I began RocketU.
-
-<!-- more -->
 
 ```
 mkdir mergeConflicting
@@ -181,4 +183,4 @@ Ultimately the develop commit shows up on the commit history of our master branc
 
 Check out the full git history here:
 
-https://github.com/jasonshark/mergeConflicting/commits/master
+https://github.com/connor11528/mergeConflicting/commits/master

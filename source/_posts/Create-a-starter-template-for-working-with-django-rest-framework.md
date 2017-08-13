@@ -1,13 +1,15 @@
+layout: post
 title: Create a starter template for working with django-rest-framework
-date: 2015-10-23 17:48:43
-tags: [Django]
+date: 2015-10-23
+category: Django
+lede: "During RocketU coding bootcamp we built a lot of Django projects. I created a base starter template in order to save time. The template allows users to create JSON APIs quickly using Django and Django Rest Framework (DRF)"
+author: Connor Leech
+published: true
 ---
 
-See the [source code here](https://github.com/jasonshark/django-drf-starter-project).
+See the [source code here](https://github.com/connor11528/django-drf-starter-project).
 
 Django rest framework serializes data from structured databases (Postgres, Mysql, Sqlite) into JSON. Django provides the server and database management. [Django rest framework](http://www.django-rest-framework.org/) converts the structured data into javascript object notation, which gets sent to the browser. Modern frontend javascript frameworks like angular, backbone and react all like to eat JSON. This workflow gets a django project set up with the rest framework.
-
-<!-- more -->
 
 ### Set up virtual environment
 
@@ -139,4 +141,4 @@ In base.html add `{% load staticfiles %}` to line 1. Then reference script/link 
 <script src="{{STATIC_URL}}/js/main.js"></script>
 ```
 
-See the [source code here](https://github.com/jasonshark/django-drf-starter-project)
+See the [source code here](https://github.com/connor11528/django-drf-starter-project)

@@ -1,10 +1,13 @@
-title: How to use the angular-leaflet directive
-date: 2015-10-23 09:54:23
-tags: [Angular, Maps]
+layout: post
+title: Make Maps with Angular 1.x and Leaflet using Directives
+date: 2015-10-23
+category: Angular
+lede: "this tutorial goes into how to use the angular-leaflet directive (built by the Angular 1.x community for integrating maps into web applications. Leaflet is a Javascript mapping library."
+author: Connor Leech
+published: true
 ---
 
 Make some maps with angular.js
-<!-- more -->
 
 This is a quick tutorial on how to add maps to your angular.js application. Using google maps API or leaflet.js by themselves is simple. Unfortunately manipulating the DOM is not always straightforward in angular.js projects. External libraries need to be packaged into angular.js directives. Fortunately there is a legit Angular community that has done the heavy lifting for us. 
 

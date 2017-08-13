@@ -1,21 +1,22 @@
-title: Set up drf to play well with angular templates
-date: 2015-10-24 18:01:10
-tags: [Django, Angular]
+layout: post
+title: Set up Django Rest Framework (DRF) to play well with Angular.js templates
+date: 2015-10-24
+category: Django
+lede: "Django and Angular.js each have their own HTML templating libraries and systems. This post harmonizes the two of them in order to build Javascript rich web applications powered by Django and Django Rest Framework (DRF)"
+author: Connor Leech
+published: true
 ---
 
-Get Django Rest Framework and Angular.js to play nicely together. Built while a student at RocketU coding bootcamp
-<!-- more -->
+Create an app with django rest framework (drf) that uses angular.js on the frontend. This app will be built from the [django-drf-starter-project](https://github.com/connor11528/django-drf-starter-project). If you are curious about how the django-drf-starter-project was built you can view the [tutorial here](https://coderwall.com/p/ympo6g/create-a-starter-template-for-working-with-django-rest-framework?p=1&q=).
 
-Create an app with django rest framework (drf) that uses angular.js on the frontend. This app will be built from the [django-drf-starter-project](https://github.com/jasonshark/django-drf-starter-project). If you are curious about how the django-drf-starter-project was built you can view the [tutorial here](https://coderwall.com/p/ympo6g/create-a-starter-template-for-working-with-django-rest-framework?p=1&q=).
-
-The full [source code is here](https://github.com/jasonshark/django-drf-angular-starter-project)
+The full [source code is here](https://github.com/connor11528/django-drf-angular-starter-project)
 
 ![Let's get started](http://media.giphy.com/media/mxDZecDOOsWCA/giphy.gif)
 
 
 ### Create the project
 ```
-$ git clone git@github.com:jasonshark/django-drf-starter-project.git
+$ git clone git@github.com:connor11528/django-drf-starter-project.git
 $ mv django-drf-starter-project django-drf-angular-starter-project
 $ cd django-drf-angular-starter-project
 ```
@@ -91,4 +92,4 @@ All of our angular templates will live in `jsframework/static/templates`. Refere
 
 All our routing will have `/#/`. Also we have not invented any models or serializers, but we've set up a server and handling angular on the frontend.
 
-The full [source code is here](https://github.com/jasonshark/django-drf-angular-starter-project)
+The full [source code is here](https://github.com/connor11528/django-drf-angular-starter-project)

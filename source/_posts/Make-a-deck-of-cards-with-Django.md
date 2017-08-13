@@ -1,12 +1,15 @@
+layout: post
 title: Make a deck of cards with Django
-date: 2015-10-23 17:59:45
-tags: [Django]
+date: 2015-10-23
+category: Django
+lede: "In this tutorial we set up a Python Django project with a virtual environment, create a Cards model and then render the data to the HTML view."
+author: Connor Leech
+published: true
 ---
 
 Learn you Django by making a deck of cards out of internets.
-<!-- more -->
 
-For the impatient, [source code is here](https://github.com/jasonshark/django_cards)
+For the impatient, [source code is here](https://github.com/connor11528/django_cards)
 
 Start the project
 
@@ -156,4 +159,4 @@ We have {{ cards | length }} cards!
 We now use get\_FIELD_display to show the suit name. This is a bit magical to me, had to [investigate on SO](http://stackoverflow.com/questions/5730211/how-does-get-field-display-in-django-work).
 
 
-In future tutorials we will build up actual functionality to play cards. Keep an eye on the [SOURCE code](https://github.com/jasonshark/django_cards) for this tutorial!
+In future tutorials we will build up actual functionality to play cards. Keep an eye on the [SOURCE code](https://github.com/connor11528/django_cards) for this tutorial!
