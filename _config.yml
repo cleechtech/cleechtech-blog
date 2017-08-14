@@ -39,7 +39,7 @@ default_author: Connor Leech
 feature_note_title: 'Build a Task List with Laravel 5.4 and Vue 2'
 feature_note_date: 'July 17th, 2017'
 feature_note_author: 'Connor Leech'
-feature_note_path: "Build-a-Task-List-with-Laravel-5-and-Vue-2/"
+feature_note_path: "blog/Build-a-Task-List-with-Laravel-5-and-Vue-2/"
 feature_note_excerpt: 'This tutorial goes through creating a Task List application with Laravel 5 and Vue 2. 
 After going through this tutorial you will have the source code for creating a Tasks dynamically with client side Javascript
 and persisting them to MySQL with PHP.'
