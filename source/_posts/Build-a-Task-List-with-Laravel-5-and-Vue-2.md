@@ -276,6 +276,8 @@ Add this line:
 That’s it! We’re done. The source code is available [on
 github](https://github.com/connor11528/laravel-vue-tasks).
 
+![](https://camo.githubusercontent.com/55dd2b124cfaf8e144982c64a47581d830dc785d/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4b34716c3534445265416538626775553072545874512e706e67)
+
 <hr>
 
 Originally published [on Medium](https://medium.com/@connorleech/build-a-task-list-with-laravel-5-4-and-vue-2-9be0bba06801)
