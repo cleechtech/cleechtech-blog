@@ -126,6 +126,6 @@ node_sass:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:connor11528/connor11528.github.io.git
+  repo: https://github.com/connor11528/connor11528.github.io.git # git@github.com:connor11528/connor11528.github.io.git
   branch: master
   message: auto deploy!
