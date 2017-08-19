@@ -723,6 +723,9 @@ Congrats on making it through this tutorial! You can view the source code for th
 
 Thanks for reading!
 
+<hr>
+
+Originally published [on Scotch.io](https://scotch.io/@connor11528/how-to-process-payments-with-nodejs-vue-2-and-stripe)
 
 
 
