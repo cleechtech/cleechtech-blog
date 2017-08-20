@@ -2,7 +2,7 @@ layout: post
 title: How to process payments with Node.js, Vue 2 and Stripe
 date: 2017-08-19
 category: Javascript
-lede: "This post goes through building a website for selling products. We set up a Vue client side application and Node.js server side app. The apps use Stripe Javascript libraries for payment process. We handle deployment using Amazon S3 for the static site and Heroku for deploying the server."
+lede: "This post goes through building a website for selling products. We set up a Vue client side application and Node.js server side app. The apps use Stripe Javascript libraries for payment processing. We deploy the static app to Amazon S3 and deploy the server to the cloud using Heroku"
 author: Connor Leech
 published: true
 ---
@@ -725,7 +725,7 @@ Thanks for reading!
 
 <hr>
 
-Originally published [on Scotch.io](https://scotch.io/@connor11528/how-to-process-payments-with-nodejs-vue-2-and-stripe)
+Also published on Medium as [Standing on the shoulders of Giants — Node.js, Vue 2, Stripe, Heroku and Amazon S3](https://medium.com/@connorleech/standing-on-the-shoulders-of-giants-node-js-vue-2-stripe-heroku-and-amazon-s3-c6fe03ee1118)
 
 
 
