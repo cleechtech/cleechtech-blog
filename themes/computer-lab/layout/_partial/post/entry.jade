@@ -9,6 +9,12 @@ article(class=page.layout)
         span=page.author
         span.date= ' - ' + page.date.format('ll')
           +postCategory(page.categories)
+      a(target='_blank' class="btn btn-primary social-share twitter" href="http://twitter.com/intent/tweet?status=" + page.title + " by @Connor11528+http://connorleech.info/" + page.path)
+        i(class="fa fa-twitter fa-2x")
+          span(class="hidden-xs")
+      a(target='_blank' href="http://www.linkedin.com/shareArticle?mini=true&url=http://connorleech.info/" + page.path + "&title=" + page.title + "&source=connorleech.info" class="btn btn-primary social-share linkedin")
+        i(class="fa fa-linkedin fa-2x")
+          span(class="hidden-xs")
       
   .post-body
     != page.more

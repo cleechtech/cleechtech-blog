@@ -36,7 +36,7 @@ default_author: Connor Leech
 #   About: /about/
 
 # Featured Note
-feature_note_title: 'Build a Task List with Laravel 5.4 and Vue 2'
+feature_note_title: 'Build a Task List with Laravel 5 and Vue 2'
 feature_note_date: 'July 17th, 2017'
 feature_note_author: 'Connor Leech'
 feature_note_path: "blog/Build-a-Task-List-with-Laravel-5-and-Vue-2/"
