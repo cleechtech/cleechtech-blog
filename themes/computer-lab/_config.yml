@@ -13,7 +13,7 @@ excerpt_link: Read More
 fancybox: true # whether or not to load the fancybox library
 
 # Integrations
-disqus_shortname: 
+disqus_shortname: connorleech
 google_analytics:
 swiftype_install_key: 
 
