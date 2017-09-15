@@ -1,0 +1,7 @@
+.col-sm-2.col-md-2
+  h3 Categories
+  a(href='/blog')
+    p All
+  each c in site.categories.toArray()
+    a(href='/categories/' + c.name)
+      p=c.name

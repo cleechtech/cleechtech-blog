@@ -4,12 +4,11 @@ block site_body
   section#archive
     .container
       .row
-        .col-xs-12.col-sm-10.col-sm-offset-2.col-md-8.col-md-offset-2
+        .col-xs-12.col-sm-10.col-sm-offset-3.col-md-8.col-md-offset-3
           h2.page__title Blog
       .row
-        .col-xs-12.col-sm-10.col-sm-offset-2.col-md-8.col-md-offset-2
+        include _partial/post/category_sidebar
+        .col-xs-12.col-sm-10.col-md-8
           include _partial/post/list
           include _partial/post/list_pagination
 
-        //- .col-xs-12.col-md-8.col-md-offset-2
-        //-   include _partial/site/sidebar
