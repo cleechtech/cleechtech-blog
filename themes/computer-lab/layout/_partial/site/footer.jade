@@ -1,9 +1,22 @@
 footer.footer
   .container
     .row
-      .col-sm-3
-      .col-sm-3
-      .col-sm-3
+      .col-sm-6
+        h4 Connor11528 dev newsletter mailing list
+        ul
+          li
+            form(action="//herokuapp.us14.list-manage.com/subscribe/post?u=42dd73a709fbadb4a29ef1d0d&amp;id=b77fdad58d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+              div(class='input-group')
+                input(type="email" value="" name="EMAIL" class="required email form-control input-lg" id="mce-EMAIL" placeholder='Enter your email here')
+                div(class="response" id="mce-error-response" style="display:none")
+                div(class="response" id="mce-success-response" style="display:none")
+
+                div(style="position: absolute; left: -5000px;" aria-hidden="true")
+                    input(type="text" name="b_42dd73a709fbadb4a29ef1d0d_b77fdad58d" tabindex="-1" value="")
+                span(class='input-group-btn')
+                  input(type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-lg")
+
+      .col-sm-2.col-sm-offset-1
         h4 Connect
         ul
           li 
@@ -12,8 +25,12 @@ footer.footer
             a(target='_blank' href="https://www.linkedin.com/in/connorleech") LinkedIn
           li 
             a(target='_blank' href="https://twitter.com/connor11528") Twitter
+          li
+            a(target='_blank' href="https://stackoverflow.com/users/2031033/connor-leech") Stackoverflow
+          li
+            a(target='_blank' href="https://plus.google.com/u/0/+ConnorLeech") Google+
       .col-sm-3
-        h4 Inquiries?
+        h4 Email
         ul
           li 
             a(href='mailto:connorleech@gmail.com') connorleech@gmail.com
