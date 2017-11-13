@@ -50,7 +50,7 @@ public function run()
 {
     $this->call(SignaturesTableSeeder::class);
 }
-``` 
+```
 
 Generate that seeder by running `php artisan make:seeder SignaturesTableSeeder` and include a call to the model factory that's outlined in the [scotch tutorial](https://scotch.io/tutorials/build-a-guestbook-with-laravel-and-vuejs).
 
