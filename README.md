@@ -34,7 +34,7 @@ This command automatically git pushes the built files to the master branch of ht
 ```
 layout: post
 title: 
-date: 
+date: 2017-11-22
 category: 
 lede: ""
 author: Connor Leech
