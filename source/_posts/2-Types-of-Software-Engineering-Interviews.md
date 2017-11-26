@@ -1,5 +1,5 @@
 layout: post
-title: The 2 Types of Software Engineering Interviews and How to Prepare for Them
+title: The 2 types of software engineering interviews and how to prepare for them
 date: 2017-11-26
 category: Writing
 lede: "To grow your career as a software engineer it’s important to recognize the different methodologies for evaluating talent."
