@@ -23,12 +23,22 @@ meta(name='city', content='Alameda')
 meta(name='state', content='California')
 meta(name='country', content='United States')
 meta(name='language', content='EN')
-meta(property='og:site_name', content='Connor Leech Blog | Node.js, Laravel, AWS')
-meta(property="og:description" content="Get notified about the latest trends in web development, career growth and cloud infrastructure. I send emails about twice a month covering tutorials in Node.js, Laravel, AWS and Vue.js")
+meta(property='og:site_name', content='Connor Leech Blog | Javascript and Laravel tutorials')
+meta(property="og:description" content="Get notified about the latest trends in web development, career growth and cloud infrastructure. I send emails about twice a month covering tutorials in Javascript, Laravel and Cloud")
 meta(property="og:image" content="http://i0.kym-cdn.com/photos/images/original/001/018/899/936.jpg")
 
 meta(property="og:title" content=page.title)
 meta(property="og:description" content=page.lede)
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70809574-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-70809574-1');
+</script>
 
 // Favicon
 link(rel="shortcut icon" type="image/png" href="/images/favicon.ico")
