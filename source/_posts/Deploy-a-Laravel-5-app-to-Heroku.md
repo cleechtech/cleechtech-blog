@@ -1,7 +1,7 @@
 layout: post
 title: Deploy a Laravel 5 app to Heroku
 date: 2017-08-29
-category: Laravel
+category: Cloud
 lede: "Get your Laravel 5 app live with a MySQL database using Heroku and PHP"
 author: Connor Leech
 published: true

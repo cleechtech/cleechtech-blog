@@ -1,7 +1,7 @@
 layout: post
 title: Ruby On Rails or Laravel, which do you use?
 date: 2016-11-13
-category: Laravel
+category: Career
 lede: "High level blog post comparing the merits of Laravel with Ruby On Rails"
 author: Connor Leech
 published: true

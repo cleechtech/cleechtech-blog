@@ -1,7 +1,7 @@
 layout: post
 title: Animate Angular apps with ngFx
 date: 2015-10-23
-category: Angular
+category: Javascript
 lede: "In this post we do client side animations using Angular 1.x and the ngFx library"
 author: Connor Leech
 published: true

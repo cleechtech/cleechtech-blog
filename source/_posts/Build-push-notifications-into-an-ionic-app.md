@@ -1,7 +1,7 @@
 layout: post
 title: Build push notifications into an Ionic 1.x app
 date: 2015-10-23
-category: Angular
+category: Javascript
 lede: "Ionic is a framework for using Angular and Javascript to build native mobile applications. This post goes through adding push messaging using Ionic 1.x and Angular 1.x. It uses Phonegap under the hood."
 author: Connor Leech
 published: true

@@ -1,7 +1,7 @@
 layout: post
 title: Build a blog with the MEAN stack (part 1)
 date: 2015-10-24
-category: Angular
+category: Javascript
 lede: "In this post we parse markdown using Angular 1.x and connect a blogging application with Node.js and MongoDB"
 author: Connor Leech
 published: true

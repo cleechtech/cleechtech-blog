@@ -1,7 +1,7 @@
 layout: post
 title: Handle authentication with Node, Angular and Stormpath
 date: 2015-11-30
-category: Angular
+category: Javascript
 lede: "In this tutorial we use Stormpath managed authentication service provider to handle authentication for our Node.js powered app. Stormpath has since been acquired by Okta and their API is shutting down soon. Pour one out for the homies.."
 author: Connor Leech
 published: true

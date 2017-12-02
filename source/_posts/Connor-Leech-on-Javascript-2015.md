@@ -1,7 +1,7 @@
 layout: post
 title: Mondo Masterclass - Connor Leech on Javascript
 date: 01-10-2015
-category: Javascript
+category: Career
 lede: "This is an interview with Mondo recruiting agency where we discussed the power of Javascript. At the time I was working as a contract Angular 1.x developer at Proteus Digital Health."
 author: Connor Leech
 published: true

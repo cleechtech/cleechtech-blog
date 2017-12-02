@@ -1,7 +1,7 @@
 layout: post
 title: Deploy Django to AWS part 2 - Hosting Files on S3
 date: 2015-10-24 
-category: Django
+category: Cloud
 lede: "This tutorial walks through the rudimentals of uploading a file to an S3 bucket using Django. We go through setting bucket permissions and navigating the AWS console."
 author: Connor Leech
 published: true

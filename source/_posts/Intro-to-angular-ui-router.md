@@ -1,7 +1,7 @@
 layout: post
 title: Intro to Angular UI Router
 date: 2015-10-23
-category: Angular
+category: Javascript
 lede: "This tutorial goes through client side routing fundamentals for an Angular 1.x application."
 author: Connor Leech
 published: true

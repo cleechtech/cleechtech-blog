@@ -1,7 +1,7 @@
 layout: post
 title: thoughts on angular todo list
 date: 2015-10-22
-category: Angular 
+category: Javascript
 lede: "Angular 1.x has some tricks. This post looks at the source code for a client side todo list app"
 author: Connor Leech
 published: true

@@ -1,7 +1,7 @@
 layout: post
 title: Build a todo app with Angular 1.x and AngularFire
 date: 2015-10-23
-category: Angular
+category: Javascript
 lede: "This app uses Angular 1.x to build a todo application that persists data using Firebase and the AngularFire client side Javascript library. When I gave presentations at tech hubs in Tanzania, Kenya, Zambia and Zimbabwe in 2015 it covered some of this Angular and Firebase code. Great experience and thanks so much to the Firebase team for all of their support!"
 author: Connor Leech
 published: true

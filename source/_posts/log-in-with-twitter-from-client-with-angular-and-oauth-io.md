@@ -1,7 +1,7 @@
 layout: post
 title: Client Side Twitter Login with Angular 1.x and OAuth.io
 date: 2015-10-23
-category: Angular
+category: Javascript
 lede: "Implements a Twitter social login feature using OAuth.io service provider and Angular.js 1.x"
 author: Connor Leech
 published: true

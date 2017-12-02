@@ -1,7 +1,7 @@
 layout: post
 title: Tutorial for building a Web Application with Amazon S3, Lambda, DynamoDB and API Gateway
 date: 2017-08-28
-category: AWS
+category: Cloud
 lede: "In this tutorial we build out a ride sharing application utilizing jQuery, Node.js and AWS Serverless architecture for fun and profit."
 author: Connor Leech
 published: true

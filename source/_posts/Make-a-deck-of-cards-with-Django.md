@@ -1,7 +1,7 @@
 layout: post
 title: Make a deck of cards with Django
 date: 2015-10-23
-category: Django
+category: General
 lede: "In this tutorial we set up a Python Django project with a virtual environment, create a Cards model and then render the data to the HTML view."
 author: Connor Leech
 published: true

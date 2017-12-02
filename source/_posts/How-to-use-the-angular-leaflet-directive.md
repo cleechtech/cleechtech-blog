@@ -1,7 +1,7 @@
 layout: post
 title: Make Maps with Angular 1.x and Leaflet using Directives
 date: 2015-10-23
-category: Angular
+category: Javascript
 lede: "this tutorial goes into how to use the angular-leaflet directive (built by the Angular 1.x community for integrating maps into web applications. Leaflet is a Javascript mapping library."
 author: Connor Leech
 published: true

@@ -1,7 +1,7 @@
 layout: post
 title: Facebook authentication with Ionic 1.x and Firebase
 date: 2015-10-24
-category: Angular
+category: Javascript
 lede: "We use Firebase and Ionic 1.x to add a login with Facebook feature to our Angular 1.x powered mobile app."
 author: Connor Leech
 published: true

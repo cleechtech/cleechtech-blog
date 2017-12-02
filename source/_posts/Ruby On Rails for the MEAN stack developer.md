@@ -1,7 +1,7 @@
 layout: post
 title: Ruby On Rails for the MEAN stack developer
 date: 2015-12-02
-category: Rails
+category: General
 lede: "If you don't know about this whole 'Ruby On Rails' thing, start here. We create a Task database model and render the database output to a web browser."
 author: Connor Leech
 published: true

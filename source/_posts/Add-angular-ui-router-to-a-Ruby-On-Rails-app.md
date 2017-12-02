@@ -1,7 +1,7 @@
 layout: post
 title: Part 3 - Add angular-ui-router to a Ruby On Rails app
 date: 2015-12-14
-category: Rails
+category: General
 lede: "In this post we add client side routing to a Ruby On Rails app using Angular 1.x"
 author: Connor Leech
 published: true

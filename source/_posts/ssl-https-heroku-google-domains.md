@@ -1,7 +1,7 @@
 layout: post
 title: HTTPS/SSL on Heroku with Google Domains as DNS provider
 date: 2017-10-18
-category: Programming
+category: Cloud
 lede: "I needed HTTPS for Stripe to work. Here's the saga as it unfolded. Add an SSL certficate with Let's Encrypt, configure Heroku and set up Google Domains. Oh my"
 author: Connor Leech
 published: true

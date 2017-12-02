@@ -1,7 +1,7 @@
 layout: post
 title: Deploy Django to AWS (Part 1)
 date: 2015-10-24
-category: Django
+category: Cloud
 lede: "In this tutorial we set up Elastic Beanstalk for our Django application to deploy it live to the internet with a Postgres database. We use the Elasic Beanstalk CLI to push our changes to AWS infrastructure."
 author: Connor Leech
 published: true

@@ -1,7 +1,7 @@
 layout: post
 title: Launch a Website with a Custom URL using Github Pages and Google Domains
 date: 2017-05-12
-category: Programming
+category: Cloud
 lede: "This tutorial goes through hosting a static site for free and linking it to a custom domain name"
 author: Connor Leech
 published: true
