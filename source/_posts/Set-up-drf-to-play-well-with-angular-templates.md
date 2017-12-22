@@ -1,7 +1,7 @@
 layout: post
 title: Set up Django Rest Framework (DRF) to play well with Angular.js templates
 date: 2015-10-24
-category: General
+category: Programming
 lede: "Django and Angular.js each have their own HTML templating libraries and systems. This post harmonizes the two of them in order to build Javascript rich web applications powered by Django and Django Rest Framework (DRF)"
 author: Connor Leech
 published: true

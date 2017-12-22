@@ -1,7 +1,7 @@
 layout: post
 title: On Insurrection
 date: 2015-10-20
-category: General
+category:
 lede: "There were a lot of protests going on in Oakland at the time of this writing. This post summarizes a summary of a book about the importance of protest movements. It is primarily in note form."
 author: Connor Leech
 published: true

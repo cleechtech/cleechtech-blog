@@ -1,7 +1,7 @@
 layout: post
 title: alright time to start a startup
 date: 2015-10-23
-category: General
+category:
 lede: "This is a rant I wrote in 2015 after completing a coding bootcamp about the importance of starting a startup"
 author: Connor Leech
 published: true

@@ -1,7 +1,7 @@
 layout: post
 title: Create a starter template for working with django-rest-framework
 date: 2015-10-23
-category: General
+category: Programming
 lede: "During RocketU coding bootcamp we built a lot of Django projects. I created a base starter template in order to save time. The template allows users to create JSON APIs quickly using Django and Django Rest Framework (DRF)"
 author: Connor Leech
 published: true

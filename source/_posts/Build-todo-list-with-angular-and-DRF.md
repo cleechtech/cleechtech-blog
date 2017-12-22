@@ -1,7 +1,7 @@
 layout: post
 title: Build todo list with Angular 1.x and Django Rest Framework (DRF)
 date: 2015-10-23
-category: General
+category: Programming
 lede: "This tutorial got pretty popular. Django Rest Framework (DRF) is a tool for building APIs out of Python Django web servers. This tutorial sets up a DRF backend and talks to it with our JS framework of choice -- Angular 1.x"
 author: Connor Leech
 published: true

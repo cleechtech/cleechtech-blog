@@ -1,7 +1,7 @@
 layout: post
 title: Handle a git merge conflict
 date: 2015-10-20
-category: General
+category: Programming
 lede: "At the beginning of the RocketU we learned how to fix git merge conflicts. Though I had been working with Git for some time i had not worked extensively in teams so handling merge conflicts was new territory for me. Since I hadn't learning about it beofre I decided to write a short tutorial."
 author: Connor Leech
 published: true

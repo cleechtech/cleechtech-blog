@@ -1,7 +1,7 @@
 layout: post
 title: Some basics about Stellar and cryptocurrency
 date: 2015-10-22
-category: General
+category:
 lede: "Here's to doing some research about non federated networks and financial systems for radical inclusion. Olé!"
 author: Connor Leech
 published: true
