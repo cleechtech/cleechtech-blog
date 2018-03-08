@@ -42,3 +42,14 @@ a {
 	background: #00aced;
 }
 
+figure {
+	a {
+		border-bottom: none;
+
+		img {
+			width: 200px;
+			max-height:200px;
+		}
+	}
+}
+
