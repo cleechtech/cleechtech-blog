@@ -43,7 +43,7 @@ a {
 }
 
 figure {
-	a {
+	a, a:hover, a:focus {
 		border-bottom: none;
 
 		img {
