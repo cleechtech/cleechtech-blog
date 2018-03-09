@@ -48,4 +48,16 @@ Currently using Computer Lab's theme: https://github.com/computer-lab/computerla
 
 All themes are stored in **themes** dir.
 
+### Goodreads API
+
+XML API requests to Goodreads for my account.
+
+``` 
+Get shelves: https://www.goodreads.com/shelf/list.xml?key=QbgRAkzPEUof3tpVDtzw&user_id=42779747
+
+Read books: https://www.goodreads.com/review/list/42779747.xml?key=QbgRAkzPEUof3tpVDtzw&user_id=42779747&shelf=read
+
+Currently reading: https://www.goodreads.com/review/list/42779747.xml?key=QbgRAkzPEUof3tpVDtzw&user_id=42779747&shelf=currently-reading
+```
+
 
