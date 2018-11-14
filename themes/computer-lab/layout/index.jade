@@ -7,18 +7,15 @@ block site_body
     .container.hero
       .row.copy
         .col-md-6.col-md-offset-2
-          h1(style='color:#494949;') Learn developer witchcraft.
-          p Get notified about the latest trends in web development. I send emails about twice a month covering tutorials in Node.js, Laravel and Vue.js with some cloud sprinkled in ☁️.
-          form(action="//herokuapp.us14.list-manage.com/subscribe/post?u=42dd73a709fbadb4a29ef1d0d&amp;id=b77fdad58d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
-            div(class='input-group')
-              input(type="email" value="" name="EMAIL" class="required email form-control input-lg" id="mce-EMAIL" placeholder='Enter your email here')
-              div(class="response" id="mce-error-response" style="display:none")
-              div(class="response" id="mce-success-response" style="display:none")
+          h1(style='color:#494949;') Hi I'm Connor.
+          p I work at 
+            a(href="https://www.stitchlabs.com/") Stitch Labs
+            |  and build 
+            a(href="https://employbl.com/") Employbl
 
-              div(style="position: absolute; left: -5000px;" aria-hidden="true")
-                input(type="text" name="b_42dd73a709fbadb4a29ef1d0d_b77fdad58d" tabindex="-1" value="")
-              span(class='input-group-btn')
-                input(type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-lg")
+          p Employbl is a site for candidates and employers to find employment matches in the Bay Area. Use it to find candidates, jobs or explore the market.
+
+          p Stitch Labs is inventory and order management for high growth retail brands.
           
 
   section#about.content-section
@@ -26,59 +23,19 @@ block site_body
       .row
         .copy.col-md-8.col-md-offset-2
           .about.wow.fadeIn
-            h2.section-title Connor writes code.
-            p 
-              span
-              | Connor's been a programmer off and on for over six years. He's passionate about Laravel and the power it gives people to build things. Javascript is cool too!
-
-          .about.wow.fadeIn
-            p
-              | Currently works at
-              a(target='_blank' href='https://www.stitchlabs.com/')  Stitch Labs
-              |  and is working on a book about
-              span
-                a(target='_blank' href='https://leanpub.com/badass-web-development-with-laravel-5')  web development with Laravel 5
-                |. Connor's open source code is free on github
-                |  and blog posts are on this site and Medium.com.
             div
-              h3(style='color:#494949;') Organizations I support
               .row
-                .col-sm-3
+                .col-sm-6
                   figure
-                    a(href='https://scripted.org/' target='_blank')
-                      img(src='https://i.imgur.com/yPvZwKj.png', class="img-rounded")
-                    figcaption Script Ed
-                .col-sm-3
+                    a(href='https://employbl.com/' target='_blank')
+                      img(src='https://i.imgur.com/wr3HpOk.png', class="img-rounded")
+                    h2(style='color:#494949;') Employbl
+                    figcaption Employbl is a site I built for candidates and employers in the Bay Area. You're free to sign up as an employer or candidate today! Generate a profile, search for talent and post jobs on one site.
+
+                .col-sm-6
                     figure
-                      a(href='http://www.tunapanda.org/' target='_blank')
-                        img(src='https://i.imgur.com/ejD7Cze.jpg', class="img-rounded")
-                      figcaption Tunapanda
-                .col-sm-3
-                  figure
-                    a(href='https://belvederecovefoundation.com/' target='_blank')
-                      img(src='https://i.imgur.com/hAK0hJM.png', class="img-rounded")
-                    figcaption Belvedere Cove Foundation
-                .col-sm-3
-                  figure
-                    a(href='https://twitter.com/ucsb_alumni' target='_blank')
-                      img(src='https://i.imgur.com/VOEb3RM.jpg', class="img-rounded")
-                    figcaption UCSB Alumni Fund
-
-          .about.wow.fadeIn    
-            p(class='text-center')
-              a.btn.btn-default.email(href='mailto:connorleech@gmail.com') mailto:connorleech@gmail.com
-
-  // Featured Post
-  section#feature-post.content-section
-    .container
-      .row
-        .col-md-8.col-md-offset-2
-          h2.section-title.wow.fadeIn
-            a(href=config.feature_note_path)='Featured post: ' + config.feature_note_title
-          h5.info.wow.fadeIn=config.feature_note_author + ' - '
-            span.date=config.feature_note_date
-          p.wow.fadeIn=config.feature_note_excerpt + ' '
-            span
-            a.readmore(href=config.feature_note_path) Read More
-          a.btn.btn-default.wow.fadeIn.read-more(href='/blog/') Blog
+                      a(href='https://codenation.org/volunteers/' target='_blank')
+                        img(src='https://i.imgur.com/HYY45uC.png', class="img-rounded")
+                      h2(style='color:#494949;') Code Nation
+                      figcaption Code Nation is a non-profit for teaching students in under-resourced high schools how to code. I volunteer as a Coding Teacher with them twice at Aspire Golden State High School in Oakland.
 

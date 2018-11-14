@@ -1,12 +1,12 @@
 footer {
   background-color: $brand;
   height: auto;
-  padding: $base-spacing * 2 0 $base-spacing * 3;
+  padding-top: $base-spacing-small;
   color: $white;
   font-size: 17px;
 
   .row {
-    padding-bottom: $base-spacing * 2;
+    padding-bottom: $base-spacing-small * 2;
   }
 
   h4 {
